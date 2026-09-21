@@ -106,7 +106,9 @@ export default function CardSwap({
 
   const order = useRef(Array.from({ length: childArr.length }, (_, i) => i));
   const tlRef = useRef<gsap.core.Timeline | null>(null);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | undefined>(
+    undefined,
+  );
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -206,13 +208,15 @@ export default function CardSwap({
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
 
   const rendered = childArr.map((child, i) =>
-    isValidElement(child)
-      ? cloneElement(child as React.ReactElement<any>, {
+    isValidElement<
+      React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>
+    >(child)
+      ? cloneElement(child, {
           key: i,
           ref: refs[i],
-          style: { width, height, ...((child.props as any).style ?? {}) },
-          onClick: (e: React.MouseEvent) => {
-            (child.props as any).onClick?.(e);
+          style: { width, height, ...(child.props.style ?? {}) },
+          onClick: (e: React.MouseEvent<HTMLDivElement>) => {
+            child.props.onClick?.(e);
             onCardClick?.(i);
           },
         })
