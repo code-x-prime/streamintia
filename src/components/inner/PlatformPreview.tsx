@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { HomeIcon } from "@/components/ui/HomeIcon";
 export async function PlatformPreview() {
   return (
-    <section className="home-section bg-[#0c0c30]">
+    <section className="home-section bg-[#0c0c30] text-white [--home-border:rgb(184_188_217/0.14)] [--home-muted:#b6bad4] [--text-primary:#ffffff] [--text-secondary:#bbc2df] [&_h2]:text-white [&_h3]:text-white [&_.home-lead]:text-[#b6bad4] [&_.platform-section-bottom_p]:text-[#b6bad4]">
       <div className="home-container">
         <SectionIntro
           eyebrow="EXPLORE YOUR NEXT STAGE"
