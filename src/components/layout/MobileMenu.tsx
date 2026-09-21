@@ -31,9 +31,13 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
       if (media.matches) dialog.current?.close();
     };
     media.addEventListener("change", resize);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    const previousThemeColor = meta?.getAttribute("content");
+    meta?.setAttribute("content", "#0d0e2c");
     return () => {
       document.body.style.overflow = previous;
       media.removeEventListener("change", resize);
+      if (previousThemeColor) meta?.setAttribute("content", previousThemeColor);
     };
   }, [open]);
   return (

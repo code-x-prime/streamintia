@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, DM_Sans } from "next/font/google";
 import { site } from "@/config/site";
 import { assets } from "@/config/assets";
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   description: site.description,
   icons: { icon: assets.brand.icon, apple: assets.brand.icon },
   robots: { index: site.indexable, follow: site.indexable },
+};
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 export default function RootLayout({
   children,
