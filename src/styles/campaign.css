@@ -1,0 +1,308 @@
+/* Reference-led campaign opening; isolated from inner-page presentation. */
+@media (prefers-reduced-motion: reduce) {
+  .campaign-note {
+    transform: none;
+  }
+}
+.site-header {
+  top: 12px;
+  width: calc(100% - 40px);
+  max-width: 1440px;
+  margin: 12px auto 0;
+  border: 1px solid rgb(114 113 181 / 0.08);
+  border-radius: 22px;
+  background: rgb(255 255 255 / 0.78);
+  box-shadow: 0 8px 35px rgb(58 53 119 / 0.025);
+  transition:
+    width 450ms var(--shell-ease),
+    max-width 450ms var(--shell-ease),
+    background var(--shell-duration),
+    box-shadow var(--shell-duration);
+}
+@media (min-width: 1280px) {
+  .site-header .mobile-navigation {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms var(--shell-ease);
+  }
+  .site-header[data-scrolled="true"] {
+    width: 80%;
+    max-width: 1150px;
+  }
+  .site-header[data-scrolled="true"] .desktop-navigation {
+    display: none;
+  }
+  .site-header[data-scrolled="true"] .mobile-navigation {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+body {
+  background: #fff;
+}
+.dot-grid-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  --dot-shift-x: 0px;
+  --dot-shift-y: 0px;
+  background-image: radial-gradient(rgb(8 8 45 / 0.16) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  background-position: var(--dot-shift-x) var(--dot-shift-y);
+  transition: background-position 400ms var(--ease-standard, ease-out);
+  pointer-events: none;
+}
+#main-content,
+.site-header,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+.site-header::before {
+  display: none;
+}
+.header-inner {
+  padding-inline: 24px;
+  gap: 18px;
+  min-height: 76px;
+}
+.site-header[data-scrolled="true"] {
+  background: rgb(255 255 255 / 0.94);
+  box-shadow: 0 12px 40px rgb(45 40 109 / 0.12);
+}
+.site-header[data-scrolled="true"] .header-inner {
+  min-height: 76px;
+}
+.header-inner > .brand-logo {
+  width: clamp(155px, 15vw, 210px);
+}
+.site-header .brand-cta {
+  background: linear-gradient(110deg, #08bde9, #4655ff 48%, #b629ff);
+  color: #fff;
+  border-radius: 14px;
+  min-height: 48px;
+  padding-inline: 24px;
+}
+.site-header .nav-link {
+  color: #111437;
+  font-size: 12px;
+  padding-inline: 8px;
+}
+.site-header .nav-link::after {
+  left: calc(50% - 3px);
+  right: auto;
+  width: 6px;
+  height: 3px;
+  bottom: 3px;
+}
+.site-header .nav-link:hover {
+  translate: 0 -1px;
+}
+.site-header .menu-trigger {
+  border-radius: 50%;
+  background: transparent;
+}
+
+.home-page .campaign-hero {
+  position: relative;
+  padding: 42px 0 20px;
+  min-height: 0;
+  background:
+    radial-gradient(ellipse at 86% 24%, #f1eaff 0, transparent 37%),
+    radial-gradient(ellipse at 50% 85%, #f1faff 0, transparent 40%);
+}
+.home-page .campaign-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.campaign-hero .hero-glow {
+  opacity: 0.3;
+}
+.campaign-hero .home-container {
+  max-width: 1440px;
+}
+.campaign-hero #hero-title {
+  font-family: var(--font-body), sans-serif;
+  font-size: clamp(52px, 4.8vw, 55px);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.075em;
+  color: #070819;
+  margin: 0;
+  max-width: none;
+}
+.campaign-hero #hero-title .home-gradient-text {
+  white-space: nowrap;
+  background-image: linear-gradient(110deg, #087ef9, #405cff 46%, #d915ee);
+}
+.campaign-hero .hero-description {
+  max-width: 490px;
+  font-size: clamp(15px, 1.12vw, 17px);
+  line-height: 1.75;
+  margin: 23px 0 0;
+  color: #2e345c;
+}
+.campaign-hero .home-actions {
+  margin-top: 28px;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+.campaign-hero .home-button {
+  min-height: 56px;
+  padding: 15px 23px;
+  border-radius: 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.campaign-hero .home-button--secondary {
+  background: rgb(255 255 255 / 0.7);
+  border: 1px solid #dadef4;
+  color: #0c123c;
+}
+.campaign-note {
+  width: 197px;
+  min-height: 73px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px;
+  border: 1px solid #dddff6;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 0.94);
+  box-shadow: 0 12px 36px rgb(81 72 158 / 0.065);
+  transform: rotate(4deg);
+  color: #13173c;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.campaign-note > svg {
+  width: 15px;
+  margin-left: auto;
+  color: #7356b8;
+}
+.campaign-note:hover {
+  border-color: #aeb9f8;
+}
+.home-page .stats-section {
+  background: #fff;
+  padding: 24px 0 28px;
+}
+.home-page .stats-strip {
+  margin: 0;
+  border: 1px solid #e2dcfc;
+  border-radius: 23px;
+  padding: 33px 38px;
+  background: linear-gradient(115deg, #f2fcff, #fff 50%, #fcf3ff);
+  box-shadow: 0 24px 50px rgb(80 98 150 / 0.065);
+}
+.home-page .stat-item > svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 15px;
+  color: #8763ee;
+}
+.home-page .stat-item .network-value-pending {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.home-page .stats-section .content-status {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .site-header .mobile-navigation {
+    display: block;
+  }
+  .header-inner {
+    gap: 8px;
+    padding-inline: 18px;
+  }
+  .header-actions {
+    gap: 13px;
+  }
+}
+@media (max-width: 1100px) and (min-width: 768px) {
+  .campaign-hero #hero-title {
+    font-size: 55px;
+  }
+  .campaign-hero .home-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .campaign-hero .campaign-note {
+    width: 165px;
+    min-height: 60px;
+    padding: 8px;
+  }
+}
+@media (max-width: 374px) {
+  .site-header .header-inner > .brand-logo {
+    width: 120px;
+  }
+  .site-header .header-actions {
+    gap: 6px;
+  }
+  .site-header .header-inner {
+    gap: 6px;
+    padding-inline: 8px;
+  }
+  .site-header .menu-trigger {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .site-header {
+    width: calc(100% - 20px);
+    top: 7px;
+    margin-top: 7px;
+    border-radius: 16px;
+  }
+  .header-inner,
+  .site-header[data-scrolled="true"] .header-inner {
+    min-height: 66px;
+    padding-inline: 10px;
+  }
+  .site-header .brand-cta {
+    min-height: 44px;
+    padding-inline: 11px;
+    font-size: 11px;
+  }
+  .home-page .campaign-hero {
+    padding-top: 35px;
+  }
+  .campaign-hero #hero-title {
+    font-size: clamp(52px, 13vw, 55px);
+  }
+  .campaign-hero .hero-description {
+    font-size: 14px;
+    max-width: 480px;
+    margin-top: 19px;
+  }
+  .campaign-hero .home-actions {
+    margin-top: 23px;
+    gap: 9px;
+  }
+  .campaign-hero .home-button {
+    min-height: 50px;
+    padding: 12px;
+    font-size: 10px;
+    gap: 9px;
+  }
+  .campaign-note {
+    width: 140px;
+    min-height: 52px;
+    padding: 8px;
+    gap: 6px;
+    font-size: 8px;
+    border-radius: 12px;
+  }
+  .home-page .stats-strip {
+    padding: 23px;
+  }
+}

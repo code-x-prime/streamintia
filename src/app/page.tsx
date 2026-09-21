@@ -1,103 +1,130 @@
-import Image from "next/image";
-
-export default function Home() {
+import { HomeMotion } from "@/components/home/HomeMotion";
+import "@/styles/home.css";
+import "@/styles/home-sections.css";
+import { HeroSection } from "@/components/home/HeroSection";
+import { TrustStrip } from "@/components/home/TrustStrip";
+import { SectionIntro } from "@/components/home/SectionIntro";
+import { OpportunityCard } from "@/components/home/OpportunityCard";
+import { ServicesShowcase } from "@/components/home/ServicesShowcase";
+import { CardSwapSection } from "@/components/home/CardSwapSection";
+import { PlatformWobbleGrid } from "@/components/home/PlatformWobbleGrid";
+import { WhyChooseSection } from "@/components/home/WhyChooseSection";
+import { FinalCTA } from "@/components/home/FinalCTA";
+import { ButtonLink } from "@/components/ui/Button";
+import { HomeIcon } from "@/components/ui/HomeIcon";
+import { StaggerTestimonials } from "@/components/ui/StaggerTestimonials";
+import { opportunities } from "@/config/home";
+import { getPlatforms } from "@/lib/content";
+import { createMetadata } from "@/lib/metadata";
+const homeMetadata = createMetadata(
+  "Live Streaming Talent & Creator Opportunities",
+  "Explore live-streaming opportunities with Streamintia. Connect as a creator or agent and find guidance, talent support and a path to grow.",
+  "/",
+);
+export const metadata = {
+  ...homeMetadata,
+  title: {
+    absolute: "Streamintia | Live Streaming Talent & Creator Opportunities",
+  },
+};
+export default async function HomePage() {
+  const platforms = await getPlatforms();
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <HomeMotion>
+      <HeroSection />
+      <TrustStrip platforms={platforms} />
+      <CardSwapSection />
+      <section
+        id="opportunities"
+        className="home-section opportunities-section"
+      >
+        <div className="home-container">
+          <SectionIntro
+            eyebrow="TWO PATHS. ONE SHARED AMBITION."
+            title={<>Where do you want to start?</>}
+            description="Choose the path that fits what you want to build."
+          />
+          <div className="opportunities-grid" data-stagger>
+            {opportunities.map((opportunity) => (
+              <OpportunityCard key={opportunity.id} opportunity={opportunity} />
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+      <section id="services" className="home-section home-services">
+        <div className="home-container">
+          <SectionIntro
+            eyebrow="WHAT WE DO"
+            title={
+              <>
+                Built around talent.
+                <br />
+                Designed for growth.
+              </>
+            }
+            description="From recruitment and onboarding to creator and agent support, our services help people move through the live-streaming ecosystem."
+          >
+            <ButtonLink href="/services" variant="text">
+              Explore our services
+              <HomeIcon name="arrow" />
+            </ButtonLink>
+          </SectionIntro>
+          <ServicesShowcase />
+        </div>
+      </section>
+      <section
+        id="platforms"
+        className="home-section home-platforms home-platforms--white"
+      >
+        <div className="home-container">
+          <SectionIntro
+            eyebrow="FIND YOUR NEXT STAGE"
+            title={
+              <>
+                Explore the platforms
+                <br />
+                <span className="home-muted-heading">
+                  behind the opportunity.
+                </span>
+              </>
+            }
+            description="Discover the platform directory and explore pathways that could fit your journey. Current entries are previews while availability is confirmed."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <PlatformWobbleGrid platforms={platforms.slice(0, 4)} />
+          <div className="platform-section-bottom">
+            <p>
+              Directory preview. Partnerships and programme availability
+              await confirmation.
+            </p>
+            <ButtonLink href="/platforms" variant="text">
+              View All Platforms
+              <HomeIcon name="arrow" />
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+      <WhyChooseSection />
+      <section id="stories" className="home-section testimonials-section">
+        <div className="home-container">
+          <SectionIntro
+            eyebrow="REAL JOURNEYS"
+            title={
+              <>
+                Every journey
+                <br />
+                starts somewhere.
+              </>
+            }
+            description="A space for the people, experiences and lessons behind the progress."
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <StaggerTestimonials />
+        </div>
+      </section>
+      <FinalCTA
+        campaign
+        showContact={false}
+        description="Whether you're ready to stream, build a creator network or simply explore your options, take the next step with Streamintia."
+      />
+    </HomeMotion>
   );
 }

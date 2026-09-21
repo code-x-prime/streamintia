@@ -1,0 +1,220 @@
+/* Shared type roles. Component layouts and artwork retain their own sizing. */
+body {
+  --font-ui: var(--font-display);
+  --text-display: clamp(3.8rem, 6.6vw, 6.5rem);
+  --text-h1: clamp(2.6rem, 4.9vw, 4.7rem);
+  --text-h2: clamp(2.5rem, 4vw, 4.5rem);
+  --text-h3: clamp(1.4rem, 2vw, 2rem);
+  --text-body-lg: clamp(1.125rem, 1.4vw, 1.25rem);
+  --text-body: clamp(1rem, 1.15vw, 1.125rem);
+  --text-small: 0.875rem;
+  --text-label: 0.6875rem;
+  --text-ui: 0.875rem;
+  --type-h1: var(--text-h1);
+  --type-h2: var(--text-h2);
+  --type-h3: var(--text-h3);
+  --type-body: var(--text-body);
+  --type-body-lg: var(--text-body-lg);
+  --home-heading: var(--text-h2);
+  --home-copy: var(--text-body-lg);
+  font-family: var(--font-body), sans-serif;
+  line-height: 1.7;
+}
+body #main-content :is(h1, h2, h3, h4),
+body .menu-editorial h2,
+body .site-footer h2 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+body #main-content h1 {
+  font-size: var(--text-h1);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+body #main-content h2 {
+  line-height: 1.08;
+}
+body #main-content h3 {
+  font-size: var(--text-h3);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+body #main-content .benefit-rows h3 {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+body #main-content .why-bento-card h3 {
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+/* Keep linked card titles readable when the new face needs more room. */
+body #main-content .service-card h3 a {
+  gap: 0.625rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .inner-page .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  body .inner-page .service-card--featured {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+  body .inner-page .service-card:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+}
+body .home-page > .home-section {
+  --home-heading: var(--text-h2);
+}
+body #main-content #hero-title:not(.campaign-hero *) {
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+body #main-content #hero-title .home-gradient-text {
+  white-space: normal;
+}
+body #main-content :is(.hero-description, .home-lead) {
+  font-size: var(--text-body-lg);
+  line-height: 1.7;
+  letter-spacing: normal;
+}
+body
+  #main-content
+  :is(
+    .home-body,
+    article p:not(.home-eyebrow),
+    .opportunity-copy > p:not(.home-eyebrow),
+    .campaign-timeline p,
+    .benefit-rows p,
+    .trust-intro > p:last-child
+  ) {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+}
+body
+  :is(
+    button,
+    summary,
+    label,
+    .button,
+    .home-button,
+    .header-cta,
+    .brand-cta,
+    .nav-link,
+    .home-eyebrow,
+    .eyebrow
+  ) {
+  font-family: var(--font-ui), sans-serif;
+}
+body :is(.button, .home-button, .header-cta, .brand-cta),
+body .site-header :is(.header-cta, .brand-cta) {
+  font-size: var(--text-ui);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+body .site-header .nav-link {
+  font-size: var(--text-ui);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+body .premium-menu :is(.menu-row-label, .menu-pathways) {
+  font-family: var(--font-ui), sans-serif;
+  font-weight: 600;
+}
+body .premium-menu .eyebrow,
+body #main-content .home-eyebrow {
+  font-size: var(--text-label);
+  font-family: var(--font-ui), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+body #main-content :is(input, textarea, select) {
+  font-family: var(--font-body), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+body #main-content :is(input, textarea)::placeholder {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+}
+body #main-content label {
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+body #main-content :is(.field-error, .field-hint) {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--text-small);
+  line-height: 1.6;
+}
+body #main-content .field-error {
+  font-weight: 500;
+}
+body #main-content :is(.faq-list, .outline-section) summary {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+body #main-content .faq-list p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+body #main-content .legal-document {
+  max-width: 62.5rem;
+}
+body #main-content .legal-document h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.2;
+}
+body #main-content .legal-document :is(p, li) {
+  font-size: var(--text-body);
+  line-height: 1.85;
+  font-weight: 400;
+}
+body #main-content .inner-hero--compact h1 {
+  font-size: clamp(2.25rem, 4vw, 4rem);
+}
+body .site-footer .footer-column h2 {
+  font-size: var(--text-small);
+}
+body .site-footer .footer-column a {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--text-small);
+  font-weight: 500;
+}
+body .site-footer :is(.footer-bottom, .footer-copyright) {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 0.8125rem;
+}
+body .campaign-hero .campaign-note {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  body {
+    --text-display: clamp(3rem, 12vw, 5rem);
+    --text-h1: clamp(2.25rem, 8.5vw, 3.5rem);
+    --text-h2: clamp(2rem, 8vw, 3rem);
+    --text-body: 1rem;
+    --text-body-lg: 1.0625rem;
+  }
+  body .campaign-hero .home-actions {
+    flex-wrap: wrap;
+  }
+  body #main-content .campaign-hero .home-eyebrow {
+    font-size: var(--text-label);
+    letter-spacing: 0.12em;
+  }
+}
