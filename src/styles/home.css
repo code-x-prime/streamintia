@@ -783,12 +783,11 @@ body:has(.home-page) .site-footer .footer-cta {
     gap: 1rem;
   }
   .service-feature-art {
-    position: absolute;
-    right: -2rem;
-    top: 3rem;
-    width: 55%;
-    height: 70%;
-    opacity: 0.6;
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    opacity: 1;
   }
   .process-steps {
     grid-template-columns: 1fr;
