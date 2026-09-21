@@ -71,7 +71,7 @@ export default function AgentPage() {
           </div>
         </div>
       </section>
-      <section className="home-section border-y border-[rgb(28_35_81/0.07)] bg-[radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff]">
+      <section className="home-section border-y border-[rgb(28_35_81/0.07)] [background:radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff]">
         <div className="home-container">
           <SectionIntro
             eyebrow="LEAD WITH PEOPLE"

@@ -56,7 +56,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
       <dialog
         ref={dialog}
         id="mobile-navigation"
-        className="fixed inset-2 m-auto h-[calc(100dvh-16px)] max-h-none w-[calc(100%-16px)] max-w-345 overflow-y-auto rounded-[26px] border border-white/13 bg-[radial-gradient(ellipse_at_100%_0,#37205c55,transparent_55%),#0d0e2c] p-0 text-[#f7f7ff] shadow-[0_35px_100px_#05061b66] [overscroll-behavior:contain]
+        className="fixed inset-2 m-auto h-[calc(100dvh-16px)] max-h-none w-[calc(100%-16px)] max-w-345 overflow-y-auto rounded-[26px] border border-white/13 [background:radial-gradient(ellipse_at_100%_0,#37205c55,transparent_55%),#0d0e2c] p-0 text-[#f7f7ff] shadow-[0_35px_100px_#05061b66] [overscroll-behavior:contain]
           open:animate-[menu-enter_250ms_cubic-bezier(0.2,0.8,0.2,1)]
           backdrop:bg-[#070819a6] backdrop:[backdrop-filter:blur(10px)]
           max-[767px]:inset-[7px] max-[767px]:h-[calc(100dvh-14px)] max-[767px]:w-[calc(100%-14px)] max-[767px]:rounded-[20px]

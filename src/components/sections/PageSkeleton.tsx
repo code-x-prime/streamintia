@@ -90,7 +90,7 @@ export function PageSkeleton({
       {content.sections.length ? (
         <section
           id={children ? "page-sections" : "page-content"}
-          className="home-section overflow-hidden bg-[radial-gradient(circle_at_8%_15%,rgb(18_217_244/0.08),transparent_24%),radial-gradient(circle_at_92%_85%,rgb(139_77_255/0.08),transparent_25%),#f6f8ff]"
+          className="home-section overflow-hidden [background:radial-gradient(circle_at_8%_15%,rgb(18_217_244/0.08),transparent_24%),radial-gradient(circle_at_92%_85%,rgb(139_77_255/0.08),transparent_25%),#f6f8ff]"
         >
           <div className="home-container">
             <SectionIntro

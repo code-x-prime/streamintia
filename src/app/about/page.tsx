@@ -81,8 +81,8 @@ export default function AboutPage() {
               key={value.label}
               className={`relative overflow-hidden rounded-(--home-radius) border border-[rgb(43_57_122/0.11)] p-12 text-[#0a1038] shadow-[0_18px_55px_rgb(39_49_105/0.08)] transition-[transform,box-shadow] duration-300 ease-(--ease-standard) hover:-translate-y-[5px] hover:shadow-[0_27px_68px_rgb(39_49_105/0.13)] max-[1100px]:p-8 max-[767px]:p-8 ${
                 value.tone === "purple"
-                  ? "bg-[radial-gradient(circle_at_100%_0,rgb(139_77_255/0.13),transparent_42%),#ffffff] [&_.home-eyebrow]:text-[#bb9aff]"
-                  : "bg-[radial-gradient(circle_at_0_0,rgb(18_217_244/0.12),transparent_42%),#ffffff]"
+                  ? "[background:radial-gradient(circle_at_100%_0,rgb(139_77_255/0.13),transparent_42%),#ffffff] [&_.home-eyebrow]:text-[#bb9aff]"
+                  : "[background:radial-gradient(circle_at_0_0,rgb(18_217_244/0.12),transparent_42%),#ffffff]"
               }`}
               data-reveal
             >
@@ -105,7 +105,7 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-      <section className="home-section border-[rgb(28_35_81/0.07)] bg-[radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff] border-y">
+      <section className="home-section border-[rgb(28_35_81/0.07)] [background:radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff] border-y">
         <div className="home-container">
           <SectionIntro
             eyebrow="WHAT WE BRING TO THE TABLE"

@@ -66,7 +66,7 @@ export default function StreamerPage() {
           <FeatureGrid features={streamerFeatures} />
         </div>
       </section>
-      <section className="home-section bg-[radial-gradient(ellipse_at_10%_30%,rgb(18_217_244/0.04),transparent_70%),#0c1032]">
+      <section className="home-section [background:radial-gradient(ellipse_at_10%_30%,rgb(18_217_244/0.04),transparent_70%),#0c1032]">
         <div className="home-container grid grid-cols-2 items-start gap-20 max-[1100px]:gap-10 max-[767px]:grid-cols-1 max-[767px]:gap-10">
           <div
             className="py-8 max-[767px]:p-0 [&>svg]:my-12 [&>svg]:block [&>svg]:h-[50px] [&>svg]:w-[50px] [&>svg]:text-primary max-[767px]:[&>svg]:my-8 [&_h2>span]:text-(--text-secondary)"

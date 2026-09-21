@@ -109,7 +109,7 @@ export default function WhyStreamintiaPage() {
           </div>
         </div>
       </section>
-      <section className="home-section overflow-hidden bg-[radial-gradient(circle_at_80%_20%,rgb(35_211_235/0.13),transparent_30%),radial-gradient(circle_at_10%_90%,rgb(135_83_255/0.18),transparent_35%),#11142d] px-(--home-gutter) py-[clamp(4.5rem,9vw,8rem)] text-white max-[767px]:py-18 [&_.home-eyebrow]:text-[#6feafb] [&_h2]:text-white [&_p:last-child]:text-[#b8c0da]">
+      <section className="home-section overflow-hidden [background:radial-gradient(circle_at_80%_20%,rgb(35_211_235/0.13),transparent_30%),radial-gradient(circle_at_10%_90%,rgb(135_83_255/0.18),transparent_35%),#11142d] px-(--home-gutter) py-[clamp(4.5rem,9vw,8rem)] text-white max-[767px]:py-18 [&_.home-eyebrow]:text-[#6feafb] [&_h2]:text-white [&_p:last-child]:text-[#b8c0da]">
         <div className="home-container grid grid-cols-[1fr_0.8fr] items-center gap-[clamp(2rem,7vw,7rem)] max-[767px]:grid-cols-1">
           <div>
             <p className="home-eyebrow">THE AGENT EXPERIENCE</p>

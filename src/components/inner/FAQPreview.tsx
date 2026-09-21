@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { HomeIcon } from "@/components/ui/HomeIcon";
 export function FAQPreview({ items }: { items: readonly FAQ[] }) {
   return (
-    <section className="home-section border-[rgb(28_35_81/0.07)] bg-[radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff]">
+    <section className="home-section border-[rgb(28_35_81/0.07)] [background:radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff]">
       <div className="home-container grid grid-cols-[0.85fr_1.15fr] gap-20 max-[1100px]:gap-10 max-[767px]:grid-cols-1 max-[767px]:gap-10">
         <div data-reveal>
           <p className="home-eyebrow">A LITTLE CLARITY</p>

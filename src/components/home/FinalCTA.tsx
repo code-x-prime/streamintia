@@ -28,7 +28,7 @@ export function FinalCTA({
       id="your-next-step"
       className={
         campaign
-          ? "home-section final-cta campaign-closing relative isolate text-left overflow-hidden bg-[radial-gradient(at_80%_50%,#54348d55,transparent_55%),radial-gradient(at_10%_100%,#04b1d01f,transparent_50%),#0b0c2b] py-[110px]"
+          ? "home-section final-cta campaign-closing relative isolate text-left overflow-hidden [background:radial-gradient(at_80%_50%,#54348d55,transparent_55%),radial-gradient(at_10%_100%,#04b1d01f,transparent_50%),#0b0c2b] py-[110px]"
           : "home-section final-cta relative isolate text-center overflow-hidden bg-[radial-gradient(circle_at_20%_80%,rgb(18_217_244/0.13),transparent_25%),radial-gradient(circle_at_80%_20%,rgb(139_77_255/0.12),transparent_28%),linear-gradient(135deg,#f8fdff,#f7f3ff)] py-[calc(var(--home-section-space)*1.2)]"
       }
     >

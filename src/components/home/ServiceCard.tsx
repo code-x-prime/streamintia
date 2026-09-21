@@ -49,7 +49,7 @@ export function ServiceCard({
     : "text-[0.625rem] in-[.home-page]:text-[10px]";
 
   const artWrapClass = isFeatured
-    ? "relative aspect-[1.25] max-h-60 w-full overflow-hidden rounded-[0.875rem] max-[767px]:absolute max-[767px]:top-12 max-[767px]:right-[-2rem] max-[767px]:h-[70%] max-[767px]:w-[55%] max-[767px]:opacity-60 in-[.home-page]:my-auto in-[.home-page]:aspect-auto in-[.home-page]:max-h-none in-[.home-page]:min-h-[240px] in-[.home-page]:rounded-none max-[767px]:in-[.home-page]:min-h-[220px]"
+    ? "relative order-first aspect-[1.25] max-h-60 w-full overflow-hidden rounded-[0.875rem] min-[768px]:absolute min-[768px]:top-12 min-[768px]:right-[-2rem] min-[768px]:order-none min-[768px]:h-[70%] min-[768px]:w-[55%] min-[768px]:opacity-60 in-[.home-page]:static in-[.home-page]:order-none in-[.home-page]:my-auto in-[.home-page]:aspect-auto in-[.home-page]:max-h-none in-[.home-page]:min-h-[240px] in-[.home-page]:rounded-none in-[.home-page]:opacity-100 max-[767px]:in-[.home-page]:min-h-[220px]"
     : "";
 
   const h3Class = isFeatured

@@ -118,12 +118,12 @@ export function HeroSection() {
           <p className="text-[#7581ad] text-[10px] font-[650] tracking-[0.18em] max-[767px]:text-[8px]">
             EXPLORE THE LIVE-STREAMING ECOSYSTEM
           </p>
-          <div className="flex justify-around gap-[25px] mt-6 max-[767px]:grid max-[767px]:grid-cols-2 max-[767px]:gap-x-3 max-[767px]:gap-y-[18px]">
+          <div className="flex justify-around gap-[25px] mt-6 max-[1023px]:grid max-[1023px]:grid-cols-2 max-[1023px]:gap-x-3 max-[1023px]:gap-y-[18px]">
             {platforms.map((platform) => (
               <Link
                 key={platform.slug}
                 href="/platforms"
-                className="flex items-center gap-[9px] text-[#737da5] text-[23px] font-bold tracking-[-0.05em] max-[767px]:text-[18px] max-[767px]:justify-center"
+                className="flex items-center gap-[9px] text-[#737da5] text-[23px] font-bold tracking-[-0.05em] max-[1023px]:text-[18px] max-[1023px]:justify-center"
               >
                 {platform.logo ? (
                   <Image
@@ -131,12 +131,13 @@ export function HeroSection() {
                     alt=""
                     width={20}
                     height={20}
+                    className="shrink-0"
                   />
                 ) : (
-                  <HomeIcon name="broadcast" />
+                  <HomeIcon name="broadcast" className="shrink-0" />
                 )}
-                {platform.name}
-                <small className="text-[8px] font-medium tracking-normal py-[3px] px-[5px] bg-[#f1f2fa] rounded">
+                <span className="whitespace-nowrap">{platform.name}</span>
+                <small className="shrink-0 text-[8px] font-medium tracking-normal py-[3px] px-[5px] bg-[#f1f2fa] rounded">
                   Preview
                 </small>
               </Link>
