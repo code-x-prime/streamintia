@@ -22,7 +22,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
           </p>
         </div>
         <div
-          className="grid grid-cols-5 gap-0 py-[35px] max-[1023px]:grid-cols-2 max-[1023px]:gap-x-10 max-[1023px]:py-5 max-[639px]:grid-cols-1"
+          className="grid grid-cols-5 gap-0 py-[35px] max-[1023px]:grid-cols-2 max-[1023px]:gap-x-10 max-[1023px]:py-5 max-[639px]:gap-x-3 max-[639px]:gap-y-3"
           data-stagger
         >
           {platforms.map((platform) => (
@@ -30,20 +30,20 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
               key={platform.slug}
               href={`/platforms/${platform.slug}`}
               data-reveal
-              className="flex min-w-0 items-center gap-3 text-[#657093] px-4 py-3 border-r border-[#e6e8f2] transition-colors duration-200 last:border-0 hover:text-[#6a4be4] [&>svg:first-child]:w-7 [&>svg:first-child]:h-7 [&>svg:last-child]:w-4 [&>svg:last-child]:ml-auto max-[1023px]:border-r-0 max-[1023px]:border-b max-[1023px]:border-[#e6e8f2] max-[1023px]:px-0 max-[1023px]:py-4"
+              className="flex min-w-0 items-center gap-3 text-[#657093] px-4 py-3 max-[639px]:flex-col max-[639px]:items-start max-[639px]:gap-3 max-[639px]:rounded-2xl max-[639px]:border max-[639px]:border-[#e6e8f2] max-[639px]:p-4 max-[639px]:last:col-span-2 border-r border-[#e6e8f2] transition-colors duration-200 last:border-0 max-[639px]:last:border hover:text-[#6a4be4] [&>svg:first-child]:w-7 [&>svg:first-child]:h-7 [&>svg:last-child]:w-4 [&>svg:last-child]:ml-auto max-[1023px]:border-r-0 max-[1023px]:border-b max-[1023px]:border-[#e6e8f2] max-[1023px]:px-0 max-[1023px]:py-4 max-[639px]:border-b"
             >
               {platform.logo ? (
                 <Image
                   src={platform.logo.src}
                   alt=""
-                  width={48}
-                  height={48}
-                  className="shrink-0 rounded-xl max-[1023px]:h-9 max-[1023px]:w-9"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 shrink-0 rounded-2xl max-[1023px]:h-14 max-[1023px]:w-14 max-[639px]:h-16 max-[639px]:w-16"
                 />
               ) : (
                 <HomeIcon name="broadcast" className="shrink-0" />
               )}
-              <span className="min-w-0 flex-1 text-[19px] font-[650] tracking-[-0.04em] max-[1023px]:text-[16px]">
+              <span className="min-w-0 flex-1 text-[20px] font-[650] tracking-[-0.04em] max-[1023px]:text-[17px] max-[639px]:w-full max-[639px]:flex-none">
                 {platform.name}
                 <small className="block font-normal tracking-normal text-[10px] mt-1 text-[#838ca5]">
                   {platform.status === "active"
@@ -51,7 +51,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
                     : "Directory preview"}
                 </small>
               </span>
-              <HomeIcon name="arrow" className="shrink-0" />
+              <HomeIcon name="arrow" className="shrink-0 max-[639px]:hidden" />
             </Link>
           ))}
         </div>

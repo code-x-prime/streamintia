@@ -1,3 +1,4 @@
+import { ShowcaseBanner } from "@/components/inner/ShowcaseBanner";
 import { InnerPageShell } from "@/components/inner/InnerPageShell";
 import { InnerPageHero } from "@/components/inner/InnerPageHero";
 import { SectionIntro } from "@/components/home/SectionIntro";
@@ -97,6 +98,19 @@ export default function StreamerPage() {
           </div>
         </div>
       </section>
+      <ShowcaseBanner
+        eyebrow="YOUR STAGE, YOUR WAY"
+        title={
+          <>
+            Go live, grow
+            <br />
+            and be seen.
+          </>
+        }
+        description="From your first stream to a loyal community, you get guidance, a clear path and people on your side."
+        image={assets.visuals.showcaseStreamer}
+        cta={{ label: "Apply as a Streamer", href: "/apply?role=streamer" }}
+      />
       <section id="streamer-process" className="home-section">
         <div className="home-container">
           <SectionIntro

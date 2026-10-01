@@ -75,6 +75,18 @@ export const assets = {
     },
   },
   visuals: {
+    showcaseStreamer: {
+      src: "/images/generated/showcase-streamer.webp",
+      alt: "A smiling creator in headphones surrounded by live chat, social app icons and growth cards",
+      width: 1400,
+      height: 933,
+    },
+    showcaseAgent: {
+      src: "/images/generated/showcase-agent.webp",
+      alt: "A bag of rupee notes and gold coins illustrating opportunity",
+      width: 1400,
+      height: 933,
+    },
     homeStreamer: {
       src: "/images/home/opportunity-streamer.webp",
       alt: "A young Indian creator laughing while recording a live video at home with a phone on a tripod and ring light",

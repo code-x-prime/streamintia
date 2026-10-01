@@ -107,6 +107,8 @@ body:has(.home-page) .site-footer .footer-cta {
   grid-area: 1 / 1;
   display: inline-block;
   white-space: nowrap;
+  padding-bottom: 0.18em;
+  margin-bottom: -0.18em;
   background: var(--home-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;

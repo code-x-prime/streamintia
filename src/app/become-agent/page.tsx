@@ -1,3 +1,4 @@
+import { ShowcaseBanner } from "@/components/inner/ShowcaseBanner";
 import { InnerPageShell } from "@/components/inner/InnerPageShell";
 import { InnerPageHero } from "@/components/inner/InnerPageHero";
 import { SectionIntro } from "@/components/home/SectionIntro";
@@ -92,6 +93,20 @@ export default function AgentPage() {
           <FeatureGrid features={agentFeatures} />
         </div>
       </section>
+      <ShowcaseBanner
+        flip
+        eyebrow="OPPORTUNITY WORTH BUILDING"
+        title={
+          <>
+            Build a network
+            <br />
+            with purpose.
+          </>
+        }
+        description="Support creators, grow your team and build something lasting. Earnings vary and are never guaranteed, and we are upfront about what to expect."
+        image={assets.visuals.showcaseAgent}
+        cta={{ label: "Apply as an Agent", href: "/apply?role=agent" }}
+      />
       <section id="agent-process" className="home-section">
         <div className="home-container">
           <SectionIntro

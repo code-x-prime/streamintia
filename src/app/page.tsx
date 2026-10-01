@@ -8,6 +8,7 @@ import { OpportunityCard } from "@/components/home/OpportunityCard";
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 import { CardSwapSection } from "@/components/home/CardSwapSection";
 import { PlatformWobbleGrid } from "@/components/home/PlatformWobbleGrid";
+import { ShowcasePair } from "@/components/home/ShowcasePair";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { ButtonLink } from "@/components/ui/Button";
@@ -72,6 +73,7 @@ export default async function HomePage() {
           <ServicesShowcase />
         </div>
       </section>
+      <ShowcasePair />
       <section
         id="platforms"
         className="home-section home-platforms home-platforms--white"
