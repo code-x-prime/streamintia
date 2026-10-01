@@ -29,8 +29,8 @@ export function HeroVisual() {
         data-hero-visual
       >
         <Image
-          src="/images/generated/hero-reference-creator.webp"
-          alt="Smiling live-streaming creator wearing cyan and purple headphones in a softly lit studio"
+          src="/images/home/hero-creator.webp"
+          alt="Smiling Indian live-streaming creator wearing cyan and purple headphones in a softly lit studio"
           fill
           priority
           sizes="(max-width: 767px) 85vw, (max-width: 1100px) 60vw, 42vw"

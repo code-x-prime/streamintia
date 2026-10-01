@@ -27,7 +27,6 @@ export const navigation: readonly NavigationItem[] = [
     ],
   },
   { label: "Platforms", href: "/platforms" },
-  { label: "How It Works", href: "/how-it-works" },
   { label: "Contact", href: "/contact" },
 ];
 export const primaryCTA = site.cta.apply;
@@ -47,7 +46,7 @@ export const footerGroups = [
     links: [
       site.cta.streamer,
       site.cta.agent,
-      { label: "How It Works", href: "/how-it-works" },
+      { label: "How It Works", href: "/platforms#journeys" },
       site.cta.apply,
     ],
   },

@@ -2,6 +2,7 @@ import { InnerPageShell } from "@/components/inner/InnerPageShell";
 import { InnerPageHero } from "@/components/inner/InnerPageHero";
 import { PlatformExplorer } from "@/components/resources/PlatformExplorer";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { HowItWorksSections } from "@/components/inner/HowItWorksSections";
 import { ButtonLink } from "@/components/ui/Button";
 import { HomeIcon } from "@/components/ui/HomeIcon";
 import { assets } from "@/config/assets";
@@ -10,7 +11,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata(
   "Live-Streaming Platforms",
-  "Explore Streamintia's preview platform directory and application pathways.",
+  "Explore Streamintia's preview platform directory, see how the journey works and find your application pathway.",
   "/platforms",
 );
 export default async function PlatformsPage() {
@@ -27,10 +28,20 @@ export default async function PlatformsPage() {
           </>
         }
         description="Explore the current directory, compare programme pathways and check availability before you apply."
-        image={assets.visuals.platformsDirectory}
+        image={assets.heroes.platforms}
+        chips={[
+          {
+            title: "Compare platforms",
+            caption: "Explore the preview directory",
+          },
+          { title: "Apply when ready", caption: "Programmes opening soon" },
+        ]}
       >
         <ButtonLink href="#platform-directory" variant="primary">
           Browse platforms <HomeIcon name="arrow" />
+        </ButtonLink>
+        <ButtonLink href="#journeys" variant="secondary">
+          How it works <HomeIcon name="arrow" />
         </ButtonLink>
       </InnerPageHero>
       <section className="bg-[#f5f2ff] px-(--home-gutter) py-4">
@@ -52,6 +63,7 @@ export default async function PlatformsPage() {
           <PlatformExplorer items={platforms} />
         </div>
       </section>
+      <HowItWorksSections />
       <FinalCTA
         title={
           <>

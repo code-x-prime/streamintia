@@ -12,7 +12,7 @@ export function JourneyTabs({
 }) {
   const [role, setRole] = useState<"streamer" | "agent">("streamer");
   return (
-    <div className="grid gap-12 [&_.process-steps]:grid-cols-3 max-[900px]:[&_.process-steps]:grid-cols-2 max-[767px]:[&_.process-steps]:grid-cols-1 [&_.process-steps]:gap-y-[2.8rem]">
+    <div className="grid gap-12 [&_.process-steps]:grid-cols-3! max-[900px]:[&_.process-steps]:grid-cols-2! max-[767px]:[&_.process-steps]:grid-cols-1! [&_.process-steps]:gap-y-[2.8rem]">
       <div
         className="flex gap-3 max-[767px]:grid max-[767px]:grid-cols-2"
         role="tablist"

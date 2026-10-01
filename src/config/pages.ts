@@ -80,11 +80,6 @@ export const pages = {
       "Agent CTA",
     ],
   },
-  "how-it-works": {
-    title: "How It Works",
-    description: "The journey from application to growth",
-    sections: ["Host journey", "Agent journey"],
-  },
   "why-streamintia": {
     title: "Why Streamintia",
     description: "Our approach to creator and agent support",

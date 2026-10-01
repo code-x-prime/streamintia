@@ -11,7 +11,6 @@ import { SectionPlaceholder } from "./SectionPlaceholder";
 const pageEyebrows: Partial<Record<PageKey, string>> = {
   services: "SUPPORT FOR EVERY NEXT STEP",
   platforms: "DISCOVER YOUR NEXT STAGE",
-  "how-it-works": "A CLEARER WAY FORWARD",
   "why-streamintia": "PEOPLE. PURPOSE. PROGRESS.",
   "success-stories": "REAL PEOPLE. REAL JOURNEYS.",
   "privacy-policy": "YOUR INFORMATION MATTERS",

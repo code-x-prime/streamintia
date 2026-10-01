@@ -8,7 +8,6 @@ const routes = [
   "/become-streamer",
   "/become-agent",
   "/platforms",
-  "/how-it-works",
   "/why-streamintia",
   "/success-stories",
   "/guides",
@@ -18,7 +17,7 @@ const routes = [
   "/apply",
   "/privacy-policy",
   "/terms-and-conditions",
-  ...["poppo-live", "taka-live", "chamet", "niki-live"].map(
+  ...["poppo-live", "taka-live", "chamet", "niki-live", "crush-live"].map(
     (slug) => `/platforms/${slug}`,
   ),
 ];

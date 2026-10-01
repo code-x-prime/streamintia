@@ -1,7 +1,49 @@
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { SectionGlow } from "@/components/home/SectionGlow";
-import { AssetImage } from "@/components/ui/AssetImage";
 import type { ImageAsset } from "@/config/assets";
+import { site } from "@/config/site";
+
+export interface HeroChip {
+  title: string;
+  caption: string;
+}
+
+function MailIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4.5 w-4.5"
+      aria-hidden="true"
+    >
+      <rect x="3" y="5" width="18" height="14" rx="3" />
+      <path d="m4 7.5 8 5.5 8-5.5" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4.5 w-4.5"
+      aria-hidden="true"
+    >
+      <path d="M4 20l1.3-4.1A8 8 0 1 1 8.3 18.8L4 20Z" />
+      <path d="M9.2 8.9c.3 2.6 2.5 4.8 5.1 5.3l1-1.2-1.9-.9-.8.6a4 4 0 0 1-1.7-1.7l.6-.8-.9-1.9-1.4.6Z" />
+    </svg>
+  );
+}
+
 export function InnerPageHero({
   eyebrow,
   title,
@@ -10,8 +52,10 @@ export function InnerPageHero({
   children,
   visual,
   image,
+  chips,
   compact = false,
   glow = true,
+  showContact,
 }: {
   eyebrow: string;
   title: React.ReactNode;
@@ -20,72 +64,182 @@ export function InnerPageHero({
   children?: React.ReactNode;
   visual?: React.ReactNode;
   image?: ImageAsset;
+  chips?: readonly HeroChip[];
   compact?: boolean;
   glow?: boolean;
+  showContact?: boolean;
 }) {
+  const hasMedia = Boolean(visual || image);
+  const contact = showContact ?? (hasMedia && !compact);
+  const { email, whatsapp } = site.contact;
+
   return (
-    <section
-      className={`relative isolate overflow-hidden border-b border-[rgb(28_35_81_/_0.08)] bg-[radial-gradient(circle_at_82%_28%,rgb(139_77_255/0.11),transparent_27%),radial-gradient(circle_at_12%_82%,rgb(18_217_244/0.09),transparent_24%),linear-gradient(145deg,#ffffff,#f5f7ff)] after:absolute after:inset-0 after:-z-10 after:content-[''] after:opacity-35 after:[background-image:linear-gradient(rgb(34_47_98/0.045)_1px,transparent_1px),linear-gradient(90deg,rgb(34_47_98/0.045)_1px,transparent_1px)] after:[background-size:64px_64px] after:[mask-image:linear-gradient(to_right,transparent,black_45%,transparent)] [&>.home-container>nav]:pt-8 max-[767px]:[&>.home-container>nav]:pt-6 [&>.home-container>nav]:text-[#5d6683] [&_h1]:text-[#0a1038]`}
-    >
-      {glow ? <SectionGlow /> : null}
+    <section className="relative isolate overflow-hidden border-b border-[rgb(28_35_81/0.08)] bg-[linear-gradient(180deg,#ffffff,#f6f7ff)] [&_nav]:text-[#5d6683]">
+      {glow ? (
+        <>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-32 right-[-12%] -z-10 h-[30rem] w-[30rem] rounded-full bg-[#8b4dff]/15 blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[-8rem] left-[-10%] -z-10 h-[26rem] w-[26rem] rounded-full bg-[#12d9f4]/15 blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 bg-[image:radial-gradient(rgb(34_47_98/0.09)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
+          />
+        </>
+      ) : null}
       <div className="home-container">
-        <Breadcrumbs items={[{ label: breadcrumb }]} />
+        <div className="pt-6 max-[767px]:pt-5">
+          <Breadcrumbs items={[{ label: breadcrumb }]} />
+        </div>
         <div
-          className={`grid min-h-[530px] items-center gap-12 py-14 pb-16 max-[1100px]:gap-8 max-[767px]:min-h-0 max-[767px]:grid-cols-1 max-[767px]:gap-4 max-[767px]:py-10 ${
-            !visual && !image
-              ? "max-w-[55rem] grid-cols-1"
-              : "grid-cols-[1.2fr_1fr] max-[1100px]:grid-cols-[1.3fr_1fr]"
+          className={`grid items-center ${
+            hasMedia
+              ? "gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
+              : "max-w-[55rem] gap-6"
           } ${
             compact
-              ? "min-h-0 py-10 pb-12 max-[767px]:pb-10"
-              : ""
+              ? "py-8 pb-12 max-[767px]:py-6 max-[767px]:pb-10"
+              : "py-10 pb-16 lg:py-14 lg:pb-20 max-[767px]:pb-12"
           }`}
         >
-          <div>
+          <div className="min-w-0">
             <p
-              className="text-[0.6875rem]! text-(--inner-accent) uppercase"
               data-inner-hero
+              className="inline-flex items-center gap-2 rounded-full border border-[rgb(28_35_81/0.1)] bg-white/80 py-1.5 pr-3.5 pl-2.5 text-[0.6875rem] font-semibold tracking-[0.14em] text-[#5b4bd4] uppercase shadow-[0_6px_20px_rgb(35_44_98/0.06)] backdrop-blur"
             >
+              <span className="h-1.5 w-1.5 rounded-full bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] shadow-[0_0_0_4px_rgb(139_77_255/0.12)]" />
               {eyebrow}
             </p>
             <h1
               data-inner-hero
-              className={`font-medium tracking-[-0.055em] text-[#0a1038] ${
+              className={`mt-5 font-semibold! tracking-[-0.045em]! text-[#0a1038] ${
                 compact
-                  ? "text-[clamp(2.6rem,4.4vw,4rem)] max-[767px]:text-[2.5rem]"
-                  : "text-[clamp(2.6rem,4.9vw,4.5rem)] leading-[1.06] max-[767px]:text-[clamp(2.5rem,8vw,3.5rem)]"
-              } leading-[1.06]`}
+                  ? "text-[clamp(2.25rem,4.2vw,3.5rem)]! leading-[1.06]!"
+                  : "text-[clamp(2.5rem,5.2vw,4.5rem)]! leading-[1.04]!"
+              }`}
             >
               {title}
             </h1>
             <p
-              className="home-lead mb-7 max-w-[35rem] text-[1rem] text-[#5d6683]"
               data-inner-hero
+              className="mt-5 max-w-[34rem] text-[1.0625rem] leading-[1.75] text-[#5d6683] max-[767px]:text-base"
             >
               {description}
             </p>
             {children ? (
-              <div className="home-actions mt-6" data-inner-hero>
+              <div
+                data-inner-hero
+                className="home-actions mt-7 flex flex-wrap items-center gap-3"
+              >
                 {children}
               </div>
             ) : null}
+            {contact ? (
+              <div
+                data-inner-hero
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[rgb(28_35_81/0.1)] pt-6 text-sm"
+              >
+                <span className="text-[0.6875rem] font-semibold tracking-[0.14em] text-[#7a84a6] uppercase">
+                  Talk to us
+                </span>
+                {email ? (
+                  <a
+                    href={`mailto:${email}`}
+                    className="group inline-flex min-w-0 items-center gap-2.5 font-medium text-[#0a1038] hover:no-underline"
+                  >
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#12d9f4]/12 text-[#0aa6bd] transition-colors group-hover:bg-[#12d9f4]/22">
+                      <MailIcon />
+                    </span>
+                    <span className="min-w-0 [overflow-wrap:anywhere] group-hover:text-[#5b4bd4]">
+                      {email}
+                    </span>
+                  </a>
+                ) : null}
+                {whatsapp ? (
+                  <a
+                    href={whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2.5 font-medium text-[#0a1038] hover:no-underline"
+                  >
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#25d366]/14 text-[#1aa152] transition-colors group-hover:bg-[#25d366]/24">
+                      <WhatsAppIcon />
+                    </span>
+                    <span className="group-hover:text-[#5b4bd4]">WhatsApp</span>
+                  </a>
+                ) : null}
+              </div>
+            ) : null}
           </div>
-          {visual || image ? (
+          {hasMedia ? (
             <div
-              className={`relative isolate ${
-                compact
-                  ? "w-full max-w-[460px] max-[767px]:max-w-[250px]"
-                  : "max-[767px]:w-full max-[767px]:max-w-[360px] max-[767px]:justify-self-center"
-              } ${
-                compact ? "justify-self-center max-[767px]:justify-self-auto" : ""
-              } has-[>img]:before:absolute has-[>img]:before:-inset-[0.45rem] has-[>img]:before:-z-10 has-[>img]:before:rounded-[1.65rem] has-[>img]:before:bg-[linear-gradient(135deg,rgb(18_217_244/0.34),transparent_42%,rgb(139_77_255/0.3))] has-[>img]:before:blur-[0.1px] has-[>img]:before:content-[''] has-[>img]:after:pointer-events-none has-[>img]:after:absolute has-[>img]:after:inset-0 has-[>img]:after:rounded-[1.35rem] has-[>img]:after:bg-[linear-gradient(180deg,transparent_58%,rgb(8_8_45/0.12))] has-[>img]:after:shadow-[inset_0_0_0_1px_rgb(255_255_255/0.45)] has-[>img]:after:content-[''] [&>img]:block [&>img]:w-full [&>img]:rounded-[1.35rem] [&>img]:object-cover [&>img]:object-center [&>img]:shadow-[0_30px_80px_rgb(35_44_98/0.18)] [&>img]:transition-[transform,box-shadow] [&>img]:duration-500 [&>img]:ease-(--ease-standard) hover:[&>img]:-translate-y-1 hover:[&>img]:scale-[1.008] hover:[&>img]:shadow-[0_38px_95px_rgb(35_44_98/0.23)] ${
-                compact
-                  ? "[&>img]:h-[clamp(280px,28vw,380px)] max-[767px]:[&>img]:h-[clamp(280px,88vw,390px)]"
-                  : "[&>img]:h-[clamp(330px,34vw,450px)] max-[767px]:[&>img]:h-[clamp(280px,88vw,390px)]"
-              }`}
               data-inner-hero
+              className={`relative mx-auto w-full ${
+                compact ? "max-w-[30rem]" : "max-w-[32rem] lg:max-w-none"
+              }`}
             >
-              {image ? <AssetImage asset={image} priority /> : visual}
+              <div
+                aria-hidden="true"
+                className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#8b4dff]/25 bg-[#8b4dff]/6 max-[767px]:-right-2 max-[767px]:-bottom-2"
+              />
+              <div
+                className={`relative overflow-hidden rounded-[2rem] bg-[#e9ecfb] shadow-[0_40px_90px_rgb(35_44_98/0.22)] ring-1 ring-white/80 max-[767px]:rounded-3xl ${
+                  compact
+                    ? "aspect-[4/3.4]"
+                    : "aspect-[4/4.6] min-[640px]:aspect-[4/4.4] lg:aspect-[4/4.6]"
+                }`}
+              >
+                {image ? (
+                  <>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 90vw, 520px"
+                      className="scale-[1.04] object-cover object-center"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 bg-[image:linear-gradient(180deg,transparent_55%,rgb(8_8_45/0.38))]"
+                    />
+                  </>
+                ) : (
+                  visual
+                )}
+              </div>
+              {chips && chips[0] ? (
+                <div className="absolute top-6 left-3 flex max-w-[13.5rem] items-center gap-3 rounded-2xl border border-white/70 bg-white/85 px-3.5 py-2.5 shadow-[0_18px_45px_rgb(35_44_98/0.16)] backdrop-blur-md min-[640px]:-left-6 min-[640px]:max-w-[15rem] min-[640px]:px-4 min-[640px]:py-3">
+                  <span className="h-9 w-9 shrink-0 rounded-xl bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] shadow-[0_8px_18px_rgb(139_77_255/0.35)]" />
+                  <span className="min-w-0">
+                    <span className="block text-[0.8125rem] leading-tight font-semibold text-[#0a1038]">
+                      {chips[0].title}
+                    </span>
+                    <span className="mt-0.5 block text-[0.6875rem] leading-snug text-[#68728f]">
+                      {chips[0].caption}
+                    </span>
+                  </span>
+                </div>
+              ) : null}
+              {chips && chips[1] ? (
+                <div className="absolute right-3 bottom-6 flex max-w-[13.5rem] items-center gap-3 rounded-2xl border border-white/70 bg-white/85 px-3.5 py-2.5 shadow-[0_18px_45px_rgb(35_44_98/0.16)] backdrop-blur-md min-[640px]:-right-6 min-[640px]:max-w-[15rem] min-[640px]:px-4 min-[640px]:py-3">
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#0a1038]">
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#12d9f4] shadow-[0_0_0_4px_rgb(18_217_244/0.25)]" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[0.8125rem] leading-tight font-semibold text-[#0a1038]">
+                      {chips[1].title}
+                    </span>
+                    <span className="mt-0.5 block text-[0.6875rem] leading-snug text-[#68728f]">
+                      {chips[1].caption}
+                    </span>
+                  </span>
+                </div>
+              ) : null}
             </div>
           ) : null}
         </div>

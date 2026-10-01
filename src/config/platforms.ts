@@ -16,7 +16,7 @@ export const platforms: Platform[] = [
     name: "Poppo Live",
     logo: assets.platformLogos.poppoLive,
     description:
-      "Example entry. Partnership, availability and programme details await confirmation.",
+      "A live-streaming platform for creators and hosts. Programme details and availability are being confirmed.",
     hostUrl: "/apply?role=streamer&platform=poppo-live",
     agentUrl: "/apply?role=agent&platform=poppo-live",
     category: "Live streaming",
@@ -28,7 +28,7 @@ export const platforms: Platform[] = [
     name: "Taka Live",
     logo: assets.platformLogos.takaLive,
     description:
-      "Example entry. Partnership, availability and programme details await confirmation.",
+      "A live-streaming platform for creators and hosts. Programme details and availability are being confirmed.",
     hostUrl: "/apply?role=streamer&platform=taka-live",
     agentUrl: "/apply?role=agent&platform=taka-live",
     category: "Live streaming",
@@ -40,7 +40,7 @@ export const platforms: Platform[] = [
     name: "Chamet",
     logo: assets.platformLogos.chamet,
     description:
-      "Example entry. Partnership, availability and programme details await confirmation.",
+      "A live-streaming platform for creators and hosts. Programme details and availability are being confirmed.",
     hostUrl: "/apply?role=streamer&platform=chamet",
     agentUrl: "/apply?role=agent&platform=chamet",
     category: "Live streaming",
@@ -52,9 +52,21 @@ export const platforms: Platform[] = [
     name: "Niki Live",
     logo: assets.platformLogos.nikiLive,
     description:
-      "Example entry. Partnership, availability and programme details await confirmation.",
+      "A live-streaming platform for creators and hosts. Programme details and availability are being confirmed.",
     hostUrl: "/apply?role=streamer&platform=niki-live",
     agentUrl: "/apply?role=agent&platform=niki-live",
+    category: "Live streaming",
+    status: "pending",
+    features: [],
+  },
+  {
+    slug: "crush-live",
+    name: "Crush Live",
+    logo: assets.platformLogos.crushLive,
+    description:
+      "A live-streaming platform for creators and hosts. Programme details and availability are being confirmed.",
+    hostUrl: "/apply?role=streamer&platform=crush-live",
+    agentUrl: "/apply?role=agent&platform=crush-live",
     category: "Live streaming",
     status: "pending",
     features: [],

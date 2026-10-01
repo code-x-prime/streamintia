@@ -55,7 +55,11 @@ export default function ServicesPage() {
           </>
         }
         description="From discovering potential to building a stronger routine, Streamintia connects people, guidance and platform pathways."
-        image={assets.visuals.agentGuidance}
+        image={assets.heroes.services}
+        chips={[
+          { title: "Creator support", caption: "From onboarding to growth" },
+          { title: "Mentor guidance", caption: "Clear, practical next steps" },
+        ]}
       >
         <ButtonLink href="#services-list" variant="primary">
           Explore services <HomeIcon name="arrow" />

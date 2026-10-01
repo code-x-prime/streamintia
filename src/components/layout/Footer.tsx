@@ -15,17 +15,17 @@ export function Footer() {
       <div className="mx-auto max-w-352 px-[clamp(1rem,3vw,3rem)]">
         <FooterCTA />
         <div
-          className="grid grid-cols-[1.8fr_repeat(4,1fr)] gap-8 py-16
+          className="grid grid-cols-[1.7fr_repeat(3,1fr)_1.4fr] gap-8 py-16
             max-[1279px]:grid-cols-3 max-[1279px]:gap-y-10
             max-[767px]:grid-cols-2 max-[767px]:gap-x-4 max-[767px]:gap-y-8 max-[767px]:py-12"
         >
           <div className="max-[1279px]:col-span-full max-[767px]:col-span-full">
             <BrandLogo wordmark="dark" className="mb-4 h-15 w-64" />
-            <p className="max-w-68 text-[0.8125rem] leading-[1.9] text-[#5d6480] max-[767px]:max-w-96">
+            <p className="max-w-80 text-[0.9375rem] leading-[1.8] text-[#5d6480] max-[767px]:max-w-96">
               {site.description}
             </p>
             <SocialLinks />
-            <span className="mt-6 block text-[0.5rem] tracking-[0.16em] text-[#5d6480]">
+            <span className="mt-6 block text-[0.6875rem] tracking-[0.14em] text-[#5d6480]">
               CREATORS. CONNECTIONS. POSSIBILITIES.
             </span>
           </div>
@@ -33,9 +33,9 @@ export function Footer() {
             <FooterColumn key={group.label} {...group} />
           ))}
           <nav
-            className="[&_h2]:mt-3 [&_h2]:mb-6 [&_h2]:font-body [&_h2]:text-[0.8125rem] [&_h2]:font-semibold
+            className="min-w-0 [&_h2]:mt-3 [&_h2]:mb-6 [&_h2]:font-body [&_h2]:text-base [&_h2]:font-semibold
               [&_li+li]:mt-3
-              [&_a]:inline-block [&_a]:text-xs [&_a]:text-[#5d6480] [&_a]:transition-[color,transform] [&_a]:duration-250
+              [&_a]:inline-block [&_a]:text-[0.9375rem] [&_a]:text-[#5d6480] [&_a]:transition-[color,transform] [&_a]:duration-250
               [&_a:hover]:translate-x-0.75 [&_a:hover]:text-text-primary [&_a:hover]:no-underline"
             aria-label="Footer Contact"
           >
@@ -44,15 +44,16 @@ export function Footer() {
               <li>
                 {site.contact.email ? (
                   <a
-                    className="max-w-full leading-[1.7] break-anywhere"
+                    className="max-w-full leading-[1.7] [overflow-wrap:anywhere]"
                     href={`mailto:${site.contact.email}`}
                   >
-                    {site.contact.email}
+                    {site.contact.email.split("@")[0]}
+                    <wbr />@{site.contact.email.split("@")[1]}
                   </a>
                 ) : (
-                  <span className="block text-xs text-[#5d6480]">
+                  <span className="block text-[0.9375rem] text-[#5d6480]">
                     Email{" "}
-                    <small className="block text-[0.625rem] text-[#5d6480] opacity-70">
+                    <small className="block text-xs text-[#5d6480] opacity-70">
                       Coming soon
                     </small>
                   </span>
@@ -68,9 +69,9 @@ export function Footer() {
                     WhatsApp
                   </a>
                 ) : (
-                  <span className="block text-xs text-[#5d6480]">
+                  <span className="block text-[0.9375rem] text-[#5d6480]">
                     WhatsApp{" "}
-                    <small className="block text-[0.625rem] text-[#5d6480] opacity-70">
+                    <small className="block text-xs text-[#5d6480] opacity-70">
                       Coming soon
                     </small>
                   </span>
@@ -90,8 +91,8 @@ export function Footer() {
         <div
           className="flex items-center justify-between gap-6 border-t border-[rgb(8_8_45_/_0.1)] py-6
             max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3
-            [&_p]:text-[0.6875rem] [&_p]:text-[#5d6480]
-            [&_a]:text-[0.6875rem] [&_a]:text-[#5d6480] [&_a:hover]:text-text-primary"
+            [&_p]:text-[0.8125rem] [&_p]:text-[#5d6480]
+            [&_a]:text-[0.8125rem] [&_a]:text-[#5d6480] [&_a:hover]:text-text-primary"
         >
           <p>
             © {new Date().getFullYear()} {site.name}. {site.copyright}

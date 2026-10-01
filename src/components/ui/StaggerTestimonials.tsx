@@ -1,56 +1,57 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { HomeIcon } from "@/components/ui/HomeIcon";
+import { HomeIcon, type HomeIconName } from "@/components/ui/HomeIcon";
 
 const SQRT_5000 = Math.sqrt(5000);
 
-const testimonials = [
+const testimonials: {
+  tempId: number;
+  testimonial: string;
+  by: string;
+  icon: HomeIconName;
+}[] = [
   {
     tempId: 0,
-    testimonial: "My favorite solution in the market. We work 5x faster with Streamintia.",
-    by: "Alex, CEO at TechCorp",
-    imgSrc:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces",
+    testimonial:
+      "We explain the requirements in plain language before you commit to anything.",
+    by: "Clarity first",
+    icon: "compass",
   },
   {
     tempId: 1,
     testimonial:
-      "I'm confident my data is safe with Streamintia. I can't say that about other providers.",
-    by: "Dan, CTO at SecureNet",
-    imgSrc:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=faces",
+      "Your goals shape the conversation. No one-size-fits-all script.",
+    by: "Guidance that fits you",
+    icon: "spark",
   },
   {
     tempId: 2,
     testimonial:
-      "I know it's cliche, but we were lost before we found Streamintia. Can't thank you guys enough!",
-    by: "Stephanie, COO at InnovateCo",
-    imgSrc:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+      "You always know where your application stands and what happens next.",
+    by: "A transparent process",
+    icon: "check",
   },
   {
     tempId: 3,
     testimonial:
-      "Streamintia's guidance makes planning for the future seamless. Can't recommend them enough!",
-    by: "Marie, Creator Success Lead",
-    imgSrc:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces",
+      "Questions get real answers from real people, in a language you're comfortable with.",
+    by: "Human support",
+    icon: "support",
   },
   {
     tempId: 4,
-    testimonial: "If I could give 11 stars, I'd give 12.",
-    by: "Andre, Head of Design at CreativeSolutions",
-    imgSrc:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces",
+    testimonial:
+      "Platform details are shared only once they are confirmed. No guesswork.",
+    by: "Honest information",
+    icon: "globe",
   },
   {
     tempId: 5,
     testimonial:
-      "So happy we found you! I'd bet you've saved me 100 hours so far.",
-    by: "Jeremy, Product Manager at TimeWise",
-    imgSrc:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+      "Creators and agents grow together, with respect for your time and your content.",
+    by: "Growth, together",
+    icon: "growth",
   },
 ];
 
@@ -97,31 +98,28 @@ function TestimonialCard({
           width: SQRT_5000,
         }}
       />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={testimonial.imgSrc}
-        alt={testimonial.by.split(",")[0]}
-        width={52}
-        height={52}
-        className={`mb-5 h-[3.25rem] w-[3.25rem] shrink-0 rounded-full border-2 object-cover shadow-[0_4px_14px_rgb(34_55_105/0.18)] ${
+      <span
+        className={`mb-5 grid h-[3.25rem] w-[3.25rem] shrink-0 place-items-center rounded-full border-2 shadow-[0_4px_14px_rgb(34_55_105/0.18)] [&_svg]:h-6 [&_svg]:w-6 ${
           isCenter
-            ? "border-[rgb(255_255_255/0.9)] shadow-[0_4px_14px_rgb(8_8_45/0.25)]"
-            : "border-white"
-        }`}
-      />
-      <p
-        className={`text-[0.9375rem] leading-[1.5] font-medium max-[640px]:max-h-[5.8rem] max-[640px]:overflow-hidden max-[640px]:text-xs max-[640px]:leading-[1.45] ${
-          isCenter ? "" : "text-[#10163f]"
+            ? "border-[rgb(255_255_255/0.9)] bg-white/15 text-white shadow-[0_4px_14px_rgb(8_8_45/0.25)]"
+            : "border-white bg-[image:var(--home-gradient)] text-white"
         }`}
       >
-        &ldquo;{testimonial.testimonial}&rdquo;
+        <HomeIcon name={testimonial.icon} />
+      </span>
+      <p
+        className={`text-[0.9375rem] leading-[1.5] font-medium max-[640px]:max-h-[5.8rem] max-[640px]:overflow-hidden max-[640px]:text-xs max-[640px]:leading-[1.45] ${
+          isCenter ? "text-white" : "text-[#10163f]"
+        }`}
+      >
+        {testimonial.testimonial}
       </p>
       <p
-        className={`absolute bottom-8 left-8 right-8 mt-2 text-[0.8125rem] italic max-[640px]:bottom-6 max-[640px]:left-6 max-[640px]:right-6 max-[640px]:text-[0.6875rem] ${
+        className={`absolute bottom-8 left-8 right-8 mt-2 text-[0.8125rem] font-semibold tracking-wide max-[640px]:bottom-6 max-[640px]:left-6 max-[640px]:right-6 max-[640px]:text-[0.6875rem] ${
           isCenter ? "text-[rgb(255_255_255/0.8)]" : "text-(--home-muted)"
         }`}
       >
-        - {testimonial.by}
+        {testimonial.by}
       </p>
     </div>
   );

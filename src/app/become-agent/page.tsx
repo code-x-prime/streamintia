@@ -39,7 +39,14 @@ export default function AgentPage() {
           </>
         }
         description="Great networks begin with people who see potential. Discover creators, support their next steps and build something with shared ambition."
-        image={assets.visuals.agentPartnership}
+        image={assets.heroes.agent}
+        chips={[
+          {
+            title: "Build your network",
+            caption: "Support creators responsibly",
+          },
+          { title: "Grow together", caption: "Shared progress over time" },
+        ]}
       >
         <ButtonLink href="/apply?role=agent" variant="primary">
           Become an Agent

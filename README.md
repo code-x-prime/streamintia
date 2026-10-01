@@ -13,7 +13,7 @@ Next.js App Router project. Phases 1–3 established the architecture, global he
 
 ## Routes
 
-`/`, `/about`, `/services`, `/become-streamer`, `/become-agent`, `/platforms`, `/platforms/[slug]`, `/how-it-works`, `/why-streamintia`, `/success-stories`, `/contact`, `/apply`, `/privacy-policy`, `/terms-and-conditions`.
+`/`, `/about`, `/services`, `/become-streamer`, `/become-agent`, `/platforms`, `/platforms/[slug]`, `/why-streamintia`, `/success-stories`, `/contact`, `/apply`, `/privacy-policy`, `/terms-and-conditions`.
 
 There are 17 route patterns and 20 concrete pages including four example platform detail pages. Unknown platform slugs and removed blog URLs return 404.
 

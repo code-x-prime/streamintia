@@ -60,7 +60,7 @@ export function ApplicationForm({
           aria-describedby="application-note"
         >
           <div className="mt-10 mb-4 flex items-center justify-between gap-4 border-t border-(--home-border) pt-8 max-[430px]:items-start">
-            <h2 className="text-[1.5rem] leading-[1.4] tracking-[-0.035em] max-[430px]:text-[1.25rem]">
+            <h2 className="text-[1.5rem]! leading-[1.4]! tracking-[-0.035em] max-[430px]:text-[1.25rem]!">
               <span className="mr-[0.6rem] text-[0.5625rem] text-primary">02</span>
               A little about you
             </h2>
@@ -133,7 +133,7 @@ export function ApplicationForm({
             />
           </div>
           <div className="mt-10 mb-4 flex items-center justify-between gap-4 border-t border-(--home-border) pt-8 max-[430px]:items-start">
-            <h2 className="text-[1.5rem] leading-[1.4] tracking-[-0.035em] max-[430px]:text-[1.25rem]">
+            <h2 className="text-[1.5rem]! leading-[1.4]! tracking-[-0.035em] max-[430px]:text-[1.25rem]!">
               <span className="mr-[0.6rem] text-[0.5625rem] text-primary">03</span>
               Your direction
             </h2>

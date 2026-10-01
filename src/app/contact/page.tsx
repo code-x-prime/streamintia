@@ -26,7 +26,6 @@ export default async function ContactPage({
       <InnerPageHero
         eyebrow="GET IN TOUCH"
         breadcrumb="Contact Us"
-        compact
         title={
           <>
             Let’s start
@@ -35,7 +34,14 @@ export default async function ContactPage({
           </>
         }
         description="A question, an idea or a new direction. Creators, agents and future collaborators—there’s a place for your conversation here."
-        image={assets.visuals.contactSupport}
+        image={assets.heroes.contact}
+        chips={[
+          {
+            title: "A real conversation",
+            caption: "Creators, agents and partners",
+          },
+          { title: "Happy to help", caption: "Ask us anything" },
+        ]}
       />
       <section className="pt-16 pb-(--home-section-space) [background:radial-gradient(circle_at_0_20%,rgb(18_217_244/0.07),transparent_24%),#ffffff] max-[767px]:pt-10">
         <div className="home-container grid grid-cols-[0.8fr_1.2fr] items-start gap-16 max-[1100px]:grid-cols-[0.75fr_1.25fr] max-[1100px]:gap-10 max-[767px]:grid-cols-1 max-[767px]:gap-10">

@@ -44,8 +44,8 @@ export function WhyChooseSection() {
             <Image
               src={assets.visuals.agentGuidance.src}
               alt={assets.visuals.agentGuidance.alt}
-              width={1536}
-              height={1024}
+              width={1600}
+              height={1067}
               sizes="(max-width: 900px) 100vw, 38vw"
               data-section-image
               className="h-full w-full object-cover object-[42%_center]"

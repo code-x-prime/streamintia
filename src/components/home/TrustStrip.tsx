@@ -22,7 +22,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
           </p>
         </div>
         <div
-          className="flex gap-[30px] overflow-x-auto py-[35px] max-[1023px]:grid max-[1023px]:grid-cols-2 max-[1023px]:gap-0 max-[1023px]:overflow-visible max-[1023px]:py-5 max-[639px]:grid-cols-1"
+          className="grid grid-cols-5 gap-0 py-[35px] max-[1023px]:grid-cols-2 max-[1023px]:gap-x-10 max-[1023px]:py-5 max-[639px]:grid-cols-1"
           data-stagger
         >
           {platforms.map((platform) => (
@@ -30,7 +30,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
               key={platform.slug}
               href={`/platforms/${platform.slug}`}
               data-reveal
-              className="flex flex-1 basis-[220px] items-center gap-[15px] text-[#657093] px-5 py-3 border-r border-[#e6e8f2] transition-colors duration-200 last:border-0 hover:text-[#6a4be4] [&>svg:first-child]:w-7 [&>svg:first-child]:h-7 [&>svg:last-child]:w-4 [&>svg:last-child]:ml-auto max-[1023px]:basis-auto max-[1023px]:border-r-0 max-[1023px]:border-b max-[1023px]:border-[#e6e8f2] max-[1023px]:px-0 max-[1023px]:py-4"
+              className="flex min-w-0 items-center gap-3 text-[#657093] px-4 py-3 border-r border-[#e6e8f2] transition-colors duration-200 last:border-0 hover:text-[#6a4be4] [&>svg:first-child]:w-7 [&>svg:first-child]:h-7 [&>svg:last-child]:w-4 [&>svg:last-child]:ml-auto max-[1023px]:border-r-0 max-[1023px]:border-b max-[1023px]:border-[#e6e8f2] max-[1023px]:px-0 max-[1023px]:py-4"
             >
               {platform.logo ? (
                 <Image
@@ -38,7 +38,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
                   alt=""
                   width={48}
                   height={48}
-                  className="shrink-0 max-[1023px]:h-9 max-[1023px]:w-9"
+                  className="shrink-0 rounded-xl max-[1023px]:h-9 max-[1023px]:w-9"
                 />
               ) : (
                 <HomeIcon name="broadcast" className="shrink-0" />

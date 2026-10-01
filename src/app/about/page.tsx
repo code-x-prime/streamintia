@@ -31,7 +31,14 @@ export default function AboutPage() {
           </>
         }
         description="We bring creators, hosts and agents closer to opportunity—with guidance, shared ambition and people at the centre."
-        image={assets.visuals.aboutTeam}
+        image={assets.heroes.about}
+        chips={[
+          {
+            title: "Creators & agents",
+            caption: "One connected network",
+          },
+          { title: "People first", caption: "Guidance at every step" },
+        ]}
       >
         <ButtonLink href="/apply" variant="primary">
           Find your path
@@ -64,7 +71,7 @@ export default function AboutPage() {
               the process and prepare for the opportunities ahead. Our focus is
               a clearer start and a thoughtful way forward.
             </p>
-            <ButtonLink href="/how-it-works" variant="text">
+            <ButtonLink href="/platforms#journeys" variant="text">
               How we connect the dots
               <HomeIcon name="arrow" />
             </ButtonLink>

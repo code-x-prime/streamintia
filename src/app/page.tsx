@@ -107,15 +107,15 @@ export default async function HomePage() {
       <section id="stories" className="home-section testimonials-section">
         <div className="home-container">
           <SectionIntro
-            eyebrow="REAL JOURNEYS"
+            eyebrow="OUR PROMISE"
             title={
               <>
-                Every journey
+                What you can
                 <br />
-                starts somewhere.
+                count on.
               </>
             }
-            description="A space for the people, experiences and lessons behind the progress."
+            description="Simple, honest commitments for every creator and agent who joins the Streamintia network."
           />
           <StaggerTestimonials />
         </div>

@@ -33,12 +33,12 @@ export function PlatformWobbleGrid({ platforms }: { platforms: Platform[] }) {
                 <Image
                   src={platform.logo.src}
                   alt=""
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-[0.6rem] bg-[rgb(255_255_255/0.92)] p-1 max-[640px]:h-8 max-[640px]:w-8"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 rounded-2xl object-cover max-[640px]:h-12 max-[640px]:w-12 max-[640px]:rounded-xl"
                 />
               ) : (
-                <HomeIcon name="broadcast" className="h-10 w-10 rounded-[0.6rem] bg-[rgb(255_255_255/0.92)] p-1 max-[640px]:h-8 max-[640px]:w-8" />
+                <HomeIcon name="broadcast" className="h-16 w-16 rounded-2xl bg-[rgb(255_255_255/0.92)] p-2 max-[640px]:h-12 max-[640px]:w-12" />
               )}
               <span className="rounded-full border border-[rgb(255_255_255/0.25)] px-2 py-[0.2rem] text-[0.625rem] tracking-[0.08em] uppercase text-[rgb(255_255_255/0.7)] max-[640px]:px-1.5 max-[640px]:text-[0.5625rem]">
                 Preview

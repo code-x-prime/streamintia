@@ -486,8 +486,8 @@ body:has(.home-page) .site-footer .footer-cta {
 .platform-logo {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border: 1px solid var(--home-border);
   border-radius: 0.75rem;
   background: rgb(139 77 255 / 0.045);
@@ -496,13 +496,14 @@ body:has(.home-page) .site-footer .footer-cta {
   color: var(--text-secondary);
 }
 .platform-logo--asset {
-  padding: 0.3rem;
-  background: var(--text-primary);
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
 }
 .platform-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .platform-status {
   color: var(--home-muted);
