@@ -63,11 +63,11 @@ export function NavigationDropdown({
     >
       <button
         ref={trigger}
-        className="relative flex items-center gap-[0.3rem] whitespace-nowrap border-0 bg-transparent px-[0.55rem] py-3.5 text-[0.8125rem] font-medium text-[#59617f] transition-colors duration-250
+        className="relative flex items-center gap-[0.3rem] whitespace-nowrap border-0 bg-transparent px-3.5 py-4 text-[0.9375rem] font-medium text-[#59617f] transition-colors duration-250
           hover:text-[#08082d] hover:no-underline data-[active=true]:text-[#08082d] data-[active=true]:no-underline aria-expanded:text-[#08082d] aria-expanded:no-underline
-          after:absolute after:bottom-[0.3rem] after:left-[0.55rem] after:right-[0.55rem] after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-[linear-gradient(120deg,var(--primary),var(--purple))] after:transition-transform after:duration-250 after:ease-[cubic-bezier(0.2,0.8,0.2,1)] after:content-['']
+          after:absolute after:bottom-1.5 after:left-3.5 after:right-3.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-[linear-gradient(120deg,var(--primary),var(--purple))] after:transition-transform after:duration-250 after:ease-[cubic-bezier(0.2,0.8,0.2,1)] after:content-['']
           hover:after:scale-x-100 data-[active=true]:after:scale-x-100
-          [&_svg]:h-3.5 [&_svg]:w-3.5 [&_svg]:transition-transform [&_svg]:duration-250 aria-expanded:[&_svg]:rotate-0"
+          [&_svg]:h-4 [&_svg]:w-4 [&_svg]:transition-transform [&_svg]:duration-250 aria-expanded:[&_svg]:rotate-0"
         data-active={active}
         aria-expanded={open}
         aria-controls={id}
@@ -79,11 +79,11 @@ export function NavigationDropdown({
       <div
         id={id}
         hidden={!open}
-        className="absolute top-[calc(100%+14px)] left-1/2 w-80 -translate-x-1/2 overflow-hidden rounded-[1.25rem] border border-[rgb(28_35_81/0.1)] bg-white/98 p-3 text-[#08082d] shadow-[0_20px_60px_rgb(22_29_75/0.16)]
+        className="absolute top-full left-1/2 pt-0 w-[22rem] -translate-x-1/2 overflow-hidden rounded-[1.25rem] border border-[rgb(28_35_81/0.1)] bg-white p-3 text-[#08082d] shadow-[0_20px_60px_rgb(22_29_75/0.16)]
           before:absolute before:top-0 before:left-[20%] before:right-[20%] before:h-px before:bg-[linear-gradient(120deg,var(--primary),var(--purple))] before:content-['']
           animate-[dropdown-enter_250ms_cubic-bezier(0.2,0.8,0.2,1)]"
       >
-        <span className="block px-3 py-2 text-[0.625rem] font-semibold tracking-[0.16em] text-[#747c99] uppercase">
+        <span className="block px-3 py-2 text-[0.6875rem] font-semibold tracking-[0.16em] text-[#5d6683] uppercase">
           {label}
         </span>
         <ul>
@@ -95,11 +95,11 @@ export function NavigationDropdown({
                   isActiveRoute(pathname, item.href) ? "page" : undefined
                 }
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-between gap-4 rounded-md p-3 transition-colors duration-250
+                className="flex items-center justify-between gap-4 rounded-xl p-3.5 transition-colors duration-250
                   hover:bg-[#f4f6ff] hover:no-underline aria-[current=page]:bg-[#f4f6ff] aria-[current=page]:no-underline
-                  [&_strong]:text-sm [&_strong]:font-medium
-                  [&_small]:mt-1 [&_small]:block [&_small]:text-xs [&_small]:text-[#747c99]
-                  [&_svg]:h-4 [&_svg]:shrink-0 [&_svg]:text-primary"
+                  [&_strong]:text-[0.9375rem] [&_strong]:font-semibold [&_strong]:text-[#08082d]
+                  [&_small]:mt-1 [&_small]:block [&_small]:text-[0.8125rem] [&_small]:leading-snug [&_small]:text-[#5d6683]
+                  [&_svg]:h-4.5 [&_svg]:shrink-0 [&_svg]:text-[#8b4dff]"
               >
                 <span>
                   <strong>{item.label}</strong>

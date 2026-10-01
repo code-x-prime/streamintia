@@ -19,7 +19,7 @@ export function HeaderCTA({
         [&_svg]:h-4 [&_svg]:w-4
         ${
           variant === "mobile-menu"
-            ? "w-full! min-h-13! rounded-[13px]! text-[13px]! text-white!"
+            ? "w-full! min-h-14! rounded-[14px]! text-base! font-semibold! text-white! bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)]! shadow-[0_14px_34px_-10px_rgb(139_77_255/0.7)]!"
             : ""
         }`}
       fillColor="#08082d"

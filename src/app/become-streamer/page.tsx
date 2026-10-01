@@ -1,9 +1,10 @@
+import { DisclaimerBar, TransparencyNote } from "@/components/inner/TrustNotes";
+import { StreamerIntro } from "@/components/inner/StreamerIntro";
 import { ShowcaseBanner } from "@/components/inner/ShowcaseBanner";
 import { InnerPageShell } from "@/components/inner/InnerPageShell";
 import { InnerPageHero } from "@/components/inner/InnerPageHero";
 import { SectionIntro } from "@/components/home/SectionIntro";
 import { FinalCTA } from "@/components/home/FinalCTA";
-import { FeatureGrid } from "@/components/inner/FeatureGrid";
 import { ButtonLink } from "@/components/ui/Button";
 import { HomeIcon } from "@/components/ui/HomeIcon";
 import { createMetadata } from "@/lib/metadata";
@@ -12,7 +13,6 @@ import { RequirementsSection } from "@/components/inner/RequirementsSection";
 import { FAQPreview } from "@/components/inner/FAQPreview";
 import { EditorialRows } from "@/components/inner/EditorialRows";
 import {
-  streamerFeatures,
   streamerSupport,
   streamerSteps,
   streamerRequirements,
@@ -59,21 +59,8 @@ export default function StreamerPage() {
           <HomeIcon name="arrow" />
         </ButtonLink>
       </InnerPageHero>
-      <section className="home-section">
-        <div className="home-container">
-          <SectionIntro
-            eyebrow="A STAGE FOR WHAT MAKES YOU, YOU"
-            title={
-              <>
-                More than going live.
-                <br />A way to connect.
-              </>
-            }
-            description="A conversation, a creative skill, a perspective worth sharing. Start with what comes naturally."
-          />
-          <FeatureGrid features={streamerFeatures} />
-        </div>
-      </section>
+      <DisclaimerBar />
+      <StreamerIntro />
       <section className="home-section [background:radial-gradient(ellipse_at_10%_30%,rgb(18_217_244/0.04),transparent_70%),#0c1032] text-white [--home-border:rgb(184_188_217/0.14)] [--home-muted:#b6bad4] [&_h2]:text-white [&_h3]:text-white [&_.home-lead]:text-[#b6bad4]">
         <div className="home-container grid grid-cols-2 items-start gap-20 max-[1100px]:gap-10 max-[767px]:grid-cols-1 max-[767px]:gap-10">
           <div
@@ -133,6 +120,7 @@ export default function StreamerPage() {
       <PlatformPreview />
       <RequirementsSection items={streamerRequirements} role="a streamer" />
       <FAQPreview items={streamerFAQs} />
+      <TransparencyNote />
       <FinalCTA
         title={
           <>

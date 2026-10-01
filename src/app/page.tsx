@@ -10,10 +10,10 @@ import { CardSwapSection } from "@/components/home/CardSwapSection";
 import { PlatformWobbleGrid } from "@/components/home/PlatformWobbleGrid";
 import { ShowcasePair } from "@/components/home/ShowcasePair";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
-import { FinalCTA } from "@/components/home/FinalCTA";
+import { HomeContact } from "@/components/home/HomeContact";
 import { ButtonLink } from "@/components/ui/Button";
 import { HomeIcon } from "@/components/ui/HomeIcon";
-import { StaggerTestimonials } from "@/components/ui/StaggerTestimonials";
+import { PromiseTabs } from "@/components/home/PromiseTabs";
 import { opportunities } from "@/config/home";
 import { getPlatforms } from "@/lib/content";
 import { createMetadata } from "@/lib/metadata";
@@ -92,7 +92,7 @@ export default async function HomePage() {
             }
             description="Discover the platform directory and explore pathways that could fit your journey. Current entries are previews while availability is confirmed."
           />
-          <PlatformWobbleGrid platforms={platforms.slice(0, 4)} />
+          <PlatformWobbleGrid platforms={platforms} />
           <div className="platform-section-bottom">
             <p>
               Directory preview. Partnerships and programme availability
@@ -106,27 +106,17 @@ export default async function HomePage() {
         </div>
       </section>
       <WhyChooseSection />
-      <section id="stories" className="home-section testimonials-section">
+      <section id="stories" className="home-section bg-white">
         <div className="home-container">
           <SectionIntro
             eyebrow="OUR PROMISE"
-            title={
-              <>
-                What you can
-                <br />
-                count on.
-              </>
-            }
-            description="Simple, honest commitments for every creator and agent who joins the Streamintia network."
+            title="What you can count on."
+            description="Pick a promise to see what it means in practice. No hype, just how we work."
           />
-          <StaggerTestimonials />
+          <PromiseTabs />
         </div>
       </section>
-      <FinalCTA
-        campaign
-        showContact={false}
-        description="Whether you're ready to stream, build a creator network or simply explore your options, take the next step with Streamintia."
-      />
+      <HomeContact />
     </HomeMotion>
   );
 }

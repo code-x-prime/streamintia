@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { assets } from "@/config/assets";
-import { benefits } from "@/config/home";
+import { whyPoints } from "@/config/home";
 import { HomeIcon, type HomeIconName } from "@/components/ui/HomeIcon";
 import { ButtonLink } from "@/components/ui/Button";
 const icons: HomeIconName[] = [
@@ -18,20 +18,55 @@ export function WhyChooseSection() {
       className="home-section relative bg-white in-[.home-page]:bg-transparent"
     >
       <div className="home-container">
-        <div className="mb-10" data-reveal>
-          <p className="home-eyebrow">WHY STREAMINTIA</p>
-          <h2>
-            More than a<br />
-            place to start.
-          </h2>
-          <p className="home-lead mt-3 max-w-[34rem] text-sm leading-[1.7] text-[#727b94]">
-            Helping creators and agents understand their options, get started
-            with confidence and keep moving forward.
-          </p>
-          <ButtonLink href="/why-streamintia" variant="text" className="mt-[22px]">
-            Discover our approach
-            <HomeIcon name="arrow" />
-          </ButtonLink>
+        <div
+          className="mb-10 grid items-end gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16"
+          data-reveal
+        >
+          <div>
+            <p className="home-eyebrow">WHY STREAMINTIA</p>
+            <h2>
+              Built for
+              <br />
+              the long run.
+            </h2>
+            <p className="home-lead mt-3 max-w-[34rem] text-sm leading-[1.7] text-[#727b94]">
+              Whether you want to stream or support streamers, we help you
+              understand your options and keep moving forward, well beyond day
+              one.
+            </p>
+            <ButtonLink
+              href="/why-streamintia"
+              variant="text"
+              className="mt-[22px]"
+            >
+              Discover our approach
+              <HomeIcon name="arrow" />
+            </ButtonLink>
+          </div>
+          <ul className="grid grid-cols-3 gap-3 max-[560px]:grid-cols-1">
+            {(
+              [
+                ["2", "clear pathways", "Streamer or agent"],
+                ["5", "platforms to explore", "In one directory"],
+                ["1", "team beside you", "Real people, real answers"],
+              ] as const
+            ).map(([value, label, note]) => (
+              <li
+                key={label}
+                className="rounded-2xl border border-[rgb(42_52_105/0.1)] bg-[linear-gradient(145deg,#ffffff,#f6f5ff)] p-4 shadow-[0_12px_30px_rgb(42_52_105/0.06)]"
+              >
+                <span className="home-gradient-text font-(family-name:--font-display) text-[2.25rem] leading-none font-semibold">
+                  {value}
+                </span>
+                <span className="mt-2 block text-sm leading-tight font-semibold text-[#17183f]">
+                  {label}
+                </span>
+                <span className="mt-1 block text-xs leading-snug text-[#727b94]">
+                  {note}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
         <div
           className="grid grid-cols-4 auto-rows-[minmax(150px,auto)] gap-4 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1"
@@ -51,7 +86,10 @@ export function WhyChooseSection() {
               className="h-full w-full object-cover object-[42%_center]"
             />
             <div className="absolute left-[18px] right-[18px] bottom-[18px] flex items-center gap-[14px] rounded-2xl bg-[#ffffffed] px-[18px] py-4 text-[13px] text-[#5c6288] shadow-[0_12px_30px_#23264b1a] backdrop-blur-[10px]">
-              <HomeIcon name="compass" className="h-7 w-7 shrink-0 text-[#8860d8]" />
+              <HomeIcon
+                name="compass"
+                className="h-7 w-7 shrink-0 text-[#8860d8]"
+              />
               <span>
                 People first.
                 <br />
@@ -61,7 +99,7 @@ export function WhyChooseSection() {
               </span>
             </div>
           </div>
-          {benefits.map((benefit, index) => (
+          {whyPoints.map((benefit, index) => (
             <article
               key={benefit.title}
               className={`group relative col-span-2 overflow-hidden rounded-[20px] border border-[rgb(42_52_105/0.1)] bg-white p-[22px] shadow-[0_12px_30px_rgb(42_52_105/0.05)] transition-[transform,box-shadow,border-color] duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:border-[rgb(18_217_244/0.3)] hover:shadow-[0_22px_45px_rgb(42_52_105/0.1)] after:content-[''] after:absolute after:inset-0 after:-z-10 after:opacity-0 after:bg-[radial-gradient(160px_circle_at_85%_-10%,rgb(139_77_255/0.1),transparent_70%)] after:transition-opacity after:duration-300 after:ease-[var(--ease-standard)] hover:after:opacity-100 max-[900px]:col-span-1${index === 0 ? " col-[3/5] max-[900px]:col-span-1" : ""}`}
@@ -70,7 +108,9 @@ export function WhyChooseSection() {
               <span className="mb-3.5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[linear-gradient(135deg,#12d9f4,#8b4dff)] text-white shadow-[0_10px_20px_-8px_#8b4dff66] [&>svg]:h-5 [&>svg]:w-5">
                 <HomeIcon name={icons[index]} />
               </span>
-              <h3 className="text-[15px] tracking-[-0.01em]">{benefit.title}</h3>
+              <h3 className="text-[15px] tracking-[-0.01em]">
+                {benefit.title}
+              </h3>
               <p className="mt-1.5 text-[12.5px] leading-[1.6] text-[#727b94]">
                 {benefit.description}
               </p>

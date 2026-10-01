@@ -35,9 +35,8 @@ export function LegalDocument({
             </strong>
           </div>
           <p className="my-8 mb-16 p-5 border-l-[3px] border-[#725ce0] bg-[#f7f5ff] text-[#59637e] leading-[1.7]">
-            This document is written as a clear operational draft and should be
-            reviewed for the business entity and applicable jurisdictions before
-            publication.
+            We have written this in plain language so it is easy to understand.
+            If anything is unclear, please write to us and we will explain it.
           </p>
           {sections.map((section, index) => (
             <section
@@ -52,7 +51,10 @@ export function LegalDocument({
                 {section.title}
               </h2>
               {section.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="mt-4 text-[#5d6780] leading-[1.9]">
+                <p
+                  key={paragraph}
+                  className="mt-4 text-[#5d6780] leading-[1.9]"
+                >
                   {paragraph}
                 </p>
               ))}

@@ -10,10 +10,10 @@ export function FooterColumn({
   return (
     <nav
       aria-label={`Footer ${label}`}
-      className="min-w-0 [&_h2]:mt-3 [&_h2]:mb-6 [&_h2]:font-body [&_h2]:text-base [&_h2]:font-semibold
+      className="min-w-0 [&_h2]:mt-3 [&_h2]:mb-6 [&_h2]:text-white [&_h2]:font-body [&_h2]:text-base [&_h2]:font-semibold
         [&_li+li]:mt-3
-        [&_a]:inline-block [&_a]:text-[0.9375rem] [&_a]:text-[#5d6480] [&_a]:transition-[color,transform] [&_a]:duration-250
-        [&_a:hover]:translate-x-0.75 [&_a:hover]:text-text-primary [&_a:hover]:no-underline"
+        [&_a]:inline-block [&_a]:text-[0.9375rem] [&_a]:text-[#c3c6e0] [&_a]:transition-[color,transform] [&_a]:duration-250
+        [&_a:hover]:translate-x-0.75 [&_a:hover]:text-white [&_a:hover]:no-underline"
     >
       <h2>{label}</h2>
       <ul>

@@ -1,3 +1,5 @@
+import { DisclaimerBar, TransparencyNote } from "@/components/inner/TrustNotes";
+import { AgentIntro } from "@/components/inner/AgentIntro";
 import { ShowcaseBanner } from "@/components/inner/ShowcaseBanner";
 import { InnerPageShell } from "@/components/inner/InnerPageShell";
 import { InnerPageHero } from "@/components/inner/InnerPageHero";
@@ -58,6 +60,8 @@ export default function AgentPage() {
           <HomeIcon name="arrow" />
         </ButtonLink>
       </InnerPageHero>
+      <DisclaimerBar />
+      <AgentIntro />
       <section className="home-section">
         <div className="home-container grid grid-cols-2 items-start gap-20 max-[1100px]:gap-10 max-[767px]:grid-cols-1 max-[767px]:gap-10">
           <div data-reveal>
@@ -175,6 +179,7 @@ export default function AgentPage() {
       </section>
       <RequirementsSection items={agentRequirements} role="an agent" />
       <FAQPreview items={agentFAQs} />
+      <TransparencyNote />
       <FinalCTA
         title={
           <>

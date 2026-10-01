@@ -34,7 +34,10 @@ export function FinalCTA({
     >
       <SectionGlow className="bg-[radial-gradient(ellipse_at_50%_65%,rgb(139_77_255/0.07),transparent_60%)]" />
       {campaign ? (
-        <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div
+          className="absolute inset-0 -z-10 overflow-hidden"
+          aria-hidden="true"
+        >
           <Image
             src={assets.visuals.networkArtwork.src}
             alt=""
@@ -69,47 +72,57 @@ export function FinalCTA({
         }
         data-reveal
       >
-        <p className="home-eyebrow">GO FROM WHAT IF TO WHAT’S NEXT</p>
-        <h2>
-          {title ?? (
-            <>
-              Your next opportunity
-              <br />
-              <span className="home-gradient-text">starts here.</span>
-            </>
-          )}
-        </h2>
-        <p className="home-lead max-[1100px]:text-[0.9375rem] max-[1100px]:[&>br]:hidden">
-          {description ?? (
-            <>
-              Step into the spotlight or bring new talent to it.
-              <br />
-              Your next chapter begins with a conversation.
-            </>
-          )}
-        </p>
-        <div className="home-actions max-[900px]:max-w-[23rem] max-[900px]:mx-auto">
-          <ButtonLink href={primary.href} variant="primary">
-            {primary.label}
-            <HomeIcon name="arrow" />
-          </ButtonLink>
-          <ButtonLink href={secondary.href} variant="secondary">
-            {secondary.label}
-            <HomeIcon name="arrow" />
-          </ButtonLink>
+        <div
+          className={
+            campaign
+              ? "grid items-center gap-[clamp(2rem,5vw,4.5rem)] lg:grid-cols-[1fr_0.95fr]"
+              : ""
+          }
+        >
+          <div className="min-w-0">
+            <p className="home-eyebrow">GO FROM WHAT IF TO WHAT’S NEXT</p>
+            <h2>
+              {title ?? (
+                <>
+                  Your next opportunity
+                  <br />
+                  <span className="home-gradient-text">starts here.</span>
+                </>
+              )}
+            </h2>
+            <p className="home-lead max-[1100px]:text-[0.9375rem] max-[1100px]:[&>br]:hidden">
+              {description ?? (
+                <>
+                  Step into the spotlight or bring new talent to it.
+                  <br />
+                  Your next chapter begins with a conversation.
+                </>
+              )}
+            </p>
+            <div className="home-actions max-[900px]:max-w-[23rem] max-[900px]:mx-auto">
+              <ButtonLink href={primary.href} variant="primary">
+                {primary.label}
+                <HomeIcon name="arrow" />
+              </ButtonLink>
+              <ButtonLink href={secondary.href} variant="secondary">
+                {secondary.label}
+                <HomeIcon name="arrow" />
+              </ButtonLink>
+            </div>
+            {campaign ? (
+              <ButtonLink href="/platforms" variant="text">
+                Explore Platforms
+                <HomeIcon name="arrow" />
+              </ButtonLink>
+            ) : null}
+            {showContact ? (
+              <ButtonLink href="/contact" variant="text">
+                Have a question? Let’s talk
+                <HomeIcon name="arrow" />
+              </ButtonLink>
+            ) : null}
+          </div>
         </div>
-        {campaign ? (
-          <ButtonLink href="/platforms" variant="text">
-            Explore Platforms
-            <HomeIcon name="arrow" />
-          </ButtonLink>
-        ) : null}
-        {showContact ? (
-          <ButtonLink href="/contact" variant="text">
-            Have a question? Let’s talk
-            <HomeIcon name="arrow" />
-          </ButtonLink>
-        ) : null}
       </div>
     </section>
   );

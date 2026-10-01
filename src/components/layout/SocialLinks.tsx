@@ -29,14 +29,14 @@ export function SocialLinks() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="grid h-8.5 w-8.5 place-items-center rounded-md border border-[rgb(28_35_81_/_0.11)] bg-[rgb(8_8_45_/_0.03)] text-text-secondary transition-[background,border-color,transform] duration-250
+                className="grid h-8.5 w-8.5 place-items-center rounded-md border border-white/20 bg-white/8 text-[#dfe1f2] transition-[background,border-color,transform] duration-250
                   hover:-translate-y-0.5 hover:border-purple hover:bg-(image:--gradient-secondary) hover:no-underline"
               >
                 {content}
               </a>
             ) : (
               <span
-                className="grid h-8.5 w-8.5 place-items-center rounded-md border border-[rgb(28_35_81_/_0.11)] bg-[rgb(8_8_45_/_0.03)] text-text-secondary opacity-55"
+                className="grid h-8.5 w-8.5 place-items-center rounded-md border border-white/20 bg-white/8 text-[#dfe1f2] opacity-55"
                 role="img"
                 aria-label={`${social.name} — coming soon`}
                 title={`${social.name} — coming soon`}

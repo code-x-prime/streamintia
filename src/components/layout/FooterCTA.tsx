@@ -5,7 +5,7 @@ export function FooterCTA() {
   return (
     <section
       data-footer-cta
-      className="flex items-center justify-between gap-8 border-b border-[rgb(8_8_45_/_0.1)] py-16
+      className="flex items-center justify-between gap-8 border-b border-white/12 py-16
         max-[1279px]:flex-col max-[1279px]:items-start
         max-[767px]:py-12
         [body:has(.home-page)_&]:hidden"
@@ -18,11 +18,11 @@ export function FooterCTA() {
         </p>
         <h2
           id="footer-cta-title"
-          className="mt-4 text-[clamp(1.875rem,3.2vw,2.75rem)] font-medium tracking-[-0.045em]"
+          className="mt-4 text-white text-[clamp(1.875rem,3.2vw,2.75rem)] font-medium tracking-[-0.045em]"
         >
           {site.footerCTA.title}
         </h2>
-        <p className="mt-4 max-w-140 text-sm leading-[1.8] text-[#5d6480]">
+        <p className="mt-4 max-w-140 text-sm leading-[1.8] text-[#c3c6e0]">
           {site.footerCTA.description}
         </p>
       </div>
@@ -38,7 +38,7 @@ export function FooterCTA() {
         </Link>
         <Link
           href={site.cta.agent.href}
-          className="inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-[rgb(184_188_217_/_0.25)] bg-white/2.5 px-5 py-3 text-sm font-semibold whitespace-nowrap text-text-primary transition-[transform,box-shadow,border-color,background] duration-250
+          className="inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-[rgb(184_188_217_/_0.25)] bg-white/5 px-5 py-3 text-sm font-semibold whitespace-nowrap text-white transition-[transform,box-shadow,border-color,background] duration-250
             hover:-translate-y-0.5 hover:border-[rgb(18_217_244_/_0.45)] hover:bg-[rgb(18_217_244_/_0.08)] hover:no-underline
             active:translate-y-0 active:scale-98"
         >

@@ -8,7 +8,13 @@ import { contactSubjects } from "@/config/inner-pages";
 import { validateDetails } from "@/lib/form-validation";
 import { SuccessMessage } from "./SuccessMessage";
 import { usePreviewForm } from "./usePreviewForm";
-export function ContactForm({ subject = "" }: { subject?: string }) {
+export function ContactForm({
+  subject = "",
+  idPrefix = "contact",
+}: {
+  subject?: string;
+  idPrefix?: string;
+}) {
   const form = usePreviewForm(
     {
       name: "",
@@ -25,31 +31,24 @@ export function ContactForm({ subject = "" }: { subject?: string }) {
     "min-w-0 rounded-(--home-radius) border border-[rgb(43_57_122/0.11)] bg-white p-10 shadow-[0_24px_70px_rgb(39_49_105/0.1)] max-[1100px]:p-7 max-[767px]:p-6 max-[430px]:p-5";
   if (form.complete)
     return (
-      <div className={panelClass} id="contact-form">
+      <div className={panelClass} id={`${idPrefix}-form`}>
         <SuccessMessage kind="message" onEdit={form.edit} />
       </div>
     );
   return (
     <form
       className={panelClass}
-      id="contact-form"
+      id={`${idPrefix}-form`}
       noValidate
       onSubmit={form.submit}
-      aria-describedby="contact-note"
     >
       <p className="home-eyebrow">TELL US WHAT’S ON YOUR MIND</p>
-      <h2 className="mb-6 text-[2.25rem] max-[430px]:text-[1.85rem]">
-        A conversation
-        <br />
-        starts with hello.
-      </h2>
-      <p
-        id="contact-note"
-        className="mb-6 max-w-[38rem] text-[0.75rem] leading-[1.8] text-(--home-muted)"
+      <h2
+        className="mb-5 font-semibold tracking-[-0.03em] text-[#0a1038]"
+        style={{ fontSize: "clamp(1.375rem, 2vw, 1.75rem)", lineHeight: 1.2 }}
       >
-        Frontend preview. Messages are not sent or saved. Required fields are
-        labelled.
-      </p>
+        A conversation starts with hello.
+      </h2>
       {Object.keys(form.errors).length ? (
         <p
           className="mb-6 rounded-lg border border-[rgb(240_0_184/0.25)] bg-[rgb(240_0_184/0.04)] px-4 py-3 text-[0.75rem] leading-[1.7] text-[#f4a8df]!"
@@ -60,7 +59,7 @@ export function ContactForm({ subject = "" }: { subject?: string }) {
       ) : null}
       <div className="mb-5 grid grid-cols-2 items-start gap-5 max-[430px]:grid-cols-1">
         <Input
-          id="contact-name"
+          id={`${idPrefix}-name`}
           name="name"
           label="Name (required)"
           required
@@ -71,7 +70,7 @@ export function ContactForm({ subject = "" }: { subject?: string }) {
           error={form.errors.name}
         />
         <Input
-          id="contact-email"
+          id={`${idPrefix}-email`}
           name="email"
           label="Email (required)"
           required
@@ -83,7 +82,7 @@ export function ContactForm({ subject = "" }: { subject?: string }) {
           error={form.errors.email}
         />
         <Input
-          id="contact-phone"
+          id={`${idPrefix}-phone`}
           name="phone"
           label="Phone (optional)"
           type="tel"
@@ -94,7 +93,7 @@ export function ContactForm({ subject = "" }: { subject?: string }) {
           error={form.errors.phone}
         />
         <Select
-          id="enquiry"
+          id={`${idPrefix}-enquiry`}
           name="subject"
           label="Subject (required)"
           required
@@ -111,7 +110,7 @@ export function ContactForm({ subject = "" }: { subject?: string }) {
         </Select>
       </div>
       <Textarea
-        id="message"
+        id={`${idPrefix}-message`}
         name="message"
         label="Message (required)"
         required

@@ -4,6 +4,7 @@ import { site } from "@/config/site";
 import { assets } from "@/config/assets";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingActions } from "@/components/layout/FloatingActions";
 import { Container } from "@/components/ui/Container";
 import { DotGridBackground } from "@/components/layout/DotGridBackground";
 import "./globals.css";
@@ -39,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${body.variable} antialiased`}>
+      <body className={`${display.variable} ${body.variable} antialiased max-[767px]:pb-20`}>
         <DotGridBackground />
         <a href="#main-content" className="skip-link">
           Skip to content
@@ -49,6 +50,7 @@ export default function RootLayout({
           <Container>{children}</Container>
         </main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );

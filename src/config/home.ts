@@ -99,3 +99,35 @@ export const testimonialPlaceholders = [
   { id: "agent-story", role: "agent", label: "The agent perspective" },
   { id: "growth-story", role: "streamer", label: "The growth journey" },
 ] as const;
+export const whyPoints = [
+  {
+    title: "Two clear pathways",
+    description:
+      "Whether you stream or build a team of streamers, there is a route made for you.",
+  },
+  {
+    title: "Platform discovery",
+    description:
+      "Compare live-streaming platforms in one directory and see what is confirmed.",
+  },
+  {
+    title: "Preparation first",
+    description:
+      "Learn what onboarding involves before you apply, so nothing is a surprise.",
+  },
+  {
+    title: "Ongoing guidance",
+    description:
+      "Support does not stop after your first stream. Keep learning with us.",
+  },
+  {
+    title: "Habits that last",
+    description:
+      "Routines, content ideas and feedback to help you keep improving.",
+  },
+  {
+    title: "Your details, handled with care",
+    description:
+      "Information you share is used only for your application. See our Privacy Policy.",
+  },
+];

@@ -26,7 +26,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
     if (!open) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const media = window.matchMedia("(min-width: 1280px)");
+    const media = window.matchMedia("(min-width: 1100px)");
     const resize = () => {
       if (media.matches) dialog.current?.close();
     };
@@ -41,7 +41,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
     };
   }, [open]);
   return (
-    <div className="hidden max-[1279px]:block">
+    <div className="hidden max-[1099px]:block">
       <button
         ref={trigger}
         className="grid h-11 w-11 place-items-center rounded-md border border-[rgb(28_35_81_/_0.12)] bg-[#f7f8ff] text-text-primary transition-colors duration-250
@@ -174,13 +174,13 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
                           data-active={item.children.some((child) =>
                             isActiveRoute(pathname, child.href),
                           )}
-                          className="flex min-h-15 cursor-pointer list-none items-center gap-3.5 rounded-[13px] border border-transparent px-3.25 py-2.25 text-[clamp(17px,1.5vw,22px)] font-medium text-[#e5e5f4] transition-[background,border-color] duration-180
+                          className="flex min-h-15 cursor-pointer list-none items-center gap-3.5 rounded-[13px] border border-transparent px-3.25 py-2.25 text-[clamp(19px,1.8vw,24px)] font-semibold text-white transition-[background,border-color] duration-180
                             marker:hidden
                             hover:border-white/3.5 hover:bg-white/2
                             data-[active=true]:bg-[linear-gradient(100deg,#2acde811,#9c68fa0d)] data-[active=true]:text-[#8fefff]
-                            max-[767px]:min-h-13.5 max-[767px]:gap-3 max-[767px]:px-2.5 max-[767px]:py-2 max-[767px]:text-[18px]
+                            max-[767px]:min-h-15 max-[767px]:gap-3 max-[767px]:px-2.5 max-[767px]:py-2 max-[767px]:text-[20px]
                             [&::-webkit-details-marker]:hidden
-                            [&_svg]:w-4 [&_svg]:shrink-0 [&_svg]:text-[#777b9e]"
+                            [&_svg]:w-4.5 [&_svg]:shrink-0 [&_svg]:text-[#c3c6e0]"
                         >
                           <span className="grid h-8.5 w-8.5 shrink-0 place-items-center rounded-[10px] border border-white/4 bg-white/2.5 text-[#9d9bc5] [&_svg]:h-4.25 [&_svg]:w-4.25">
                             <HomeIcon name={menuIcons[index]} />
@@ -199,9 +199,9 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
                                     : undefined
                                 }
                                 onClick={close}
-                                className="block min-h-13.5 rounded-[10px] bg-white/1 px-3.5 py-3 text-sm text-[#e3dcff] transition-colors duration-200
-                                  hover:bg-white/3
-                                  [&_span]:mt-1 [&_span]:block [&_span]:text-[11px] [&_span]:leading-[1.5] [&_span]:text-[#969dba]"
+                                className="block min-h-15 rounded-xl border border-white/8 bg-white/4 px-4 py-3.5 text-base font-semibold text-white transition-colors duration-200
+                                  hover:bg-white/8
+                                  [&_span]:mt-1 [&_span]:block [&_span]:text-[13px] [&_span]:font-normal [&_span]:leading-[1.5] [&_span]:text-[#b6bad4]"
                               >
                                 {child.label}
                                 <span>{child.description}</span>
@@ -219,10 +219,10 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
                             : undefined
                         }
                         onClick={close}
-                        className="flex min-h-15 items-center gap-3.5 rounded-[13px] border border-transparent px-3.25 py-2.25 text-[clamp(17px,1.5vw,22px)] font-medium text-[#e5e5f4] transition-[background,border-color] duration-180
+                        className="flex min-h-15 items-center gap-3.5 rounded-[13px] border border-transparent px-3.25 py-2.25 text-[clamp(19px,1.8vw,24px)] font-semibold text-white transition-[background,border-color] duration-180
                           hover:border-white/3.5 hover:bg-white/2 hover:no-underline
                           aria-[current=page]:bg-[linear-gradient(100deg,#2acde811,#9c68fa0d)] aria-[current=page]:text-[#8fefff] aria-[current=page]:no-underline
-                          max-[767px]:min-h-13.5 max-[767px]:gap-3 max-[767px]:px-2.5 max-[767px]:py-2 max-[767px]:text-[18px]"
+                          max-[767px]:min-h-15 max-[767px]:gap-3 max-[767px]:px-2.5 max-[767px]:py-2 max-[767px]:text-[20px]"
                       >
                         <span className="grid h-8.5 w-8.5 shrink-0 place-items-center rounded-[10px] border border-white/4 bg-white/2.5 text-[#9d9bc5] [&_svg]:h-4.25 [&_svg]:w-4.25">
                           <HomeIcon name={menuIcons[index]} />
@@ -237,12 +237,12 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
             </nav>
             <div className="mt-5 grid gap-5 border-t border-white/7 pt-5.75 max-[767px]:mt-4.75 max-[767px]:gap-4.25 max-[767px]:pt-5">
               <div>
-                <span className="flex items-center gap-1.75 text-[8px] tracking-[0.16em] text-[#969ebf]">
+                <span className="flex items-center gap-1.75 text-[11px] tracking-[0.16em] text-[#b6bad4]">
                   <i className="h-1.25 w-1.25 rounded-full bg-[#77e6e0]" />
                   LET’S CONNECT
                 </span>
                 <a
-                  className="mt-2 inline-block text-xs text-[#c5c7df] break-anywhere"
+                  className="mt-2 inline-block text-[15px] text-white [overflow-wrap:anywhere]"
                   href={`mailto:${site.contact.email}`}
                 >
                   {site.contact.email}

@@ -1515,3 +1515,35 @@ body:has(.home-page) .site-footer .footer-cta {
     background: transparent;
   }
 }
+
+/* Promise tabs (home) */
+@keyframes promise-progress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes promise-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.promise-progress {
+  animation: promise-progress linear both;
+}
+.promise-panel {
+  animation: promise-enter 350ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .promise-progress,
+  .promise-panel {
+    animation: none;
+  }
+}

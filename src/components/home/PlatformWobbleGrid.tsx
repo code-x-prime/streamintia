@@ -21,7 +21,9 @@ export function PlatformWobbleGrid({ platforms }: { platforms: Platform[] }) {
           containerClassName={`min-h-[220px] col-span-1 ${
             index === 0 || index === 3
               ? "col-span-2 max-[640px]:min-h-[170px]"
-              : "max-[640px]:min-h-[170px]"
+              : index === 4
+                ? "col-span-3 max-[640px]:col-span-2 max-[640px]:min-h-[170px]"
+                : "max-[640px]:min-h-[170px]"
           } group/wobble`}
         >
           <Link
