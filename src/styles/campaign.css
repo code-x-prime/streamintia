@@ -161,20 +161,21 @@ body {
   color: #0c123c;
 }
 .campaign-note {
-  width: 197px;
-  min-height: 73px;
+  width: 232px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   gap: 11px;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #dddff6;
   border-radius: 18px;
   background: rgb(255 255 255 / 0.94);
   box-shadow: 0 12px 36px rgb(81 72 158 / 0.065);
   transform: rotate(4deg);
   color: #13173c;
-  font-size: 10px;
-  line-height: 1.4;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
 }
 .campaign-note > svg {
   width: 15px;
@@ -235,9 +236,10 @@ body {
     gap: 10px;
   }
   .campaign-hero .campaign-note {
-    width: 165px;
-    min-height: 60px;
-    padding: 8px;
+    width: 190px;
+    min-height: 64px;
+    padding: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 374px) {
@@ -295,11 +297,11 @@ body {
     gap: 9px;
   }
   .campaign-note {
-    width: 140px;
-    min-height: 52px;
+    width: 158px;
+    min-height: 54px;
     padding: 8px;
     gap: 6px;
-    font-size: 8px;
+    font-size: 11px;
     border-radius: 12px;
   }
   .home-page .stats-strip {

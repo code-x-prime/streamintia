@@ -22,7 +22,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
           </p>
         </div>
         <div
-          className="grid grid-cols-5 gap-0 py-[35px] max-[1023px]:grid-cols-2 max-[1023px]:gap-x-10 max-[1023px]:py-5 max-[639px]:gap-x-3 max-[639px]:gap-y-3"
+          className="grid grid-cols-4 gap-0 py-[35px] max-[1023px]:grid-cols-2 max-[1023px]:gap-x-10 max-[1023px]:py-5 max-[639px]:gap-x-3 max-[639px]:gap-y-3"
           data-stagger
         >
           {platforms.map((platform) => (
@@ -30,7 +30,7 @@ export function TrustStrip({ platforms }: { platforms: Platform[] }) {
               key={platform.slug}
               href={`/platforms/${platform.slug}`}
               data-reveal
-              className="flex min-w-0 items-center gap-3 text-[#657093] px-4 py-3 max-[639px]:flex-col max-[639px]:items-start max-[639px]:gap-3 max-[639px]:rounded-2xl max-[639px]:border max-[639px]:border-[#e6e8f2] max-[639px]:p-4 max-[639px]:last:col-span-2 border-r border-[#e6e8f2] transition-colors duration-200 last:border-0 max-[639px]:last:border hover:text-[#6a4be4] [&>svg:first-child]:w-7 [&>svg:first-child]:h-7 [&>svg:last-child]:w-4 [&>svg:last-child]:ml-auto max-[1023px]:border-r-0 max-[1023px]:border-b max-[1023px]:border-[#e6e8f2] max-[1023px]:px-0 max-[1023px]:py-4 max-[639px]:border-b"
+              className="flex min-w-0 items-center gap-3 text-[#657093] px-4 py-3 max-[639px]:flex-col max-[639px]:items-start max-[639px]:gap-3 max-[639px]:rounded-2xl max-[639px]:border max-[639px]:border-[#e6e8f2] max-[639px]:p-4 border-r border-[#e6e8f2] transition-colors duration-200 last:border-0 max-[639px]:last:border hover:text-[#6a4be4] [&>svg:first-child]:w-7 [&>svg:first-child]:h-7 [&>svg:last-child]:w-4 [&>svg:last-child]:ml-auto max-[1023px]:border-r-0 max-[1023px]:border-b max-[1023px]:border-[#e6e8f2] max-[1023px]:px-0 max-[1023px]:py-4 max-[639px]:border-b"
             >
               {platform.logo ? (
                 <Image

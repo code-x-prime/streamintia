@@ -279,7 +279,7 @@ export default async function AboutPage() {
                 </div>
               </div>
               <ul
-                className="grid grid-cols-3 gap-3 min-[640px]:gap-4 lg:max-w-[22rem] lg:justify-self-end"
+                className="grid grid-cols-4 gap-3 min-[640px]:gap-4 lg:grid-cols-2 lg:max-w-[16rem] lg:justify-self-end"
                 aria-label="Platforms in our directory"
               >
                 {platforms.map((platform) =>

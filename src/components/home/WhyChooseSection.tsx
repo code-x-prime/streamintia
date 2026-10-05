@@ -47,7 +47,7 @@ export function WhyChooseSection() {
             {(
               [
                 ["2", "clear pathways", "Streamer or agent"],
-                ["5", "platforms to explore", "In one directory"],
+                ["4", "platforms to explore", "In one directory"],
                 ["1", "team beside you", "Real people, real answers"],
               ] as const
             ).map(([value, label, note]) => (

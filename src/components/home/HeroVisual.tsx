@@ -30,7 +30,7 @@ export function HeroVisual() {
       >
         <Image
           src="/images/home/hero-creator.webp"
-          alt="Smiling Indian live-streaming creator wearing cyan and purple headphones in a softly lit studio"
+          alt="Smiling young Indian woman live streaming with cyan headphones and a microphone in a softly lit studio"
           fill
           priority
           sizes="(max-width: 767px) 85vw, (max-width: 1100px) 60vw, 42vw"
@@ -45,7 +45,7 @@ export function HeroVisual() {
           ] as const
         ).map(([icon, first, second, href]) => (
           <Link
-            className="campaign-note flex items-center gap-[11px] w-[197px] min-h-[73px] p-3 rounded-[18px] border border-[#dddff6] bg-white/94 shadow-[0_12px_36px_rgb(81_72_158_/_0.065)] rotate-4 text-[#13173c] text-[10px] leading-[1.4] hover:border-[#aeb9f8] [&>svg:last-child]:w-[15px] [&>svg:last-child]:ml-auto [&>svg:last-child]:text-[#7356b8] max-[1100px]:min-[768px]:w-[165px] max-[1100px]:min-[768px]:min-h-[60px] max-[1100px]:min-[768px]:p-2 max-[767px]:w-[140px] max-[767px]:min-h-[52px] max-[767px]:p-2 max-[767px]:gap-1.5 max-[767px]:text-[8px] max-[767px]:rounded-xl"
+            className="campaign-note flex items-center gap-[11px] w-[232px] min-h-[80px] p-3.5 rounded-[18px] border border-[#dddff6] bg-white/94 shadow-[0_12px_36px_rgb(81_72_158_/_0.065)] rotate-4 text-[#13173c] text-[13px] font-medium leading-[1.35] hover:border-[#aeb9f8] [&>svg:last-child]:w-[15px] [&>svg:last-child]:ml-auto [&>svg:last-child]:text-[#7356b8] max-[1100px]:min-[768px]:w-[190px] max-[1100px]:min-[768px]:min-h-[64px] max-[1100px]:min-[768px]:text-[12px] max-[1100px]:min-[768px]:p-2 max-[767px]:w-[158px] max-[767px]:min-h-[54px] max-[767px]:p-2 max-[767px]:gap-1.5 max-[767px]:text-[11px] max-[767px]:rounded-xl"
             href={href}
             key={icon}
             data-hero-node

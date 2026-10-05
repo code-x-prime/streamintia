@@ -87,10 +87,10 @@ export function StreamerIntro() {
             </h2>
             <p className="mt-5 max-w-[36rem] text-[1.0625rem] leading-[1.8] text-[#5d6683]">
               A streamer shares their personality and talent live with an
-              audience, on platforms such as Poppo Live, Taka Live, Chamet, Niki
-              Live and Crush Live. It might be music, dance, comedy, cooking or
-              simply great conversation. What matters is that you enjoy
-              connecting with people.
+              audience, on platforms such as Poppo Live, Taka Live, Chamet and
+              Niki Live. It might be music, dance, comedy, cooking or simply
+              great conversation. What matters is that you enjoy connecting with
+              people.
             </p>
             <p className="mt-4 max-w-[36rem] text-[1.0625rem] leading-[1.8] text-[#5d6683]">
               If you like entertaining and engaging with others, streaming could
@@ -111,7 +111,10 @@ export function StreamerIntro() {
 
       <section className="home-section bg-[linear-gradient(180deg,#f8f7ff,#fff4fa)] px-(--home-gutter) py-[clamp(3.5rem,7vw,6rem)]">
         <div className="home-container">
-          <div className="mx-auto mb-[clamp(2rem,5vw,3.5rem)] max-w-[44rem] text-center" data-reveal>
+          <div
+            className="mx-auto mb-[clamp(2rem,5vw,3.5rem)] max-w-[44rem] text-center"
+            data-reveal
+          >
             <p className="home-eyebrow">WHY LIVE STREAMING</p>
             <h2 className="mt-3 text-[clamp(2rem,4vw,3.25rem)]! leading-[1.05]! tracking-[-0.05em]!">
               Why choose live streaming{" "}

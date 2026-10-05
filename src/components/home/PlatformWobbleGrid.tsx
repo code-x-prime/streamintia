@@ -21,9 +21,7 @@ export function PlatformWobbleGrid({ platforms }: { platforms: Platform[] }) {
           containerClassName={`min-h-[220px] col-span-1 ${
             index === 0 || index === 3
               ? "col-span-2 max-[640px]:min-h-[170px]"
-              : index === 4
-                ? "col-span-3 max-[640px]:col-span-2 max-[640px]:min-h-[170px]"
-                : "max-[640px]:min-h-[170px]"
+              : "max-[640px]:min-h-[170px]"
           } group/wobble`}
         >
           <Link
@@ -40,7 +38,10 @@ export function PlatformWobbleGrid({ platforms }: { platforms: Platform[] }) {
                   className="h-16 w-16 rounded-2xl object-cover max-[640px]:h-12 max-[640px]:w-12 max-[640px]:rounded-xl"
                 />
               ) : (
-                <HomeIcon name="broadcast" className="h-16 w-16 rounded-2xl bg-[rgb(255_255_255/0.92)] p-2 max-[640px]:h-12 max-[640px]:w-12" />
+                <HomeIcon
+                  name="broadcast"
+                  className="h-16 w-16 rounded-2xl bg-[rgb(255_255_255/0.92)] p-2 max-[640px]:h-12 max-[640px]:w-12"
+                />
               )}
               <span className="rounded-full border border-[rgb(255_255_255/0.25)] px-2 py-[0.2rem] text-[0.625rem] tracking-[0.08em] uppercase text-[rgb(255_255_255/0.7)] max-[640px]:px-1.5 max-[640px]:text-[0.5625rem]">
                 Preview

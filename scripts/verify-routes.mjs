@@ -17,7 +17,7 @@ const routes = [
   "/apply",
   "/privacy-policy",
   "/terms-and-conditions",
-  ...["poppo-live", "taka-live", "chamet", "niki-live", "crush-live"].map(
+  ...["poppo-live", "taka-live", "chamet", "niki-live"].map(
     (slug) => `/platforms/${slug}`,
   ),
 ];

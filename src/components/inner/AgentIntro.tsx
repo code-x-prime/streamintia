@@ -22,9 +22,9 @@ export function AgentIntro() {
             </h2>
             <p className="mt-5 text-[1.0625rem] leading-[1.8] text-[#5d6683]">
               Agents, sometimes called talent managers, are key partners for
-              live-streaming platforms such as Poppo Live, Taka Live, Chamet,
-              Niki Live and Crush Live. They find and nurture new talent, and
-              guide a team of streamers as they grow.
+              live-streaming platforms such as Poppo Live, Taka Live, Chamet and
+              Niki Live. They find and nurture new talent, and guide a team of
+              streamers as they grow.
             </p>
             <div className="mt-7 flex justify-center">
               <ButtonLink href="/apply?role=agent" variant="primary">

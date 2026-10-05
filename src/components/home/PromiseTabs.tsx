@@ -62,7 +62,7 @@ const promises: readonly Promise[] = [
     id: "honest",
     label: "Honest info",
     icon: "globe",
-    metric: "5",
+    metric: "4",
     metricLabel: "platforms, clearly marked",
     note: "Preview until confirmed",
     body: "Platform details are shared only once they are confirmed. Earnings and approvals are decided by each platform and are never guaranteed.",

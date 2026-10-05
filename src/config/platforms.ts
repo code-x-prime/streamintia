@@ -59,16 +59,4 @@ export const platforms: Platform[] = [
     status: "pending",
     features: [],
   },
-  {
-    slug: "crush-live",
-    name: "Crush Live",
-    logo: assets.platformLogos.crushLive,
-    description:
-      "A live-streaming platform for creators and hosts. Programme details and availability are being confirmed.",
-    hostUrl: "/apply?role=streamer&platform=crush-live",
-    agentUrl: "/apply?role=agent&platform=crush-live",
-    category: "Live streaming",
-    status: "pending",
-    features: [],
-  },
 ];
