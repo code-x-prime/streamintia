@@ -21,14 +21,14 @@ export function ShowcaseBanner({
   return (
     <section className="home-section px-(--home-gutter) py-[clamp(3rem,7vw,6rem)] max-[767px]:py-10">
       <div className="home-container">
-        <div className="relative isolate overflow-hidden rounded-[2rem] [background:radial-gradient(circle_at_20%_20%,rgb(139_77_255/0.35),transparent_45%),radial-gradient(circle_at_85%_80%,rgb(18_217_244/0.22),transparent_40%),#0b0c2b] shadow-[0_40px_100px_rgb(35_44_98/0.28)] max-[767px]:rounded-3xl">
+        <div className="relative isolate overflow-hidden rounded-[2rem] [background:radial-gradient(circle_at_20%_20%,rgb(124_58_237/0.35),transparent_45%),radial-gradient(circle_at_85%_80%,rgb(218_38_118/0.22),transparent_40%),#0b0114] shadow-[0_40px_100px_rgb(35_44_98/0.28)] max-[767px]:rounded-3xl">
           <div
             className={`grid items-center gap-6 px-[clamp(1.5rem,4vw,4rem)] py-[clamp(2rem,5vw,4rem)] lg:grid-cols-[0.8fr_1.2fr] lg:gap-10 ${
               flip ? "lg:[&>div:first-child]:order-2" : ""
             }`}
           >
             <div className="min-w-0 text-white">
-              <p className="text-[0.6875rem] font-semibold tracking-[0.16em] text-[#6feafb] uppercase">
+              <p className="text-[0.6875rem] font-semibold tracking-[0.16em] text-[#f9a8d4] uppercase">
                 {eyebrow}
               </p>
               <h2 className="mt-4 text-[clamp(2rem,4.2vw,3.5rem)]! leading-[1.05]! font-semibold! tracking-[-0.05em]! text-white!">

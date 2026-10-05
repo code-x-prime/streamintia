@@ -8,10 +8,10 @@ export function PartnershipCTA() {
     <section id="partnerships" className="home-section partnership-section pb-0 bg-white in-[.home-page]:bg-transparent">
       <div className="home-container">
         <div
-          className="relative isolate grid grid-cols-[1.15fr_1fr] items-center gap-8 overflow-hidden rounded-[var(--home-radius)] border border-[rgb(139_77_255/0.22)] bg-[linear-gradient(115deg,#131033,#15163e_60%,#182344)] p-16 shadow-[0_34px_85px_rgb(18_24_67/0.2)] transition-[transform,box-shadow] duration-350 ease-[var(--ease-standard)] hover:-translate-y-1 hover:shadow-[0_42px_100px_rgb(18_24_67/0.25)] max-[1023px]:grid-cols-1 max-[1023px]:gap-4 max-[1023px]:p-8"
+          className="relative isolate grid grid-cols-[1.15fr_1fr] items-center gap-8 overflow-hidden rounded-[var(--home-radius)] border border-[rgb(124_58_237/0.22)] bg-[linear-gradient(115deg,#131033,#15163e_60%,#182344)] p-16 shadow-[0_34px_85px_rgb(18_24_67/0.2)] transition-[transform,box-shadow] duration-350 ease-[var(--ease-standard)] hover:-translate-y-1 hover:shadow-[0_42px_100px_rgb(18_24_67/0.25)] max-[1023px]:grid-cols-1 max-[1023px]:gap-4 max-[1023px]:p-8"
           data-reveal
         >
-          <SectionGlow className="bg-[radial-gradient(ellipse_at_80%_40%,rgb(139_77_255/0.2),transparent_60%)]" />
+          <SectionGlow className="bg-[radial-gradient(ellipse_at_80%_40%,rgb(124_58_237/0.2),transparent_60%)]" />
           <div className="relative z-[1]">
             <p className="home-eyebrow">BETTER, TOGETHER.</p>
             <h2 className="text-[clamp(2.5rem,4.4vw,4rem)]">
@@ -34,7 +34,7 @@ export function PartnershipCTA() {
             aria-hidden="true"
           >
             <span className="absolute inset-[8%] rounded-full border border-[rgb(184_188_217/0.16)] [transform:rotate(-30deg)_scaleY(0.7)]" />
-            <span className="absolute inset-[20%] rounded-full border border-[rgb(139_77_255/0.3)] [transform:rotate(40deg)_scaleY(0.85)]" />
+            <span className="absolute inset-[20%] rounded-full border border-[rgb(124_58_237/0.3)] [transform:rotate(40deg)_scaleY(0.85)]" />
             <Image
               src={site.logos.icon}
               alt=""

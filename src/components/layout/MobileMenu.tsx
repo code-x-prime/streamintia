@@ -34,7 +34,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
     media.addEventListener("change", resize);
     const meta = document.querySelector('meta[name="theme-color"]');
     const previousThemeColor = meta?.getAttribute("content");
-    meta?.setAttribute("content", "#0d0e2c");
+    meta?.setAttribute("content", "#12021f");
     return () => {
       document.body.style.overflow = previous;
       media.removeEventListener("change", resize);
@@ -46,7 +46,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
       <button
         ref={trigger}
         className="grid h-11 w-11 place-items-center rounded-md border border-[rgb(28_35_81_/_0.12)] bg-[#f7f8ff] text-text-primary transition-colors duration-250
-          hover:bg-[rgb(18_217_244_/_0.08)]"
+          hover:bg-[rgb(218_38_118_/_0.08)]"
         aria-label="Open navigation menu"
         aria-haspopup="dialog"
         aria-expanded={open}
@@ -61,7 +61,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
       <dialog
         ref={dialog}
         id="mobile-navigation"
-        className="fixed inset-2 m-auto h-[calc(100dvh-16px)] max-h-none w-[calc(100%-16px)] max-w-345 overflow-y-auto rounded-[26px] border border-white/13 [background:radial-gradient(ellipse_at_100%_0,#37205c55,transparent_55%),#0d0e2c] p-0 text-[#f7f7ff] shadow-[0_35px_100px_#05061b66] [overscroll-behavior:contain]
+        className="fixed inset-2 m-auto h-[calc(100dvh-16px)] max-h-none w-[calc(100%-16px)] max-w-345 overflow-y-auto rounded-[26px] border border-white/13 [background:radial-gradient(ellipse_at_100%_0,#37205c55,transparent_55%),#12021f] p-0 text-[#f7f7ff] shadow-[0_35px_100px_#05061b66] [overscroll-behavior:contain]
           open:animate-[menu-enter_250ms_cubic-bezier(0.2,0.8,0.2,1)]
           backdrop:bg-[#070819a6] backdrop:[backdrop-filter:blur(10px)]
           max-[767px]:inset-[7px] max-[767px]:h-[calc(100dvh-14px)] max-[767px]:w-[calc(100%-14px)] max-[767px]:rounded-[20px]
@@ -79,7 +79,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
           <div onClick={close}>{brand}</div>
           <button
             className="grid h-11.5 w-11.5 shrink-0 place-items-center rounded-full border border-white/35 bg-white/4 text-white transition-colors duration-250
-              hover:bg-white/9.5 hover:text-[#70eaff]"
+              hover:bg-white/9.5 hover:text-[#f9a8d4]"
             aria-label="Close navigation menu"
             autoFocus
             onClick={close}
@@ -95,7 +95,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
             className="relative isolate self-stretch overflow-hidden rounded-[20px] border border-white/6 bg-[radial-gradient(at_20%_10%,#16364e88,transparent_50%),linear-gradient(140deg,#1b1d41,#211537)] p-[clamp(26px,4vw,50px)]
               max-[767px]:hidden"
           >
-            <p className="flex items-center gap-2 text-[9px] leading-[1.6] font-[650] tracking-[0.2em] text-[#74dcf5]">
+            <p className="flex items-center gap-2 text-[9px] leading-[1.6] font-[650] tracking-[0.2em] text-[#f9a8d4]">
               YOUR NEXT CHAPTER
             </p>
             <h2 className="relative z-1 mt-10 font-body text-[clamp(42px,5.3vw,76px)] leading-none font-semibold tracking-[-0.065em] text-white">
@@ -103,7 +103,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
               <br />
               place.
               <br />
-              <span className="bg-[linear-gradient(110deg,#43e8ff,#aa83ff,#ec88fa)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(110deg,#ec4899,#aa83ff,#ec88fa)] bg-clip-text text-transparent">
                 Go further.
               </span>
             </h2>
@@ -157,7 +157,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
           <div className="min-w-0 self-center">
             <p
               id="mobile-menu-title"
-              className="text-[9px] leading-[1.6] font-[650] tracking-[0.2em] text-[#74dcf5]"
+              className="text-[9px] leading-[1.6] font-[650] tracking-[0.2em] text-[#f9a8d4]"
             >
               EXPLORE STREAMINTIA
             </p>
@@ -178,7 +178,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
                           className="flex min-h-15 cursor-pointer list-none items-center gap-3.5 rounded-[13px] border border-transparent px-3.25 py-2.25 text-[clamp(19px,1.8vw,24px)] font-semibold text-white transition-[background,border-color] duration-180
                             marker:hidden
                             hover:border-white/3.5 hover:bg-white/2
-                            data-[active=true]:bg-[linear-gradient(100deg,#2acde811,#9c68fa0d)] data-[active=true]:text-[#8fefff]
+                            data-[active=true]:bg-[linear-gradient(100deg,#da267611,#9c68fa0d)] data-[active=true]:text-[#fbcfe8]
                             max-[767px]:min-h-15 max-[767px]:gap-3 max-[767px]:px-2.5 max-[767px]:py-2 max-[767px]:text-[20px]
                             [&::-webkit-details-marker]:hidden
                             [&_svg]:w-4.5 [&_svg]:shrink-0 [&_svg]:text-[#c3c6e0]"
@@ -222,7 +222,7 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
                         onClick={close}
                         className="flex min-h-15 items-center gap-3.5 rounded-[13px] border border-transparent px-3.25 py-2.25 text-[clamp(19px,1.8vw,24px)] font-semibold text-white transition-[background,border-color] duration-180
                           hover:border-white/3.5 hover:bg-white/2 hover:no-underline
-                          aria-[current=page]:bg-[linear-gradient(100deg,#2acde811,#9c68fa0d)] aria-[current=page]:text-[#8fefff] aria-[current=page]:no-underline
+                          aria-[current=page]:bg-[linear-gradient(100deg,#da267611,#9c68fa0d)] aria-[current=page]:text-[#fbcfe8] aria-[current=page]:no-underline
                           max-[767px]:min-h-15 max-[767px]:gap-3 max-[767px]:px-2.5 max-[767px]:py-2 max-[767px]:text-[20px]"
                       >
                         <span className="grid h-8.5 w-8.5 shrink-0 place-items-center rounded-[10px] border border-white/4 bg-white/2.5 text-[#9d9bc5] [&_svg]:h-4.25 [&_svg]:w-4.25">

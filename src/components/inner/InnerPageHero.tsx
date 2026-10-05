@@ -79,11 +79,11 @@ export function InnerPageHero({
         <>
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-32 right-[-12%] -z-10 h-[30rem] w-[30rem] rounded-full bg-[#8b4dff]/15 blur-3xl"
+            className="pointer-events-none absolute -top-32 right-[-12%] -z-10 h-[30rem] w-[30rem] rounded-full bg-[#7c3aed]/15 blur-3xl"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-[-8rem] left-[-10%] -z-10 h-[26rem] w-[26rem] rounded-full bg-[#12d9f4]/15 blur-3xl"
+            className="pointer-events-none absolute bottom-[-8rem] left-[-10%] -z-10 h-[26rem] w-[26rem] rounded-full bg-[#da2676]/15 blur-3xl"
           />
           <div
             aria-hidden="true"
@@ -111,7 +111,7 @@ export function InnerPageHero({
               data-inner-hero
               className="inline-flex items-center gap-2 rounded-full border border-[rgb(28_35_81/0.1)] bg-white/80 py-1.5 pr-3.5 pl-2.5 text-[0.6875rem] font-semibold tracking-[0.14em] text-[#5b4bd4] uppercase shadow-[0_6px_20px_rgb(35_44_98/0.06)] backdrop-blur"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] shadow-[0_0_0_4px_rgb(139_77_255/0.12)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] shadow-[0_0_0_4px_rgb(124_58_237/0.12)]" />
               {eyebrow}
             </p>
             <h1
@@ -151,7 +151,7 @@ export function InnerPageHero({
                     href={`mailto:${email}`}
                     className="group inline-flex min-w-0 items-center gap-2.5 font-medium text-[#0a1038] hover:no-underline"
                   >
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#12d9f4]/12 text-[#0aa6bd] transition-colors group-hover:bg-[#12d9f4]/22">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#da2676]/12 text-[#b5005d] transition-colors group-hover:bg-[#da2676]/22">
                       <MailIcon />
                     </span>
                     <span className="min-w-0 [overflow-wrap:anywhere] group-hover:text-[#5b4bd4]">
@@ -184,7 +184,7 @@ export function InnerPageHero({
             >
               <div
                 aria-hidden="true"
-                className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#8b4dff]/25 bg-[#8b4dff]/6 max-[767px]:-right-2 max-[767px]:-bottom-2"
+                className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#7c3aed]/25 bg-[#7c3aed]/6 max-[767px]:-right-2 max-[767px]:-bottom-2"
               />
               <div
                 className={`relative overflow-hidden rounded-[2rem] bg-[#e9ecfb] shadow-[0_40px_90px_rgb(35_44_98/0.22)] ring-1 ring-white/80 max-[767px]:rounded-3xl ${
@@ -214,7 +214,7 @@ export function InnerPageHero({
               </div>
               {chips && chips[0] ? (
                 <div className="absolute top-6 left-3 flex max-w-[13.5rem] items-center gap-3 rounded-2xl border border-white/70 bg-white/85 px-3.5 py-2.5 shadow-[0_18px_45px_rgb(35_44_98/0.16)] backdrop-blur-md min-[640px]:-left-6 min-[640px]:max-w-[15rem] min-[640px]:px-4 min-[640px]:py-3">
-                  <span className="h-9 w-9 shrink-0 rounded-xl bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] shadow-[0_8px_18px_rgb(139_77_255/0.35)]" />
+                  <span className="h-9 w-9 shrink-0 rounded-xl bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] shadow-[0_8px_18px_rgb(124_58_237/0.35)]" />
                   <span className="min-w-0">
                     <span className="block text-[0.8125rem] leading-tight font-semibold text-[#0a1038]">
                       {chips[0].title}
@@ -227,8 +227,8 @@ export function InnerPageHero({
               ) : null}
               {chips && chips[1] ? (
                 <div className="absolute right-3 bottom-6 flex max-w-[13.5rem] items-center gap-3 rounded-2xl border border-white/70 bg-white/85 px-3.5 py-2.5 shadow-[0_18px_45px_rgb(35_44_98/0.16)] backdrop-blur-md min-[640px]:-right-6 min-[640px]:max-w-[15rem] min-[640px]:px-4 min-[640px]:py-3">
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#0a1038]">
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#12d9f4] shadow-[0_0_0_4px_rgb(18_217_244/0.25)]" />
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#1f0233]">
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#da2676] shadow-[0_0_0_4px_rgb(218_38_118/0.25)]" />
                   </span>
                   <span className="min-w-0">
                     <span className="block text-[0.8125rem] leading-tight font-semibold text-[#0a1038]">

@@ -7,7 +7,7 @@ export function HeroVisual() {
   return (
     <div className="relative w-full h-152.5 min-h-0 aspect-auto m-0 perspective-none max-[1100px]:min-[768px]:h-142.5 max-[767px]:h-[clamp(365px,105vw,550px)] max-[767px]:max-w-130 max-[767px]:mx-auto">
       <span
-        className="absolute top-[42px] -left-16 z-4 font-[cursive] italic text-[34px] leading-[1.1] tracking-[-0.04em] text-[#ad83f1] pointer-events-none after:content-[''] after:block after:mt-[9px] after:h-0.5 after:bg-[linear-gradient(90deg,#e7b8ff,#71d6ff)] max-[1100px]:min-[768px]:-left-2.5 max-[1100px]:min-[768px]:top-3 max-[1100px]:min-[768px]:text-[28px] max-[767px]:top-px max-[767px]:left-px max-[767px]:text-[23px]"
+        className="absolute top-[42px] -left-16 z-4 font-[cursive] italic text-[34px] leading-[1.1] tracking-[-0.04em] text-[#ad83f1] pointer-events-none after:content-[''] after:block after:mt-[9px] after:h-0.5 after:bg-[linear-gradient(90deg,#e7b8ff,#f9a8d4)] max-[1100px]:min-[768px]:-left-2.5 max-[1100px]:min-[768px]:top-3 max-[1100px]:min-[768px]:text-[28px] max-[767px]:top-px max-[767px]:left-px max-[767px]:text-[23px]"
         aria-hidden="true"
       >
         Stream
@@ -17,7 +17,7 @@ export function HeroVisual() {
         Grow
       </span>
       <div
-        className="campaign-ribbon absolute inset-[30px_80px_55px_115px] rounded-[50px] pointer-events-none rotate-[26deg] bg-[linear-gradient(145deg,#af2eff,#658bff_46%,#2edaff)] max-[767px]:inset-[43px_53px_42px_66px] max-[767px]:rounded-[35px]"
+        className="campaign-ribbon absolute inset-[30px_80px_55px_115px] rounded-[50px] pointer-events-none rotate-[26deg] bg-[linear-gradient(145deg,#da2676,#a855f7_46%,#ec4899)] max-[767px]:inset-[43px_53px_42px_66px] max-[767px]:rounded-[35px]"
         aria-hidden="true"
       />
       <div
@@ -65,7 +65,7 @@ export function HeroVisual() {
       </div>
       <Link
         href="/about"
-        className="absolute top-[123px] -right-4 z-4 grid justify-items-center w-[204px] p-[17px] rounded-[18px] border border-[#cac0ef] bg-[radial-gradient(at_bottom_right,#24c7e6,transparent_55%),linear-gradient(140deg,#142041,#20123f)] text-white shadow-[0_15px_35px_rgb(46_34_117_/_0.15)] -rotate-1 text-[10px] gap-1 max-[1100px]:min-[768px]:w-[145px] max-[1100px]:min-[768px]:-right-1.25 max-[1100px]:min-[768px]:top-[125px] max-[767px]:top-[55px] max-[767px]:right-0 max-[767px]:w-[121px] max-[767px]:rounded-[13px] max-[767px]:p-[11px] max-[767px]:text-[8px] [&>img]:max-[767px]:w-10 [&>img]:max-[767px]:h-10"
+        className="absolute top-[123px] -right-4 z-4 grid justify-items-center w-[204px] p-[17px] rounded-[18px] border border-[#cac0ef] bg-[radial-gradient(at_bottom_right,#da2676,transparent_55%),linear-gradient(140deg,#142041,#20123f)] text-white shadow-[0_15px_35px_rgb(46_34_117_/_0.15)] -rotate-1 text-[10px] gap-1 max-[1100px]:min-[768px]:w-[145px] max-[1100px]:min-[768px]:-right-1.25 max-[1100px]:min-[768px]:top-[125px] max-[767px]:top-[55px] max-[767px]:right-0 max-[767px]:w-[121px] max-[767px]:rounded-[13px] max-[767px]:p-[11px] max-[767px]:text-[8px] [&>img]:max-[767px]:w-10 [&>img]:max-[767px]:h-10"
         data-hero-node
       >
         <Image src={site.logos.icon} alt="" width={62} height={62} />
@@ -75,7 +75,7 @@ export function HeroVisual() {
         <span>Discover Our Story</span>
       </Link>
       <span
-        className="absolute -right-0.5 top-[309px] z-4 font-[cursive] italic text-[28px] leading-[1.1] tracking-[-0.04em] text-[#8b43c8] pointer-events-none after:content-[''] after:block after:mt-[9px] after:h-0.5 after:bg-[linear-gradient(90deg,#e7b8ff,#71d6ff)] max-[1100px]:hidden"
+        className="absolute -right-0.5 top-[309px] z-4 font-[cursive] italic text-[28px] leading-[1.1] tracking-[-0.04em] text-[#8b43c8] pointer-events-none after:content-[''] after:block after:mt-[9px] after:h-0.5 after:bg-[linear-gradient(90deg,#e7b8ff,#f9a8d4)] max-[1100px]:hidden"
         aria-hidden="true"
       >
         More

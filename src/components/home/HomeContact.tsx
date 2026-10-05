@@ -43,7 +43,7 @@ export function HomeContact() {
           <ul className="mt-8 grid gap-4">
             {reasons.map((item) => (
               <li key={item.title} className="flex gap-4">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] text-white shadow-[0_10px_20px_-8px_#8b4dff66] [&_svg]:h-5 [&_svg]:w-5">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] text-white shadow-[0_10px_20px_-8px_#7c3aed66] [&_svg]:h-5 [&_svg]:w-5">
                   <HomeIcon name={item.icon} />
                 </span>
                 <span>

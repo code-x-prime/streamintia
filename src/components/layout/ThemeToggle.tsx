@@ -20,7 +20,7 @@ function apply(choice: ThemeChoice) {
   root.dataset.themeChoice = choice;
   root.style.colorScheme = theme;
   const meta = document.querySelector('meta[name="theme-color"]');
-  meta?.setAttribute("content", theme === "dark" ? "#070818" : "#ffffff");
+  meta?.setAttribute("content", theme === "dark" ? "#0b0114" : "#ffffff");
 }
 
 /** Runs before paint (inlined in <head>) so the page never flashes the wrong theme. */

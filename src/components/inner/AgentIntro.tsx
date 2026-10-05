@@ -43,7 +43,7 @@ export function AgentIntro() {
           >
             <div
               aria-hidden="true"
-              className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#8b4dff]/25 bg-[#8b4dff]/6"
+              className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#7c3aed]/25 bg-[#7c3aed]/6"
             />
             <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-[0_30px_70px_rgb(35_44_98/0.18)]">
               <Image
@@ -72,7 +72,7 @@ export function AgentIntro() {
                   key={item}
                   className="flex gap-3 text-base leading-[1.6] text-[#2e345c]"
                 >
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] text-white">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] text-white">
                     <HomeIcon name="check" className="h-3.5 w-3.5" />
                   </span>
                   {item}

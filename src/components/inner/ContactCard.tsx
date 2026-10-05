@@ -15,7 +15,7 @@ export function ContactCard({
 }) {
   const content = (
     <>
-      <span className="grid h-[38px] w-[38px] shrink-0 place-items-center rounded-lg border border-(--home-border) bg-[#f4fbff] text-(--primary) shadow-[0_8px_22px_rgb(18_217_244/0.08)] [&>svg]:h-[18px] [&>svg]:w-[18px]">
+      <span className="grid h-[38px] w-[38px] shrink-0 place-items-center rounded-lg border border-(--home-border) bg-[#f4fbff] text-(--primary) shadow-[0_8px_22px_rgb(218_38_118/0.08)] [&>svg]:h-[18px] [&>svg]:w-[18px]">
         <HomeIcon name={icon} />
       </span>
       <span>

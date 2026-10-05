@@ -153,13 +153,13 @@ export function PromiseTabs() {
               tabIndex={isActive ? 0 : -1}
               onClick={() => select(index)}
               onKeyDown={(e) => onKeyDown(e, index)}
-              className={`relative flex min-h-16 items-center justify-center gap-2 px-3 py-4 text-[0.9375rem] font-semibold transition-colors duration-150 hover:bg-[rgb(139_77_255/0.05)] max-[639px]:min-h-14 ${
+              className={`relative flex min-h-16 items-center justify-center gap-2 px-3 py-4 text-[0.9375rem] font-semibold transition-colors duration-150 hover:bg-[rgb(124_58_237/0.05)] max-[639px]:min-h-14 ${
                 isActive ? "text-[#0a1038]" : "text-[#727b94]"
               }`}
             >
               <HomeIcon
                 name={item.icon}
-                className={`h-4.5 w-4.5 shrink-0 ${isActive ? "text-[#8b4dff]" : ""}`}
+                className={`h-4.5 w-4.5 shrink-0 ${isActive ? "text-[#7c3aed]" : ""}`}
               />
               <span className="whitespace-nowrap">{item.label}</span>
               <span
@@ -169,7 +169,7 @@ export function PromiseTabs() {
                 {isActive ? (
                   <span
                     key={`${active}-${pickedAt}`}
-                    className="promise-progress block size-full bg-[image:linear-gradient(90deg,#12d9f4,#8b4dff)]"
+                    className="promise-progress block size-full bg-[image:linear-gradient(90deg,#da2676,#7c3aed)]"
                     style={
                       reduced
                         ? undefined

@@ -22,10 +22,10 @@ export function DisclaimerBar() {
   return (
     <div
       role="note"
-      className="bg-[#0a1038] px-(--home-gutter) py-3 text-center text-[0.8125rem] leading-[1.5] text-[#d9dcf0] max-[767px]:text-xs"
+      className="bg-[#1f0233] px-(--home-gutter) py-3 text-center text-[0.8125rem] leading-[1.5] text-[#d9dcf0] max-[767px]:text-xs"
     >
       <p className="mx-auto flex max-w-[64rem] items-start justify-center gap-2.5 text-inherit">
-        <ShieldIcon className="mt-0.5 h-4 w-4 shrink-0 text-[#6feafb]" />
+        <ShieldIcon className="mt-0.5 h-4 w-4 shrink-0 text-[#f9a8d4]" />
         <span>
           <strong className="font-semibold text-white">Please note:</strong>{" "}
           Streamintia is an independent talent and creator-support team. We are
@@ -53,7 +53,7 @@ export function TransparencyNote() {
           className="mx-auto max-w-[56rem] rounded-3xl border border-[rgb(42_52_105/0.12)] bg-[linear-gradient(145deg,#ffffff,#f6f5ff)] p-[clamp(1.5rem,4vw,2.5rem)] shadow-[0_18px_45px_rgb(42_52_105/0.07)]"
         >
           <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] text-white shadow-[0_10px_20px_-8px_#8b4dff66]">
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] text-white shadow-[0_10px_20px_-8px_#7c3aed66]">
               <ShieldIcon className="h-5 w-5" />
             </span>
             <h2 className="text-[clamp(1.25rem,2.4vw,1.625rem)]! font-semibold! tracking-[-0.03em]!">
@@ -68,7 +68,7 @@ export function TransparencyNote() {
               >
                 <span
                   aria-hidden="true"
-                  className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8b4dff]"
+                  className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7c3aed]"
                 />
                 {item}
               </li>

@@ -23,7 +23,7 @@ export function ServiceCard({
   const baseCard =
     "relative flex min-h-60 flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-[rgb(42_52_105/0.1)] bg-white p-8 shadow-[0_16px_46px_rgb(42_52_105/0.07)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1.5 hover:border-[rgb(76_120_255/0.22)] hover:bg-white hover:shadow-[0_25px_60px_rgb(42_52_105/0.13)] max-[1100px]:p-6 max-[767px]:min-h-[245px] max-[767px]:p-6";
   const featuredCard = isFeatured
-    ? "row-span-3 bg-[radial-gradient(circle_at_50%_35%,rgb(18_217_244/0.12),transparent_34%),linear-gradient(150deg,#f7fdff,#f5f2ff)] max-[767px]:col-span-full max-[767px]:row-auto max-[767px]:min-h-[330px] max-[430px]:min-h-[330px]"
+    ? "row-span-3 bg-[radial-gradient(circle_at_50%_35%,rgb(218_38_118/0.12),transparent_34%),linear-gradient(150deg,#f7fdff,#f5f2ff)] max-[767px]:col-span-full max-[767px]:row-auto max-[767px]:min-h-[330px] max-[430px]:min-h-[330px]"
     : "max-[430px]:min-h-[210px]";
   const sixthCard = isSixth
     ? "max-[1100px]:col-[2/4] max-[1100px]:min-h-[180px] max-[1100px]:flex-row max-[1100px]:items-center max-[767px]:col-[1/-1] max-[767px]:min-h-[180px] max-[430px]:col-auto max-[430px]:flex-col max-[430px]:items-stretch"
@@ -60,7 +60,7 @@ export function ServiceCard({
     <article className={cardClass} data-reveal>
       <div className={topClass}>
         <span className={numberClass}>0{index + 1}</span>
-        <HomeIcon name={service.icon} className="text-primary in-[.home-page]:text-[#7c5bde]" />
+        <HomeIcon name={service.icon} className="text-primary in-[.home-page]:text-[#7c3aed]" />
       </div>
       {isFeatured ? (
         <div className={artWrapClass}>

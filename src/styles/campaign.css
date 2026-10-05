@@ -78,7 +78,7 @@ body {
   width: clamp(155px, 15vw, 210px);
 }
 .site-header .brand-cta {
-  background: linear-gradient(110deg, #08bde9, #4655ff 48%, #b629ff);
+  background: linear-gradient(110deg, #da2676, #9333ea 48%, #7c3aed);
   color: #fff;
   border-radius: 14px;
   min-height: 48px;
@@ -134,7 +134,7 @@ body {
 }
 .campaign-hero #hero-title .home-gradient-text {
   white-space: nowrap;
-  background-image: linear-gradient(110deg, #087ef9, #405cff 46%, #d915ee);
+  background-image: linear-gradient(110deg, #da2676, #a855f7 46%, #7c3aed);
 }
 .campaign-hero .hero-description {
   max-width: 490px;

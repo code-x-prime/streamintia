@@ -44,8 +44,8 @@ export function PlatformExplorer({ items }: { items: Platform[] }) {
             type="button"
             className={`border rounded-full py-[0.72rem] px-[1.05rem] text-[0.76rem] font-bold cursor-pointer transition-[180ms] ease-in-out ${
               category === item
-                ? "border-transparent bg-[linear-gradient(135deg,#7456ef,#10cfe7)] text-white shadow-[0_10px_25px_rgb(91_82_218/0.2)]"
-                : "border-[rgb(40_54_122/0.13)] bg-white text-[#505a78] hover:border-transparent hover:bg-[linear-gradient(135deg,#7456ef,#10cfe7)] hover:text-white hover:shadow-[0_10px_25px_rgb(91_82_218/0.2)]"
+                ? "border-transparent bg-[linear-gradient(135deg,#7456ef,#da2676)] text-white shadow-[0_10px_25px_rgb(91_82_218/0.2)]"
+                : "border-[rgb(40_54_122/0.13)] bg-white text-[#505a78] hover:border-transparent hover:bg-[linear-gradient(135deg,#7456ef,#da2676)] hover:text-white hover:shadow-[0_10px_25px_rgb(91_82_218/0.2)]"
             }`}
             aria-pressed={category === item}
             onClick={() => setCategory(item)}

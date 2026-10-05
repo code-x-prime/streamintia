@@ -102,10 +102,10 @@ export function WhyChooseSection() {
           {whyPoints.map((benefit, index) => (
             <article
               key={benefit.title}
-              className={`group relative col-span-2 overflow-hidden rounded-[20px] border border-[rgb(42_52_105/0.1)] bg-white p-[22px] shadow-[0_12px_30px_rgb(42_52_105/0.05)] transition-[transform,box-shadow,border-color] duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:border-[rgb(18_217_244/0.3)] hover:shadow-[0_22px_45px_rgb(42_52_105/0.1)] after:content-[''] after:absolute after:inset-0 after:-z-10 after:opacity-0 after:bg-[radial-gradient(160px_circle_at_85%_-10%,rgb(139_77_255/0.1),transparent_70%)] after:transition-opacity after:duration-300 after:ease-[var(--ease-standard)] hover:after:opacity-100 max-[900px]:col-span-1${index === 0 ? " col-[3/5] max-[900px]:col-span-1" : ""}`}
+              className={`group relative col-span-2 overflow-hidden rounded-[20px] border border-[rgb(42_52_105/0.1)] bg-white p-[22px] shadow-[0_12px_30px_rgb(42_52_105/0.05)] transition-[transform,box-shadow,border-color] duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:border-[rgb(218_38_118/0.3)] hover:shadow-[0_22px_45px_rgb(42_52_105/0.1)] after:content-[''] after:absolute after:inset-0 after:-z-10 after:opacity-0 after:bg-[radial-gradient(160px_circle_at_85%_-10%,rgb(124_58_237/0.1),transparent_70%)] after:transition-opacity after:duration-300 after:ease-[var(--ease-standard)] hover:after:opacity-100 max-[900px]:col-span-1${index === 0 ? " col-[3/5] max-[900px]:col-span-1" : ""}`}
               data-reveal
             >
-              <span className="mb-3.5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[linear-gradient(135deg,#12d9f4,#8b4dff)] text-white shadow-[0_10px_20px_-8px_#8b4dff66] [&>svg]:h-5 [&>svg]:w-5">
+              <span className="mb-3.5 grid h-[42px] w-[42px] place-items-center rounded-xl bg-[linear-gradient(135deg,#da2676,#7c3aed)] text-white shadow-[0_10px_20px_-8px_#7c3aed66] [&>svg]:h-5 [&>svg]:w-5">
                 <HomeIcon name={icons[index]} />
               </span>
               <h3 className="text-[15px] tracking-[-0.01em]">

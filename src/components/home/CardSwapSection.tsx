@@ -44,7 +44,7 @@ export function CardSwapSection() {
   return (
     <section
       id="benefits"
-      className="home-section overflow-hidden bg-[radial-gradient(circle_at_8%_20%,rgb(18_217_244/0.07),transparent_30%),radial-gradient(circle_at_95%_80%,rgb(139_77_255/0.08),transparent_32%)]"
+      className="home-section overflow-hidden bg-[radial-gradient(circle_at_8%_20%,rgb(218_38_118/0.07),transparent_30%),radial-gradient(circle_at_95%_80%,rgb(124_58_237/0.08),transparent_32%)]"
     >
       <div className="home-container grid grid-cols-[1fr_1fr] items-center gap-8 max-[1023px]:grid-cols-1 max-[1023px]:gap-6">
         <SectionIntro

@@ -43,7 +43,7 @@ export default async function ContactPage({
           { title: "Happy to help", caption: "Ask us anything" },
         ]}
       />
-      <section className="pt-16 pb-(--home-section-space) [background:radial-gradient(circle_at_0_20%,rgb(18_217_244/0.07),transparent_24%),#ffffff] max-[767px]:pt-10">
+      <section className="pt-16 pb-(--home-section-space) [background:radial-gradient(circle_at_0_20%,rgb(218_38_118/0.07),transparent_24%),#ffffff] max-[767px]:pt-10">
         <div className="home-container grid grid-cols-[0.8fr_1.2fr] items-start gap-16 max-[1100px]:grid-cols-[0.75fr_1.25fr] max-[1100px]:gap-10 max-[767px]:grid-cols-1 max-[767px]:gap-10">
           <div>
             <p className="home-eyebrow">GOOD CONNECTIONS BEGIN HERE</p>
@@ -100,7 +100,7 @@ export default async function ContactPage({
       <section className="home-section">
         <div className="home-container">
           <div
-            className="flex items-center justify-between gap-12 rounded-(--home-radius) border border-[rgb(92_74_178/0.14)] bg-[radial-gradient(circle_at_90%_10%,rgb(139_77_255/0.14),transparent_38%),linear-gradient(135deg,#f8fdff,#f5f2ff)] p-12 text-[#0a1038] shadow-[0_22px_60px_rgb(39_49_105/0.1)] max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-8 max-[767px]:p-8 [&_h2]:text-[2.75rem] max-[767px]:[&_h2]:text-[2.1rem]"
+            className="flex items-center justify-between gap-12 rounded-(--home-radius) border border-[rgb(92_74_178/0.14)] bg-[radial-gradient(circle_at_90%_10%,rgb(124_58_237/0.14),transparent_38%),linear-gradient(135deg,#f8fdff,#f5f2ff)] p-12 text-[#0a1038] shadow-[0_22px_60px_rgb(39_49_105/0.1)] max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-8 max-[767px]:p-8 [&_h2]:text-[2.75rem] max-[767px]:[&_h2]:text-[2.1rem]"
             data-reveal
           >
             <div>

@@ -33,10 +33,10 @@ export function ShowcasePair() {
             <article
               key={card.id}
               data-reveal
-              className="relative isolate flex min-h-[19rem] overflow-hidden rounded-3xl [background:radial-gradient(circle_at_15%_15%,rgb(139_77_255/0.38),transparent_50%),radial-gradient(circle_at_90%_90%,rgb(18_217_244/0.22),transparent_45%),#0b0c2b] shadow-[0_30px_70px_rgb(35_44_98/0.22)] max-[560px]:min-h-0 max-[560px]:flex-col"
+              className="relative isolate flex min-h-[19rem] overflow-hidden rounded-3xl [background:radial-gradient(circle_at_15%_15%,rgb(124_58_237/0.38),transparent_50%),radial-gradient(circle_at_90%_90%,rgb(218_38_118/0.22),transparent_45%),#0b0114] shadow-[0_30px_70px_rgb(35_44_98/0.22)] max-[560px]:min-h-0 max-[560px]:flex-col"
             >
               <div className="relative z-10 flex w-[50%] flex-col justify-center p-7 max-[1280px]:p-6 max-[1000px]:w-[54%] text-white max-[560px]:w-full max-[560px]:p-6 max-[560px]:pb-2">
-                <p className="text-[0.625rem] font-semibold tracking-[0.16em] text-[#6feafb]">
+                <p className="text-[0.625rem] font-semibold tracking-[0.16em] text-[#f9a8d4]">
                   {card.eyebrow}
                 </p>
                 <h3 className="mt-3 text-[clamp(1.5rem,2.3vw,2rem)]! leading-[1.1]! font-semibold! tracking-[-0.04em]! text-white!">

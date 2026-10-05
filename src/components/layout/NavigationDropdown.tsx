@@ -99,7 +99,7 @@ export function NavigationDropdown({
                   hover:bg-[#f4f6ff] hover:no-underline aria-[current=page]:bg-[#f4f6ff] aria-[current=page]:no-underline
                   [&_strong]:text-[0.9375rem] [&_strong]:font-semibold [&_strong]:text-[#08082d]
                   [&_small]:mt-1 [&_small]:block [&_small]:text-[0.8125rem] [&_small]:leading-snug [&_small]:text-[#5d6683]
-                  [&_svg]:h-4.5 [&_svg]:shrink-0 [&_svg]:text-[#8b4dff]"
+                  [&_svg]:h-4.5 [&_svg]:shrink-0 [&_svg]:text-[#7c3aed]"
               >
                 <span>
                   <strong>{item.label}</strong>

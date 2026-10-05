@@ -120,7 +120,7 @@ export default function ServicesPage() {
           <ProcessSteps steps={flow} />
         </div>
       </section>
-      <section className="home-section overflow-hidden [background:radial-gradient(circle_at_80%_20%,rgb(35_211_235/0.13),transparent_30%),radial-gradient(circle_at_10%_90%,rgb(135_83_255/0.18),transparent_35%),#11142d] px-(--home-gutter) py-[clamp(4.5rem,9vw,8rem)] text-white max-[767px]:py-18 [&_.home-eyebrow]:text-[#6feafb] [&_h2]:text-white [&_h3]:text-white">
+      <section className="home-section overflow-hidden [background:radial-gradient(circle_at_80%_20%,rgb(35_211_235/0.13),transparent_30%),radial-gradient(circle_at_10%_90%,rgb(135_83_255/0.18),transparent_35%),#14031f] px-(--home-gutter) py-[clamp(4.5rem,9vw,8rem)] text-white max-[767px]:py-18 [&_.home-eyebrow]:text-[#f9a8d4] [&_h2]:text-white [&_h3]:text-white">
         <div className="home-container">
           <div className="mb-[clamp(2rem,5vw,4rem)] max-w-[760px]">
             <p className="home-eyebrow">BUILT FOR THE ECOSYSTEM</p>
@@ -130,7 +130,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-3 gap-4 max-[767px]:grid-cols-1">
             <article className="min-h-[230px] rounded-2xl border border-[rgb(255_255_255/0.12)] bg-[rgb(255_255_255/0.055)] p-6">
-              <span className="text-[0.7rem] text-[#6be6f6]">01</span>
+              <span className="text-[0.7rem] text-[#f9a8d4]">01</span>
               <h3 className="mt-16">For creators</h3>
               <p className="mt-3 text-[#b7bfd8] leading-[1.7]">
                 Direction for preparing, onboarding and building confidence on
@@ -138,7 +138,7 @@ export default function ServicesPage() {
               </p>
             </article>
             <article className="min-h-[230px] rounded-2xl border border-[rgb(255_255_255/0.12)] bg-[rgb(255_255_255/0.055)] p-6">
-              <span className="text-[0.7rem] text-[#6be6f6]">02</span>
+              <span className="text-[0.7rem] text-[#f9a8d4]">02</span>
               <h3 className="mt-16">For agents</h3>
               <p className="mt-3 text-[#b7bfd8] leading-[1.7]">
                 Structure for discovering talent and supporting a responsible
@@ -146,7 +146,7 @@ export default function ServicesPage() {
               </p>
             </article>
             <article className="min-h-[230px] rounded-2xl border border-[rgb(255_255_255/0.12)] bg-[rgb(255_255_255/0.055)] p-6">
-              <span className="text-[0.7rem] text-[#6be6f6]">03</span>
+              <span className="text-[0.7rem] text-[#f9a8d4]">03</span>
               <h3 className="mt-16">For platforms</h3>
               <p className="mt-3 text-[#b7bfd8] leading-[1.7]">
                 A people-focused route for connecting with informed, prepared

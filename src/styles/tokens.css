@@ -1,15 +1,15 @@
 :root {
-  --background: #ffffff;
+  --background: #faf8ff;
   --background-secondary: #f8faff;
   --surface: #f6f7ff;
   --surface-soft: #fbfbfe;
-  --primary: #12d9f4;
-  --primary-blue: #4a8cff;
-  --purple: #8b4dff;
-  --magenta: #d400c8;
+  --primary: #da2676;
+  --primary-blue: #b5005d;
+  --purple: #7c3aed;
+  --magenta: #630ed4;
   --pink: #f000b8;
-  --text-primary: #08082d;
-  --text-secondary: #5d6480;
+  --text-primary: #131b2e;
+  --text-secondary: #4a4455;
   --border: rgba(8, 8, 45, 0.1);
   --gradient-brand: linear-gradient(
     120deg,
@@ -38,7 +38,7 @@
   --radius-lg: 1rem;
   --radius-full: 9999px;
   --shadow-soft: 0 8px 24px rgb(8 8 45 / 0.08);
-  --shadow-glow: 0 0 24px rgb(18 217 244 / 0.18);
+  --shadow-glow: 0 0 24px rgb(218 38 118 / 0.18);
   --container-content: 75rem;
   --container-reading: 48rem;
   --duration-fast: 150ms;

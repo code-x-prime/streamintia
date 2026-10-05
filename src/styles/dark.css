@@ -7,24 +7,25 @@
  */
 
 html[data-theme="dark"] {
-  --background: #070818;
-  --background-secondary: #0b0d24;
-  --surface: #12153a;
+  --background: #0b0114;
+  --background-secondary: #10021d;
+  --surface: #1f0233;
   --surface-soft: #0e1030;
-  --text-primary: #eef0ff;
-  --text-secondary: #a9aecb;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
   --border: rgb(255 255 255 / 0.1);
-  --home-muted: #a9aecb;
+  --home-muted: #d1d5db;
   --home-border: rgb(255 255 255 / 0.1);
-  --inner-accent: #b9a6ff;
-  --dk-bg: #070818;
-  --dk-section: #0b0d24;
-  --dk-card: #12153a;
-  --dk-card-2: #171b47;
+  --inner-accent: #f0abfc;
+  --dk-bg: #0b0114;
+  --dk-section: #10021d;
+  --dk-card: #1a0230;
+  --dk-card-2: #2a0845;
   --dk-line: rgb(255 255 255 / 0.1);
-  --dk-text: #eef0ff;
-  --dk-muted: #a9aecb;
-  --dk-accent: #b9a6ff;
+  --dk-glow: radial-gradient(circle at 10% 20%, rgb(218 38 118 / 0.15), transparent 40%), radial-gradient(circle at 90% 80%, rgb(124 58 237 / 0.2), transparent 40%);
+  --dk-text: #ffffff;
+  --dk-muted: #c9c4d6;
+  --dk-accent: #f0abfc;
   color-scheme: dark;
 }
 
@@ -35,6 +36,10 @@ html[data-theme="dark"] .home-page,
 html[data-theme="dark"] .inner-page {
   background: var(--dk-bg) !important;
   color: var(--dk-text);
+}
+html[data-theme="dark"] body {
+  background: var(--dk-glow), var(--dk-bg) !important;
+  background-attachment: fixed !important;
 }
 @layer base {
   html[data-theme="dark"] p {
@@ -143,8 +148,8 @@ html[data-theme="dark"] :not(section):is(
   [class*="bg-[linear-gradient(135deg,#f"],
   [class*="bg-[linear-gradient(135deg,#e"],
   [class*="bg-[linear-gradient(135deg,#d3f7ff"],
-  [class*="bg-[linear-gradient(135deg,rgb(18_217_244/0.12),#ffffff)]"],
-  [class*="bg-[linear-gradient(135deg,rgb(139_77_255/0.12),#ffffff)]"],
+  [class*="bg-[linear-gradient(135deg,rgb(218_38_118/0.12),#ffffff)]"],
+  [class*="bg-[linear-gradient(135deg,rgb(124_58_237/0.12),#ffffff)]"],
   [class*="#f5f2ff)]"],
   [class*="#f7f3ff)]"],
   [class*="#eef1ff)]"],
@@ -253,7 +258,7 @@ html[data-theme="dark"] :is(
   background: var(--dk-section) !important;
 }
 html[data-theme="dark"] .home-page .opportunities-section {
-  background: linear-gradient(145deg, #0b0d24, #110d2c) !important;
+  background: linear-gradient(145deg, #10021d, #110d2c) !important;
 }
 html[data-theme="dark"] :is(
   .card-swap-card,
@@ -290,8 +295,8 @@ html[data-theme="dark"] .home-button--text {
 }
 html[data-theme="dark"] .home-page .campaign-hero {
   background:
-    radial-gradient(ellipse at 86% 24%, rgb(139 77 255 / 0.18) 0, transparent 37%),
-    radial-gradient(ellipse at 50% 85%, rgb(18 217 244 / 0.1) 0, transparent 40%),
+    radial-gradient(ellipse at 86% 24%, rgb(124 58 237 / 0.18) 0, transparent 37%),
+    radial-gradient(ellipse at 50% 85%, rgb(218 38 118 / 0.1) 0, transparent 40%),
     var(--dk-bg) !important;
 }
 html[data-theme="dark"] .home-eyebrow {
@@ -356,7 +361,7 @@ html[data-theme="dark"] .home-button--shiny,
 html[data-theme="dark"] [class*="gleam-edge-"] {
   box-shadow:
     0 0 0 1px rgb(185 166 255 / 0.45),
-    0 10px 28px rgb(139 77 255 / 0.35) !important;
+    0 10px 28px rgb(124 58 237 / 0.35) !important;
 }
 html[data-theme="dark"] [class*="text-[#151938]"],
 html[data-theme="dark"] .service-list-name,

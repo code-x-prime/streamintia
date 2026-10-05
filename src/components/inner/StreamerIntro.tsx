@@ -67,7 +67,7 @@ export function StreamerIntro() {
           >
             <div
               aria-hidden="true"
-              className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#8b4dff]/25 bg-[#8b4dff]/6"
+              className="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#7c3aed]/25 bg-[#7c3aed]/6"
             />
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-[0_30px_70px_rgb(35_44_98/0.18)] max-[767px]:aspect-[4/3]">
               <Image
@@ -142,7 +142,7 @@ export function StreamerIntro() {
                   />
                 </div>
                 <div className="p-1 md:p-3">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] text-white shadow-[0_10px_20px_-8px_#8b4dff66] [&_svg]:h-5 [&_svg]:w-5">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] text-white shadow-[0_10px_20px_-8px_#7c3aed66] [&_svg]:h-5 [&_svg]:w-5">
                     <HomeIcon name={item.icon} />
                   </span>
                   <h3 className="mt-4 text-[clamp(1.375rem,2.4vw,1.75rem)]! font-semibold! tracking-[-0.03em]!">
@@ -159,7 +159,7 @@ export function StreamerIntro() {
                       >
                         <HomeIcon
                           name="check"
-                          className="mt-0.5 h-5 w-5 shrink-0 text-[#8b4dff]"
+                          className="mt-0.5 h-5 w-5 shrink-0 text-[#7c3aed]"
                         />
                         {point}
                       </li>
@@ -191,7 +191,7 @@ export function StreamerIntro() {
                   key={benefit}
                   className="flex gap-3 text-base leading-[1.6] text-[#2e345c]"
                 >
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] text-white">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] text-white">
                     <HomeIcon name="check" className="h-3.5 w-3.5" />
                   </span>
                   {benefit}
@@ -214,7 +214,7 @@ export function StreamerIntro() {
           >
             <div
               aria-hidden="true"
-              className="absolute -bottom-3 -left-3 h-full w-full rounded-[2rem] border border-[#12d9f4]/30 bg-[#12d9f4]/6"
+              className="absolute -bottom-3 -left-3 h-full w-full rounded-[2rem] border border-[#da2676]/30 bg-[#da2676]/6"
             />
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-[0_30px_70px_rgb(35_44_98/0.18)] max-[767px]:aspect-[4/3]">
               <Image

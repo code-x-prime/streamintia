@@ -11,7 +11,7 @@ export function Footer() {
       <div className="relative z-0 text-white">
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_90%_100%,rgb(18_217_244/0.12),transparent_50%),linear-gradient(180deg,#120a3a,#0e0a33_50%,#0b0c2b)] "
+          className="absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_90%_100%,rgb(218_38_118/0.12),transparent_50%),linear-gradient(180deg,#1a0530,#12021f_50%,#0b0114)] "
         />
         <div className="mx-auto max-w-352 px-[clamp(1rem,3vw,3rem)]">
           <FooterCTA />

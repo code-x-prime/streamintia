@@ -114,7 +114,7 @@ export default async function AboutPage() {
           <div className="relative mx-auto w-full max-w-[36rem]" data-reveal>
             <div
               aria-hidden="true"
-              className="absolute inset-[8%_4%] -z-10 rounded-[3rem] bg-[radial-gradient(ellipse_at_center,rgb(139_77_255/0.22),rgb(18_217_244/0.12)_55%,transparent_75%)] blur-2xl"
+              className="absolute inset-[8%_4%] -z-10 rounded-[3rem] bg-[radial-gradient(ellipse_at_center,rgb(124_58_237/0.22),rgb(218_38_118/0.12)_55%,transparent_75%)] blur-2xl"
             />
             <Image
               src={assets.visuals.showcaseStreamer.src}
@@ -132,16 +132,16 @@ export default async function AboutPage() {
         <div className="home-container grid gap-5 md:grid-cols-2">
           <article
             data-reveal
-            className="relative isolate overflow-hidden rounded-[1.75rem] bg-[#0a1038] p-[clamp(1.75rem,4vw,3rem)] text-white shadow-[0_30px_70px_rgb(10_16_56/0.25)]"
+            className="relative isolate overflow-hidden rounded-[1.75rem] bg-[#1f0233] p-[clamp(1.75rem,4vw,3rem)] text-white shadow-[0_30px_70px_rgb(10_16_56/0.25)]"
           >
             <div
               aria-hidden="true"
-              className="absolute -top-16 -right-16 -z-10 h-56 w-56 rounded-full bg-[#12d9f4]/20 blur-3xl"
+              className="absolute -top-16 -right-16 -z-10 h-56 w-56 rounded-full bg-[#da2676]/20 blur-3xl"
             />
-            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-[#6feafb] [&_svg]:h-6 [&_svg]:w-6">
+            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-[#f9a8d4] [&_svg]:h-6 [&_svg]:w-6">
               <HomeIcon name="compass" />
             </span>
-            <p className="mt-6 text-[0.6875rem] font-semibold tracking-[0.16em] text-[#6feafb]">
+            <p className="mt-6 text-[0.6875rem] font-semibold tracking-[0.16em] text-[#f9a8d4]">
               OUR MISSION
             </p>
             <h2 className="mt-2 text-[clamp(1.75rem,3vw,2.25rem)]! leading-[1.1]! font-semibold! tracking-[-0.04em]! text-white!">
@@ -200,7 +200,7 @@ export default async function AboutPage() {
                 data-reveal
                 className="rounded-3xl border border-[rgb(42_52_105/0.1)] bg-white p-6 shadow-[0_14px_36px_rgb(42_52_105/0.06)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgb(42_52_105/0.12)]"
               >
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)] text-white shadow-[0_10px_20px_-8px_#8b4dff66] [&_svg]:h-5.5 [&_svg]:w-5.5">
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-[image:linear-gradient(135deg,#da2676,#7c3aed)] text-white shadow-[0_10px_20px_-8px_#7c3aed66] [&_svg]:h-5.5 [&_svg]:w-5.5">
                   <HomeIcon name={value.icon} />
                 </span>
                 <h3 className="mt-5 text-lg! font-semibold! tracking-[-0.02em]!">
@@ -234,7 +234,7 @@ export default async function AboutPage() {
                 data-reveal
                 className="relative rounded-3xl border border-[rgb(42_52_105/0.1)] bg-[linear-gradient(145deg,#ffffff,#f6f5ff)] p-7"
               >
-                <span className="font-(family-name:--font-display) text-[3rem] leading-none font-semibold text-[rgb(139_77_255/0.2)]">
+                <span className="font-(family-name:--font-display) text-[3rem] leading-none font-semibold text-[rgb(124_58_237/0.2)]">
                   0{index + 1}
                 </span>
                 <h3 className="mt-3 text-xl! font-semibold! tracking-[-0.03em]!">
@@ -253,11 +253,11 @@ export default async function AboutPage() {
         <div className="home-container">
           <div
             data-reveal
-            className="relative isolate overflow-hidden rounded-[2rem] [background:radial-gradient(circle_at_85%_20%,rgb(139_77_255/0.3),transparent_45%),#0b0c2b] px-[clamp(1.5rem,4vw,3.5rem)] py-[clamp(2rem,5vw,3.5rem)] text-white"
+            className="relative isolate overflow-hidden rounded-[2rem] [background:radial-gradient(circle_at_85%_20%,rgb(124_58_237/0.3),transparent_45%),#0b0114] px-[clamp(1.5rem,4vw,3.5rem)] py-[clamp(2rem,5vw,3.5rem)] text-white"
           >
             <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
-                <p className="text-[0.6875rem] font-semibold tracking-[0.16em] text-[#6feafb]">
+                <p className="text-[0.6875rem] font-semibold tracking-[0.16em] text-[#f9a8d4]">
                   PLATFORMS WE HELP YOU EXPLORE
                 </p>
                 <h2 className="mt-3 text-[clamp(1.75rem,3.4vw,2.75rem)]! leading-[1.08]! font-semibold! tracking-[-0.045em]! text-white!">

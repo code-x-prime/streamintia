@@ -32,7 +32,7 @@ export function HeroSection() {
             <h1
               id="hero-title"
               data-hero-copy
-              className="m-0 max-w-none font-sans text-[clamp(52px,4.8vw,55px)] font-[650] leading-none tracking-[-0.075em] text-[#070819] max-[1100px]:min-[768px]:text-[40px] max-[767px]:text-[clamp(52px,13vw,55px)] [&_.home-gradient-text]:whitespace-nowrap [&_.home-gradient-text]:bg-[linear-gradient(110deg,#087ef9,#405cff_46%,#d915ee)]"
+              className="m-0 max-w-none font-sans text-[clamp(52px,4.8vw,55px)] font-[650] leading-none tracking-[-0.075em] text-[#070819] max-[1100px]:min-[768px]:text-[40px] max-[767px]:text-[clamp(52px,13vw,55px)] [&_.home-gradient-text]:whitespace-nowrap [&_.home-gradient-text]:bg-[linear-gradient(110deg,#da2676,#a855f7_46%,#7c3aed)]"
             >
               Creators
               <br />

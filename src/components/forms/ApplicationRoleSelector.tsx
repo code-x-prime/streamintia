@@ -31,8 +31,8 @@ export function ApplicationRoleSelector({
             <span
               className={`block rounded-xl border border-[rgb(43_57_122/0.12)] bg-[#f8f9ff] p-6 transition-[border-color,background] duration-200 group-has-focus-visible:outline-2 group-has-focus-visible:outline-offset-4 group-has-focus-visible:outline-primary max-[1100px]:p-[1.1rem] max-[430px]:p-[0.875rem] ${
                 role.value === "agent"
-                  ? "group-has-checked:border-[#b18bff] group-has-checked:bg-[linear-gradient(135deg,rgb(139_77_255/0.12),#ffffff)] group-has-checked:shadow-[0_12px_30px_rgb(139_77_255/0.08)]"
-                  : "group-has-checked:border-[rgb(18_217_244/0.7)] group-has-checked:bg-[linear-gradient(135deg,rgb(18_217_244/0.12),#ffffff)] group-has-checked:shadow-[0_12px_30px_rgb(18_217_244/0.08)]"
+                  ? "group-has-checked:border-[#b18bff] group-has-checked:bg-[linear-gradient(135deg,rgb(124_58_237/0.12),#ffffff)] group-has-checked:shadow-[0_12px_30px_rgb(124_58_237/0.08)]"
+                  : "group-has-checked:border-[rgb(218_38_118/0.7)] group-has-checked:bg-[linear-gradient(135deg,rgb(218_38_118/0.12),#ffffff)] group-has-checked:shadow-[0_12px_30px_rgb(218_38_118/0.08)]"
               }`}
             >
               <span className="mb-6 flex items-center justify-between max-[430px]:mb-4 [&>svg]:text-primary">

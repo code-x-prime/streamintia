@@ -100,7 +100,7 @@ export function FloatingActions() {
         onClick={toTop}
         aria-label={`Scroll to top, ${Math.round(progress * 100)}% of page read`}
         tabIndex={showTop ? 0 : -1}
-        className={`group fixed right-5 bottom-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-white text-[#0a1038] shadow-[0_16px_40px_-8px_rgb(35_44_98/0.4)] transition-[opacity,transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_22px_48px_-8px_rgb(139_77_255/0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8b4dff] max-[767px]:right-4 max-[767px]:bottom-[calc(5.25rem+env(safe-area-inset-bottom))] max-[767px]:h-12 max-[767px]:w-12 ${
+        className={`group fixed right-5 bottom-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-white text-[#0a1038] shadow-[0_16px_40px_-8px_rgb(35_44_98/0.4)] transition-[opacity,transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_22px_48px_-8px_rgb(124_58_237/0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c3aed] max-[767px]:right-4 max-[767px]:bottom-[calc(5.25rem+env(safe-area-inset-bottom))] max-[767px]:h-12 max-[767px]:w-12 ${
           showTop
             ? "translate-y-0 scale-100 opacity-100"
             : "pointer-events-none translate-y-6 scale-90 opacity-0"
@@ -113,8 +113,8 @@ export function FloatingActions() {
         >
           <defs>
             <linearGradient id="scroll-ring" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#12d9f4" />
-              <stop offset="100%" stopColor="#8b4dff" />
+              <stop offset="0%" stopColor="#da2676" />
+              <stop offset="100%" stopColor="#7c3aed" />
             </linearGradient>
           </defs>
           <circle
@@ -167,7 +167,7 @@ export function FloatingActions() {
           )}
           <Link
             href={onApply ? "/contact" : site.cta.apply.href}
-            className="flex min-h-14 items-center justify-center gap-2 text-[0.8125rem] font-semibold tracking-[0.08em] text-white uppercase [background:linear-gradient(135deg,#0a1038,#2a1068)] hover:no-underline"
+            className="flex min-h-14 items-center justify-center gap-2 text-[0.8125rem] font-semibold tracking-[0.08em] text-white uppercase [background:linear-gradient(135deg,#0a1038,#3b0a5c)] hover:no-underline"
           >
             <Icon d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z" />
             {onApply ? "Enquire" : "Apply Now"}

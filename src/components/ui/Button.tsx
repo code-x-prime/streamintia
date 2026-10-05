@@ -23,10 +23,10 @@ export function ButtonLink({
         href={href}
         external={external}
         className={`home-button home-button--shiny ${className}`}
-        fillColor="#08082d"
+        fillColor="#1f0233"
         labelColor="#ffffff"
-        accentColor="#12d9f4"
-        accentSoftColor="#8b4dff"
+        accentColor="#da2676"
+        accentSoftColor="#7c3aed"
         insetColor="rgba(255, 255, 255, 0.12)"
         cornerRadius={12}
         sweepDuration={3.5}

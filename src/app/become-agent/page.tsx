@@ -83,7 +83,7 @@ export default function AgentPage() {
           </div>
         </div>
       </section>
-      <section className="home-section border-y border-[rgb(28_35_81/0.07)] [background:radial-gradient(circle_at_92%_10%,rgb(139_77_255/0.08),transparent_28%),#f6f8ff]">
+      <section className="home-section border-y border-[rgb(28_35_81/0.07)] [background:radial-gradient(circle_at_92%_10%,rgb(124_58_237/0.08),transparent_28%),#f6f8ff]">
         <div className="home-container">
           <SectionIntro
             eyebrow="LEAD WITH PEOPLE"
@@ -133,7 +133,7 @@ export default function AgentPage() {
       <section className="home-section pt-0">
         <div className="home-container">
           <div
-            className="grid grid-cols-[1.2fr_0.8fr] items-center gap-16 rounded-(--home-radius) border border-[rgb(139_77_255/0.2)] p-14 text-white shadow-[0_30px_78px_rgb(22_27_72/0.2)] [--home-border:rgb(184_188_217/0.14)] [--home-muted:#969fbe] [--text-primary:#ffffff] [--text-secondary:#bbc2df] bg-[radial-gradient(circle_at_90%_25%,rgb(139_77_255/0.22),transparent_34%),linear-gradient(145deg,#0d0d35,#181449)] max-[1100px]:gap-8 max-[767px]:grid-cols-1 max-[767px]:gap-8 max-[767px]:p-8 [&_h2]:text-[clamp(2rem,3.2vw,3rem)]"
+            className="grid grid-cols-[1.2fr_0.8fr] items-center gap-16 rounded-(--home-radius) border border-[rgb(124_58_237/0.2)] p-14 text-white shadow-[0_30px_78px_rgb(22_27_72/0.2)] [--home-border:rgb(184_188_217/0.14)] [--home-muted:#969fbe] [--text-primary:#ffffff] [--text-secondary:#bbc2df] bg-[radial-gradient(circle_at_90%_25%,rgb(124_58_237/0.22),transparent_34%),linear-gradient(145deg,#0d0d35,#181449)] max-[1100px]:gap-8 max-[767px]:grid-cols-1 max-[767px]:gap-8 max-[767px]:p-8 [&_h2]:text-[clamp(2rem,3.2vw,3rem)]"
             data-reveal
           >
             <div>
@@ -158,17 +158,17 @@ export default function AgentPage() {
                 <HomeIcon name="network" />
                 Agent
               </span>
-              <i className="h-6 w-px bg-[linear-gradient(var(--purple),rgb(18_217_244/0.3))]" />
+              <i className="h-6 w-px bg-[linear-gradient(var(--purple),rgb(218_38_118/0.3))]" />
               <span className="flex w-[85%] items-center gap-4 rounded-lg border border-(--home-border) bg-[rgb(255_255_255/0.015)] px-6 py-4 font-(family-name:--font-display) [&>svg]:h-[18px] [&>svg]:w-[18px] [&>svg]:text-[#bb9aff]">
                 <HomeIcon name="broadcast" />
                 Creators
               </span>
-              <i className="h-6 w-px bg-[linear-gradient(var(--purple),rgb(18_217_244/0.3))]" />
+              <i className="h-6 w-px bg-[linear-gradient(var(--purple),rgb(218_38_118/0.3))]" />
               <span className="flex w-[85%] items-center gap-4 rounded-lg border border-(--home-border) bg-[rgb(255_255_255/0.015)] px-6 py-4 font-(family-name:--font-display) [&>svg]:h-[18px] [&>svg]:w-[18px] [&>svg]:text-[#bb9aff]">
                 <HomeIcon name="play" />
                 Platforms
               </span>
-              <i className="h-6 w-px bg-[linear-gradient(var(--purple),rgb(18_217_244/0.3))]" />
+              <i className="h-6 w-px bg-[linear-gradient(var(--purple),rgb(218_38_118/0.3))]" />
               <span className="flex w-[85%] items-center gap-4 rounded-lg border border-(--home-border) bg-[rgb(255_255_255/0.015)] px-6 py-4 font-(family-name:--font-display) [&>svg]:h-[18px] [&>svg]:w-[18px] [&>svg]:text-[#bb9aff]">
                 <HomeIcon name="growth" />
                 Growth

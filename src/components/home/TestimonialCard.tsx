@@ -13,13 +13,13 @@ export function TestimonialCard({
     <article
       className={`group relative flex flex-col overflow-hidden rounded-xl border border-(--home-border) bg-[rgb(255_255_255/0.012)] py-8 pr-8 pl-[4.5rem] shadow-none before:pointer-events-none before:absolute before:inset-0 before:[background:linear-gradient(115deg,transparent_25%,rgb(255_255_255/0.55),transparent_60%)] before:-translate-x-[120%] before:transition-transform before:duration-[650ms] before:ease-[var(--ease-standard)] hover:before:translate-x-[120%] max-[1023px]:py-7 max-[1023px]:pr-6 max-[1023px]:pl-14 ${
         featured
-          ? "row-span-2 bg-[radial-gradient(ellipse_at_0_0,rgb(139_77_255/0.08),transparent_60%),rgb(255_255_255/0.015)] p-12 max-[1023px]:row-auto max-[1023px]:min-h-[330px] max-[1023px]:p-8"
+          ? "row-span-2 bg-[radial-gradient(ellipse_at_0_0,rgb(124_58_237/0.08),transparent_60%),rgb(255_255_255/0.015)] p-12 max-[1023px]:row-auto max-[1023px]:min-h-[330px] max-[1023px]:p-8"
           : ""
       }`}
       data-reveal
     >
       <span
-        className={`absolute top-6 left-6 font-[family-name:var(--font-display),sans-serif] text-5xl leading-none text-[rgb(18_217_244/0.45)] max-[1023px]:left-[1.1rem] ${
+        className={`absolute top-6 left-6 font-[family-name:var(--font-display),sans-serif] text-5xl leading-none text-[rgb(218_38_118/0.45)] max-[1023px]:left-[1.1rem] ${
           featured ? "static mb-4 text-[5rem]" : ""
         }`}
         aria-hidden="true"

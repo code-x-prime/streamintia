@@ -10,7 +10,7 @@ export function StatsStrip() {
     >
       <div className="home-container">
         <div
-          className="relative -mt-5 grid grid-cols-[1.3fr_repeat(4,1fr)] gap-0 rounded-2xl border border-[rgb(28_35_81/0.1)] bg-[radial-gradient(circle_at_0_0,rgb(18_217_244/0.1),transparent_27%),radial-gradient(circle_at_100%_100%,rgb(139_77_255/0.08),transparent_25%),rgb(255_255_255/0.98)] p-8 shadow-[0_24px_65px_rgb(31_38_84/0.1)] max-[1023px]:grid-cols-[1.3fr_repeat(4,1fr)] max-[1023px]:p-7 max-[767px]:-mt-3 max-[767px]:grid-cols-2 max-[767px]:gap-y-6 max-[767px]:gap-x-0 max-[767px]:p-6"
+          className="relative -mt-5 grid grid-cols-[1.3fr_repeat(4,1fr)] gap-0 rounded-2xl border border-[rgb(28_35_81/0.1)] bg-[radial-gradient(circle_at_0_0,rgb(218_38_118/0.1),transparent_27%),radial-gradient(circle_at_100%_100%,rgb(124_58_237/0.08),transparent_25%),rgb(255_255_255/0.98)] p-8 shadow-[0_24px_65px_rgb(31_38_84/0.1)] max-[1023px]:grid-cols-[1.3fr_repeat(4,1fr)] max-[1023px]:p-7 max-[767px]:-mt-3 max-[767px]:grid-cols-2 max-[767px]:gap-y-6 max-[767px]:gap-x-0 max-[767px]:p-6"
           data-stagger
         >
           <div className="pr-6 max-[767px]:col-span-full max-[767px]:flex max-[767px]:items-center max-[767px]:justify-between max-[767px]:border-b max-[767px]:border-(--home-border) max-[767px]:pb-6 max-[767px]:pr-0">

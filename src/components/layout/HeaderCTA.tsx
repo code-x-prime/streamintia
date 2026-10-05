@@ -19,13 +19,13 @@ export function HeaderCTA({
         [&_svg]:h-4 [&_svg]:w-4
         ${
           variant === "mobile-menu"
-            ? "w-full! min-h-14! rounded-[14px]! text-base! font-semibold! text-white! bg-[image:linear-gradient(135deg,#12d9f4,#8b4dff)]! shadow-[0_14px_34px_-10px_rgb(139_77_255/0.7)]!"
+            ? "w-full! min-h-14! rounded-[14px]! text-base! font-semibold! text-white! bg-[image:linear-gradient(135deg,#da2676,#7c3aed)]! shadow-[0_14px_34px_-10px_rgb(124_58_237/0.7)]!"
             : ""
         }`}
-      fillColor="#08082d"
+      fillColor="#1f0233"
       labelColor="#ffffff"
-      accentColor="#12d9f4"
-      accentSoftColor="#8b4dff"
+      accentColor="#da2676"
+      accentSoftColor="#7c3aed"
       insetColor="rgba(255, 255, 255, 0.12)"
       cornerRadius={10}
       sweepDuration={3.5}

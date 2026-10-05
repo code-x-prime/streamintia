@@ -15,7 +15,7 @@ export function SuccessMessage({
   }, []);
   return (
     <div className="max-w-[36rem] py-8">
-      <span className="mb-8 grid h-14 w-14 place-items-center rounded-full border border-[rgb(18_217_244/0.35)] bg-[rgb(18_217_244/0.06)] text-primary">
+      <span className="mb-8 grid h-14 w-14 place-items-center rounded-full border border-[rgb(218_38_118/0.35)] bg-[rgb(218_38_118/0.06)] text-primary">
         <HomeIcon name="check" />
       </span>
       <p className="home-eyebrow">PREVIEW COMPLETE</p>

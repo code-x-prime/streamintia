@@ -15,7 +15,7 @@
   font-weight: 700;
 }
 .home-page > .home-section:not(.home-hero) .home-button--primary {
-  background: linear-gradient(110deg, #0cbce9, #5353fc 48%, #b729f7);
+  background: linear-gradient(110deg, #da2676, #9333ea 48%, #7c3aed);
   color: white;
 }
 .trust-intro {
@@ -163,7 +163,7 @@
   inset: -20% -10% auto -10%;
   height: 60%;
   background: radial-gradient(ellipse at 30% 0%, #6d63ff12, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, #15c9ec14, transparent 55%);
+    radial-gradient(ellipse at 80% 20%, #da267614, transparent 55%);
   pointer-events: none;
 }
 .timeline-wrap {
@@ -213,7 +213,7 @@
   opacity: 1;
 }
 .home-page .campaign-timeline li:hover .process-number {
-  background: linear-gradient(135deg, #15c9ec, #6d63ff);
+  background: linear-gradient(135deg, #da2676, #6d63ff);
   border-color: transparent;
   color: #fff;
 }
@@ -250,7 +250,7 @@
   padding: 9px;
   box-sizing: content-box;
   color: #fff;
-  background: linear-gradient(135deg, #15c9ec, #6d63ff);
+  background: linear-gradient(135deg, #da2676, #6d63ff);
   border-radius: 11px;
   box-shadow: 0 8px 16px -6px #6d63ff55;
 }
@@ -273,7 +273,7 @@
 }
 .home-page .home-platforms {
   background:
-    radial-gradient(ellipse at 70% 40%, #36256766, transparent 55%), #0b0c2b;
+    radial-gradient(ellipse at 70% 40%, #36256766, transparent 55%), #0b0114;
   position: relative;
 }
 .home-page .home-platforms::before {
@@ -380,11 +380,11 @@
 }
 .experience-grid article:hover {
   transform: translateY(-6px);
-  border-color: rgb(18 217 244 / 0.35);
+  border-color: rgb(218 38 118 / 0.35);
   box-shadow: 0 28px 70px rgb(34 55 105 / 0.14);
 }
 .experience-grid article:nth-child(2):hover {
-  border-color: rgb(139 77 255 / 0.35);
+  border-color: rgb(124 58 237 / 0.35);
 }
 .experience-grid article:nth-child(2) {
   margin-top: 70px;
@@ -477,7 +477,7 @@
   }
 }
 .stories-coming:hover {
-  border-color: rgb(139 77 255 / 0.35);
+  border-color: rgb(124 58 237 / 0.35);
   box-shadow: 0 28px 70px rgb(72 47 140 / 0.13);
 }
 .stories-coming > svg {
@@ -637,7 +637,7 @@
   overflow: hidden;
   background:
     radial-gradient(at 80% 50%, #54348d55, transparent 55%),
-    radial-gradient(at 10% 100%, #04b1d01f, transparent 50%), #0b0c2b;
+    radial-gradient(at 10% 100%, #da26761f, transparent 50%), #0b0114;
   padding-block: 110px;
   text-align: left;
 }
