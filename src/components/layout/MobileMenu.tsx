@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { navigation, isActiveRoute } from "@/config/navigation";
 import { HeaderCTA } from "./HeaderCTA";
+import { ThemeToggle } from "./ThemeToggle";
 import { NavigationIcon } from "./NavigationIcon";
 import { HomeIcon, type HomeIconName } from "@/components/ui/HomeIcon";
 import { site } from "@/config/site";
@@ -247,6 +248,12 @@ export function MobileMenu({ brand }: { brand: React.ReactNode }) {
                 >
                   {site.contact.email}
                 </a>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-[11px] tracking-[0.16em] text-[#b6bad4]">
+                  THEME
+                </span>
+                <ThemeToggle className="theme-toggle--menu" />
               </div>
               <HeaderCTA onClick={close} variant="mobile-menu" />
             </div>

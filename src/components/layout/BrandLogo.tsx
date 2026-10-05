@@ -26,8 +26,20 @@ export function BrandLogo({
         height={240}
         sizes="280px"
         priority={priority}
-        className="h-full w-full object-contain"
+        className={`h-full w-full object-contain ${wordmark === "dark" ? "logo-for-light" : ""}`}
       />
+      {wordmark === "dark" ? (
+        <Image
+          src={site.logos.dark}
+          alt=""
+          aria-hidden="true"
+          width={848}
+          height={240}
+          sizes="280px"
+          priority={priority}
+          className="logo-for-dark absolute inset-0 hidden h-full w-full object-contain"
+        />
+      ) : null}
     </Link>
   );
 }

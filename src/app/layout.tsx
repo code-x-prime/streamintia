@@ -7,9 +7,11 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
 import { Container } from "@/components/ui/Container";
 import { DotGridBackground } from "@/components/layout/DotGridBackground";
+import { themeInitScript } from "@/components/layout/ThemeToggle";
 import "./globals.css";
 import "@/styles/campaign.css";
 import "@/styles/typography.css";
+import "@/styles/dark.css";
 const display = Manrope({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = {
   themeColor: "#ffffff",
-  colorScheme: "light",
+  colorScheme: "light dark",
 };
 export default function RootLayout({
   children,
@@ -39,8 +41,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${display.variable} ${body.variable} antialiased max-[767px]:pb-20`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body
+        className={`${display.variable} ${body.variable} antialiased max-[767px]:pb-20`}
+      >
         <DotGridBackground />
         <a href="#main-content" className="skip-link">
           Skip to content

@@ -3,6 +3,7 @@ import { HeaderFrame } from "./HeaderFrame";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { HeaderCTA } from "./HeaderCTA";
 import { MobileMenu } from "./MobileMenu";
+import { ThemeToggle } from "./ThemeToggle";
 export function Header() {
   return (
     <HeaderFrame>
@@ -19,6 +20,7 @@ export function Header() {
         />
         <DesktopNavigation />
         <div className="flex shrink-0 items-center gap-3 max-[767px]:gap-2">
+          <ThemeToggle className="max-[767px]:hidden" />
           <HeaderCTA />
           <MobileMenu brand={<BrandLogo className="h-[3.4rem] w-56" />} />
         </div>

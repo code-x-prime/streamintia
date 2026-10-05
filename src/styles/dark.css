@@ -1,0 +1,368 @@
+/*
+ * Dark theme.
+ * The site was built light-first with many hard-coded colours, so this layer
+ * (1) swaps the design tokens and (2) remaps the light surfaces and dark text
+ * colours that components hard-code. Everything is scoped to
+ * html[data-theme="dark"], which ThemeToggle sets before first paint.
+ */
+
+html[data-theme="dark"] {
+  --background: #070818;
+  --background-secondary: #0b0d24;
+  --surface: #12153a;
+  --surface-soft: #0e1030;
+  --text-primary: #eef0ff;
+  --text-secondary: #a9aecb;
+  --border: rgb(255 255 255 / 0.1);
+  --home-muted: #a9aecb;
+  --home-border: rgb(255 255 255 / 0.1);
+  --inner-accent: #b9a6ff;
+  --dk-bg: #070818;
+  --dk-section: #0b0d24;
+  --dk-card: #12153a;
+  --dk-card-2: #171b47;
+  --dk-line: rgb(255 255 255 / 0.1);
+  --dk-text: #eef0ff;
+  --dk-muted: #a9aecb;
+  --dk-accent: #b9a6ff;
+  color-scheme: dark;
+}
+
+/* ---------- page canvas ---------- */
+html[data-theme="dark"],
+html[data-theme="dark"] body,
+html[data-theme="dark"] .home-page,
+html[data-theme="dark"] .inner-page {
+  background: var(--dk-bg) !important;
+  color: var(--dk-text);
+}
+@layer base {
+  html[data-theme="dark"] p {
+    color: var(--dk-muted);
+  }
+  html[data-theme="dark"] :is(h1, h2, h3, h4) {
+    color: var(--dk-text);
+  }
+}
+
+/* ---------- header ---------- */
+html[data-theme="dark"] header[data-scrolled],
+html[data-theme="dark"] .site-header {
+  background: rgb(7 8 24 / 0.86) !important;
+  border-color: var(--dk-line) !important;
+}
+html[data-theme="dark"] header[data-scrolled="true"] {
+  background: rgb(7 8 24 / 0.95) !important;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 0.45) !important;
+}
+html[data-theme="dark"] nav[aria-label="Main navigation"] :is(a, button) {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"]
+  nav[aria-label="Main navigation"]
+  :is(a[aria-current="page"], a:hover, button:hover, button[aria-expanded="true"], button[data-active="true"]) {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] nav[aria-label="Main navigation"] [id] {
+  background: var(--dk-card) !important;
+  border-color: var(--dk-line) !important;
+}
+html[data-theme="dark"] nav[aria-label="Main navigation"] [id] a:is(:hover, [aria-current="page"]) {
+  background: var(--dk-card-2) !important;
+}
+html[data-theme="dark"] nav[aria-label="Main navigation"] [id] :is(strong, span) {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] nav[aria-label="Main navigation"] [id] small {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"] button[aria-label="Open navigation menu"] {
+  background: var(--dk-card) !important;
+  border-color: var(--dk-line) !important;
+  color: var(--dk-text) !important;
+}
+
+/* ---------- theme toggle ---------- */
+html[data-theme="dark"] .theme-toggle {
+  background: var(--dk-card) !important;
+  border-color: var(--dk-line) !important;
+}
+html[data-theme="dark"] .theme-toggle button {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"] .theme-toggle .theme-toggle-active {
+  background: var(--dk-card-2) !important;
+  color: var(--dk-text) !important;
+  box-shadow: 0 0 0 1px rgb(185 166 255 / 0.35) !important;
+}
+.theme-toggle--menu {
+  background: rgb(255 255 255 / 0.06) !important;
+  border-color: rgb(255 255 255 / 0.12) !important;
+}
+.theme-toggle--menu button {
+  color: #b6bad4 !important;
+}
+.theme-toggle--menu .theme-toggle-active {
+  background: rgb(255 255 255 / 0.14) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* ---------- light surfaces -> dark ---------- */
+/* full-width sections */
+html[data-theme="dark"] section:is(
+  [class~="bg-white"],
+  [class*="bg-[#f"],
+  [class*="bg-[linear-gradient(180deg,#f"],
+  [class*="bg-[linear-gradient(180deg,#ffffff"],
+  [class*="bg-[linear-gradient(145deg,#f7fbff"],
+  [class*="#f6f8ff]"],
+  [class*=",#ffffff]"],
+  [class*="#f7f3ff)]"],
+  [class*="#fff4fa)]"]
+) {
+  background: var(--dk-section) !important;
+}
+
+/* cards, panels, chips */
+html[data-theme="dark"] :not(section):is(
+  [class~="bg-white"],
+  [class*="bg-white/70"],
+  [class*="bg-white/80"],
+  [class*="bg-white/85"],
+  [class*="bg-white/88"],
+  [class*="bg-white/94"],
+  [class*="bg-white/95"],
+  [class*="bg-white/96"],
+  [class*="bg-white/98"],
+  [class*="bg-[#f"],
+  [class*="bg-[#e9ecfb]"],
+  [class*="bg-[linear-gradient(145deg,#f"],
+  [class*="bg-[linear-gradient(150deg,#f"],
+  [class*="bg-[linear-gradient(180deg,#f"],
+  [class*="bg-[linear-gradient(135deg,#f"],
+  [class*="bg-[linear-gradient(135deg,#e"],
+  [class*="bg-[linear-gradient(135deg,#d3f7ff"],
+  [class*="bg-[linear-gradient(135deg,rgb(18_217_244/0.12),#ffffff)]"],
+  [class*="bg-[linear-gradient(135deg,rgb(139_77_255/0.12),#ffffff)]"],
+  [class*="#f5f2ff)]"],
+  [class*="#f7f3ff)]"],
+  [class*="#eef1ff)]"],
+  [class*="#efe7ff)]"],
+  [class*="#f6f8ff]"],
+  [class*=",#ffffff]"],
+  [class*="rgb(255_255_255/0.98)]"]
+) {
+  background: var(--dk-card) !important;
+}
+
+/* light borders */
+html[data-theme="dark"] :is(
+  [class*="border-[rgb(42_52_105"],
+  [class*="border-[rgb(43_57_122"],
+  [class*="border-[rgb(28_35_81"],
+  [class*="border-[rgb(40_54_122"],
+  [class*="border-[rgb(44_69_124"],
+  [class*="border-[#e"],
+  [class*="border-[#d"]
+) {
+  border-color: var(--dk-line) !important;
+}
+
+/* ---------- dark text -> light ---------- */
+html[data-theme="dark"] :is(
+  [class*="text-[#0a1038]"],
+  [class*="text-[#08082d]"],
+  [class*="text-[#17183f]"],
+  [class*="text-[#11183f]"],
+  [class*="text-[#10163f]"],
+  [class*="text-[#13173c]"],
+  [class*="text-[#0c123c]"],
+  [class*="text-[#070819]"],
+  [class*="text-[#11162c]"],
+  [class*="text-[#2e345c]"],
+  [class*="text-[#20294f]"],
+  [class*="text-[#222648]"],
+  [class*="text-[#23264b]"],
+  [class*="text-[#22294f]"],
+  [class*="text-[#252b49]"],
+  [class*="text-[#303752]"],
+  [class*="text-[#38405e]"],
+  [class*="text-[#0a1038]!"],
+  [class*="text-text-primary"]
+) {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] :is(
+  [class*="text-[#5d6683]"],
+  [class*="text-[#5d6480]"],
+  [class*="text-[#727b94]"],
+  [class*="text-[#68728f]"],
+  [class*="text-[#69728c]"],
+  [class*="text-[#606a87]"],
+  [class*="text-[#505a78]"],
+  [class*="text-[#59617f]"],
+  [class*="text-[#7b849f]"],
+  [class*="text-[#8a90ac]"],
+  [class*="text-[#66708a]"],
+  [class*="text-[#636d87]"],
+  [class*="text-[#6a748e]"],
+  [class*="text-[#747c99]"],
+  [class*="text-[#7581ad]"],
+  [class*="text-[#737da5]"],
+  [class*="text-[#657093]"],
+  [class*="text-[#586084]"],
+  [class*="text-[#616da0]"],
+  [class*="text-[#838ca5]"],
+  [class*="text-[#5d6780]"],
+  [class*="text-[#59637e]"],
+  [class*="text-[#68718b]"],
+  [class*="text-[#727c9f]"],
+  [class*="text-[#5c6288]"],
+  [class*="text-[#7a84a6]"],
+  [class*="text-[#66708b]"],
+  [class*="text-[#5d6683]!"],
+  [class*="text-(--home-muted)"],
+  [class*="text-(--text-secondary)"]
+) {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"] :is(
+  [class*="text-[#5b4bd4]"],
+  [class*="text-[#5547ce]"],
+  [class*="text-[#5140c5]"],
+  [class*="text-[#5847d1]"],
+  [class*="text-[#6a4be4]"],
+  [class*="text-[#7461df]"],
+  [class*="text-[#7059e3]"]
+) {
+  color: var(--dk-accent) !important;
+}
+
+/* ---------- stylesheet-defined surfaces ---------- */
+html[data-theme="dark"] :is(
+  .home-platforms--white,
+  .why-section,
+  .partnership-section,
+  .stats-section,
+  .home-resources,
+  .home-experience,
+  .process-section,
+  .home-page #what-we-do
+) {
+  background: var(--dk-section) !important;
+}
+html[data-theme="dark"] .home-page .opportunities-section {
+  background: linear-gradient(145deg, #0b0d24, #110d2c) !important;
+}
+html[data-theme="dark"] :is(
+  .card-swap-card,
+  .campaign-note,
+  .service-list-icon,
+  .process-number,
+  .experience-grid article,
+  .home-resource-card,
+  .home-page .campaign-timeline li,
+  .stats-strip,
+  .intro-network li
+) {
+  background: var(--dk-card) !important;
+  border-color: var(--dk-line) !important;
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] .campaign-hero #hero-title,
+html[data-theme="dark"] .home-page .trust-intro h2,
+html[data-theme="dark"] .home-page .home-platforms--white h2,
+html[data-theme="dark"] .why-art > p {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] .campaign-hero .hero-description {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"] .campaign-hero .home-button--secondary,
+html[data-theme="dark"] .home-button--secondary {
+  background: var(--dk-card) !important;
+  border-color: var(--dk-line) !important;
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] .home-button--text {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] .home-page .campaign-hero {
+  background:
+    radial-gradient(ellipse at 86% 24%, rgb(139 77 255 / 0.18) 0, transparent 37%),
+    radial-gradient(ellipse at 50% 85%, rgb(18 217 244 / 0.1) 0, transparent 40%),
+    var(--dk-bg) !important;
+}
+html[data-theme="dark"] .home-eyebrow {
+  background: transparent;
+}
+html[data-theme="dark"] .home-hero .home-eyebrow,
+html[data-theme="dark"] .campaign-hero .home-eyebrow {
+  background: var(--dk-card) !important;
+}
+
+/* ---------- forms ---------- */
+html[data-theme="dark"] :is(input, select, textarea) {
+  background: var(--dk-section) !important;
+  border-color: rgb(255 255 255 / 0.14) !important;
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] :is(input, textarea)::placeholder {
+  color: #7d83a6 !important;
+}
+html[data-theme="dark"] label {
+  color: var(--dk-muted);
+}
+
+/* ---------- misc ---------- */
+html[data-theme="dark"] details,
+html[data-theme="dark"] summary {
+  color: var(--dk-text);
+}
+html[data-theme="dark"] hr,
+html[data-theme="dark"] :is([class*="border-b"], [class*="border-t"], [class*="border-y"]) {
+  border-color: var(--dk-line);
+}
+html[data-theme="dark"] .legal-document :is(p, li) {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"] nav[aria-label="Quick actions"] > div {
+  background: rgb(18 21 58 / 0.95) !important;
+  border-color: var(--dk-line) !important;
+}
+html[data-theme="dark"] button[aria-label^="Scroll to top"] {
+  background: var(--dk-card) !important;
+  color: var(--dk-text) !important;
+}
+
+/* ---------- round 2 fixes ---------- */
+html[data-theme="dark"] .logo-for-light {
+  visibility: hidden;
+}
+html[data-theme="dark"] .logo-for-dark {
+  display: block !important;
+}
+html[data-theme="dark"] [class*="bg-[rgb(255_255_255_/_0.86)]"],
+html[data-theme="dark"] [class*="bg-[rgb(255_255_255/0.86)]"],
+html[data-theme="dark"] .service-feature {
+  background: var(--dk-card) !important;
+  border-color: var(--dk-line) !important;
+}
+html[data-theme="dark"] .service-feature h3 a {
+  color: var(--dk-text);
+}
+html[data-theme="dark"] .home-button--shiny,
+html[data-theme="dark"] [class*="gleam-edge-"] {
+  box-shadow:
+    0 0 0 1px rgb(185 166 255 / 0.45),
+    0 10px 28px rgb(139 77 255 / 0.35) !important;
+}
+html[data-theme="dark"] [class*="text-[#151938]"],
+html[data-theme="dark"] .service-list-name,
+html[data-theme="dark"] .service-list-row {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] .service-list-row[data-active="true"] {
+  background: var(--dk-card) !important;
+}
