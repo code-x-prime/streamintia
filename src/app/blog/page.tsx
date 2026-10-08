@@ -1,33 +1,58 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { createMetadata } from "@/lib/metadata";
 import { site } from "@/config/site";
 import { jsonLdString } from "@/lib/json-ld";
 import { imgUrl } from "@/lib/blog-image";
 import { getPosts } from "@/sanity/queries";
 import { sanityConfigured } from "@/sanity/env";
-import { BlogList } from "@/components/blog/BlogList";
+import { BlogList, blogHref } from "@/components/blog/BlogList";
 import { Author, Tags, formatDate } from "@/components/blog/BlogCard";
 import { HomeIcon } from "@/components/ui/HomeIcon";
 
 export const revalidate = 60;
 
-const base = createMetadata(
-  "Blog: Live Streaming Tips & Guides",
-  "Practical guides for live streamers and agents in India: getting started, choosing a platform, growing your audience and staying safe.",
-  "/blog",
-);
-export const metadata = {
-  ...base,
-  alternates: {
-    canonical: "/blog",
-    types: { "application/rss+xml": "/blog/feed.xml" },
-  },
-};
+type SearchParams = Promise<{ page?: string; category?: string }>;
 
-export default async function BlogPage() {
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}): Promise<Metadata> {
+  const { page, category } = await searchParams;
+  const n = Math.max(1, Number.parseInt(page ?? "1", 10) || 1);
+  const cat = category && category !== "all" ? category : "all";
+  const path = blogHref(cat, n);
+  const base = createMetadata(
+    n > 1
+      ? `Blog: Live Streaming Tips & Guides (Page ${n})`
+      : "Blog: Live Streaming Tips & Guides",
+    "Practical guides for live streamers and agents in India: getting started, choosing a platform, growing your audience and staying safe.",
+    path,
+  );
+  return {
+    ...base,
+    alternates: {
+      canonical: path,
+      types: { "application/rss+xml": "/blog/feed.xml" },
+    },
+  };
+}
+
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const { page, category } = await searchParams;
+  const pageNumber = Math.max(1, Number.parseInt(page ?? "1", 10) || 1);
+  const activeCategory = category ?? "all";
   const posts = await getPosts();
-  const featured = posts.find((p) => p.featured) ?? posts[0];
+  const showFeatured = pageNumber === 1 && activeCategory === "all";
+  const featured = showFeatured
+    ? (posts.find((p) => p.featured) ?? posts[0])
+    : undefined;
   const rest = posts.filter((p) => p !== featured);
   const previewMode = process.env.BLOG_SAMPLE === "1";
 
@@ -108,7 +133,7 @@ export default async function BlogPage() {
               </div>
             </div>
           </article>
-        ) : (
+        ) : posts.length === 0 ? (
           <div className="blog-surface mt-10 rounded-3xl border-dashed p-8 text-center min-[640px]:p-10">
             <h2 className="text-2xl! font-semibold!">
               New articles are on the way
@@ -119,11 +144,15 @@ export default async function BlogPage() {
                 : "Connect the blog editor (Sanity) to start publishing articles."}
             </p>
           </div>
-        )}
+        ) : null}
 
         {rest.length ? (
           <div className="mt-14">
-            <BlogList posts={rest} />
+            <BlogList
+              posts={rest}
+              category={activeCategory}
+              page={pageNumber}
+            />
           </div>
         ) : null}
       </div>

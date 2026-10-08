@@ -158,3 +158,60 @@ html[data-theme="dark"] {
   outline-offset: -2px;
   border-radius: inherit;
 }
+
+/* Pagination */
+.blog-page-num {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  padding: 0 0.6rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--blog-line);
+  background: var(--blog-card);
+  color: var(--blog-ink) !important;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition:
+    transform 150ms,
+    background 150ms;
+}
+.blog-page-num:hover {
+  transform: translateY(-1px);
+}
+.blog-page-num[aria-current="page"] {
+  color: #ffffff !important;
+  border-color: transparent;
+  background: linear-gradient(135deg, #da2676, #7c3aed);
+}
+.blog-chip[aria-current="true"] {
+  color: #ffffff !important;
+  border-color: transparent;
+  background: linear-gradient(135deg, #da2676, #7c3aed);
+}
+
+/* Skeleton loading */
+@keyframes blog-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.blog-skel {
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    90deg,
+    var(--blog-line) 0%,
+    rgb(124 58 237 / 0.18) 50%,
+    var(--blog-line) 100%
+  );
+  background-size: 200% 100%;
+  animation: blog-shimmer 1.4s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-skel {
+    animation: none;
+  }
+}
