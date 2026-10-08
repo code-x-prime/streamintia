@@ -27,6 +27,7 @@ export const navigation: readonly NavigationItem[] = [
     ],
   },
   { label: "Platforms", href: "/platforms" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 export const primaryCTA = site.cta.apply;
@@ -38,6 +39,7 @@ export const footerGroups = [
       { label: "Services", href: "/services" },
       { label: "Why Streamintia", href: "/why-streamintia" },
       { label: "Success Stories", href: "/success-stories" },
+      { label: "Blog", href: "/blog" },
       { label: "Partners", href: "/platforms" },
     ],
   },

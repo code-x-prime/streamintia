@@ -371,3 +371,17 @@ html[data-theme="dark"] .service-list-row {
 html[data-theme="dark"] .service-list-row[data-active="true"] {
   background: var(--dk-card) !important;
 }
+
+/* blog */
+html[data-theme="dark"] :is([class*="text-[#131b2e]"]) {
+  color: var(--dk-text) !important;
+}
+html[data-theme="dark"] :is([class*="text-[#4a4455]"]) {
+  color: var(--dk-muted) !important;
+}
+html[data-theme="dark"] :is([class*="text-[#630ed4]"]) {
+  color: #e879f9 !important;
+}
+html[data-theme="dark"] .blog-prose a {
+  color: #f0abfc;
+}

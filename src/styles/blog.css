@@ -1,0 +1,160 @@
+/* Blog colours come from variables, so light and dark both work without overrides. */
+:root {
+  --blog-card: #ffffff;
+  --blog-soft: #f4eefe;
+  --blog-accent: #630ed4;
+  --blog-line: rgb(42 52 105 / 0.14);
+  --blog-ink: #131b2e;
+  --blog-muted: #4a4455;
+}
+html[data-theme="dark"] {
+  --blog-card: #1a0230;
+  --blog-soft: #2a0845;
+  --blog-accent: #f0abfc;
+  --blog-line: rgb(255 255 255 / 0.14);
+  --blog-ink: #ffffff;
+  --blog-muted: #d1cbe0;
+}
+
+.blog-page {
+  color: var(--blog-muted);
+}
+.blog-page h1,
+.blog-page h2,
+.blog-page h3 {
+  color: var(--blog-ink) !important;
+}
+.blog-muted {
+  color: var(--blog-muted) !important;
+}
+.blog-accent {
+  color: var(--blog-accent) !important;
+}
+.blog-surface {
+  background: var(--blog-card) !important;
+  border: 1px solid var(--blog-line);
+}
+.blog-soft {
+  background: var(--blog-soft) !important;
+}
+
+.blog-tag {
+  display: inline-flex;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blog-accent) !important;
+  background: rgb(124 58 237 / 0.12);
+}
+
+/* Buttons */
+.blog-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: 0.875rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none !important;
+  transition:
+    transform 200ms,
+    box-shadow 200ms,
+    background 200ms;
+}
+.blog-btn:hover {
+  transform: translateY(-2px);
+}
+.blog-btn svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.blog-btn--primary {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #da2676, #7c3aed);
+  box-shadow: 0 14px 30px -12px rgb(124 58 237 / 0.7);
+}
+.blog-btn--light {
+  color: #131b2e !important;
+  background: #ffffff;
+  box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.5);
+}
+.blog-btn--ghost {
+  color: var(--blog-ink) !important;
+  background: var(--blog-card);
+  border: 1px solid var(--blog-line);
+}
+.blog-btn--outline-light {
+  color: #ffffff !important;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  background: rgb(255 255 255 / 0.08);
+}
+
+/* CTA banner is dark in both themes */
+.blog-cta {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 15% 15%, rgb(124 58 237 / 0.4), transparent 50%),
+    radial-gradient(circle at 90% 90%, rgb(218 38 118 / 0.25), transparent 45%),
+    #0b0114;
+  border: 1px solid rgb(255 255 255 / 0.1);
+}
+.blog-cta h2 {
+  color: #ffffff !important;
+}
+.blog-cta p {
+  color: #d1cbe0 !important;
+}
+
+/* Filter chips */
+.blog-chip {
+  border: 1px solid var(--blog-line);
+  background: var(--blog-card);
+  color: var(--blog-muted);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 150ms;
+}
+.blog-chip:hover {
+  color: var(--blog-ink);
+}
+.blog-chip[aria-pressed="true"] {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #da2676, #7c3aed);
+}
+
+/* Card hover */
+.blog-card {
+  transition:
+    transform 300ms,
+    box-shadow 300ms,
+    border-color 300ms;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(124 58 237 / 0.45);
+  box-shadow: 0 24px 50px rgb(99 14 212 / 0.16);
+}
+.blog-card:hover .blog-card-img {
+  transform: scale(1.04);
+}
+.blog-card-img {
+  transition: transform 500ms;
+}
+.blog-card a:focus-visible::after {
+  outline: 2px solid #7c3aed;
+  outline-offset: -2px;
+  border-radius: inherit;
+}

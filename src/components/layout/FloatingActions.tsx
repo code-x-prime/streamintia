@@ -91,6 +91,7 @@ export function FloatingActions() {
   }, []);
 
   const email = site.contact.email;
+  if (pathname.startsWith("/studio")) return null;
   const onApply = pathname.startsWith("/apply");
 
   return (

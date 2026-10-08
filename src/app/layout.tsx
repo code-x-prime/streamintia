@@ -30,6 +30,7 @@ export const metadata: Metadata = {
   description: site.description,
   icons: { icon: assets.brand.icon, apple: assets.brand.icon },
   robots: { index: site.indexable, follow: site.indexable },
+  alternates: { types: { "application/rss+xml": "/blog/feed.xml" } },
 };
 export const viewport: Viewport = {
   themeColor: "#ffffff",
